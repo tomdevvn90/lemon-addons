@@ -1,0 +1,147 @@
+@import "variables";
+@import "animation";
+@import "general";
+@import "pagination";
+@import "swiper";
+@import "posts";
+@import "testimonial";
+@import "members";
+@import "projects";
+@import "counter";
+@import "pie-chart";
+@import "hot-spot";
+@import "icon-box";
+@import "image-box";
+@import "video-box";
+@import "base-carousel";
+@import "logo-carousel";
+@import "uber-menu";
+@import "banner-animation";
+@import "products-masonry";
+@import "products-sidebar";
+
+
+body {
+    &.admin-bar {
+        .header-fixed {
+            top: 32px;
+        }
+    }
+    header {
+        .header-fixed {
+            position: fixed;
+            width: 100%;
+            left: 0;
+            top: 0;
+            z-index: 999;
+            &.stick-show {
+                animation: menuslidedown 0.5s ease;
+                -webkit-animation: menuslidedown 0.5s ease;
+                transform: translateY(0%);
+                -webkit-transform: translateY(0%);
+                opacity: 1;
+            }
+
+            &.stick-hide {
+                animation: menuslideup 0.5s ease;
+                -webkit-animation: menuslideup 0.5s ease;
+                transform: translateY(-120%);
+                -webkit-transform: translateY(-120%);
+                opacity: 0;
+            }
+        }
+
+        .stick-menu {
+            position: fixed;
+            top: 0;
+            transform: translateY(-120%);
+            -webkit-transform: translateY(-120%);
+        }
+    }
+}
+@keyframes menuslidedown {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@-webkit-keyframes menuslidedown {
+    from {
+        opacity: 0;
+        -webkit-transform: translateY(-100%);
+    }
+
+    to {
+        opacity: 1;
+        -webkit-transform: translateY(0);
+    }
+}
+@keyframes menuslideup {
+    from {
+        opacity: 0.8;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-120%);
+    }
+}
+@-webkit-keyframes menuslideup {
+    from {
+        opacity: 0.8;
+        -webkit-transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        -webkit-transform: translateY(-120%);
+    }
+}
+@keyframes menuhoveritem {
+    0% {
+        opacity: 0.2;
+        width: 10%;
+        left: 0;
+        background: #ffff;
+    }
+
+    60% {
+        opacity: 0.8;
+        width: 70%;
+        left: 30%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 0;
+        left: 100%;
+        background: #FF2B42;
+    }
+}
+@-webkit-keyframes menuhoveritem {
+    0% {
+        opacity: 0.2;
+        width: 10%;
+        left: 0;
+        background: #ffff;
+    }
+
+    60% {
+        opacity: 0.8;
+        width: 70%;
+        left: 30%;
+    }
+
+    100% {
+        opacity: 1;
+        width: 0;
+        left: 100%;
+        background: #FF2B42;
+    }
+}

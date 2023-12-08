@@ -1,0 +1,92 @@
+.elementor-products-sidebar {
+    h2._heading {
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 30px;
+            height: 2px;
+            background-color: #fed700;
+        }
+    }
+    .product-categories {
+        .wrapper {
+            ul {
+                list-style: none;
+                padding: 0;
+            }
+            ._list {
+                .__item {
+                    border-bottom: 1px solid #ececec;
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+                    a {
+                        display: inline-flex;
+                        align-items: center;
+                        position: relative;
+                        padding: 8px 0 8px 20px;
+                        &::before {
+                            content: '';
+                            background: transparent;
+                            width: 5px;
+                            height: 5px;
+                            border: 1px solid #000000;
+                            border-radius: 50%;
+                            position: absolute;
+                            left: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                    &.has_child {
+                        transition: all 0.3s;
+                        position: relative;
+                        cursor: pointer;
+                        .parent {
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                            .toggle {
+                                position: relative;
+                                margin-left: auto;
+                                margin-right: 15px;
+                                .plus-1 {
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 2px;
+                                    background: #000000;
+                                }
+                                .plus-2 {
+                                    position: absolute;
+                                    width: 10px;
+                                    height: 2px;
+                                    background: #000000;
+                                    transform: rotate(90deg);
+                                    transition: all 0.3s;
+                                }
+                            }
+
+                        }
+                        &.open {
+                            .parent {
+                                .toggle {
+                                    .plus-2 {
+                                        transform: rotate(0deg);
+                                    }
+                                }
+                            }
+                        }
+                        .__child {
+                            display: none;
+                            padding-left: 20px;
+                            background: #FAFAFA;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

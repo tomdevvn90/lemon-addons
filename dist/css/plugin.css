@@ -1,0 +1,288 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomOut {
+  from {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+    transform: scale3d(0.3, 0.3, 0.3);
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.elementor-counter {
+  text-align: center;
+}
+
+.elementor-counter--icon-position-left .elementor-counter {
+  display: flex;
+  text-align: left;
+}
+
+.elementor-counter--icon-position-left .elementor-counter__icon-wrap {
+  margin-right: 16px;
+  margin-bottom: 0 !important;
+}
+
+.elementor-counter--icon-position-right .elementor-counter {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.elementor-counter--icon-position-right .elementor-counter__icon-wrap {
+  margin-left: 16px;
+  margin-bottom: 0 !important;
+}
+
+.elementor-counter--vertical-align-top .elementor-counter {
+  align-items: flex-start;
+}
+
+.elementor-counter--vertical-align-middle .elementor-counter {
+  align-items: center;
+}
+
+.elementor-counter--vertical-align-bottom .elementor-counter {
+  align-items: flex-end;
+}
+
+.elementor-counter--icon-view-stacked .elementor-counter__icon,
+.elementor-counter--icon-view-framed .elementor-counter__icon {
+  display: inline-flex;
+  width: 100px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.elementor-counter--icon-view-stacked .elementor-counter__icon i {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.elementor-counter--icon-view-stacked .elementor-counter__icon svg {
+  width: 16px;
+  height: auto;
+  fill: #FFFFFF;
+}
+
+.elementor-counter--icon-view-framed .elementor-counter__icon {
+  background: #FFFFFF;
+}
+
+.elementor-counter--icon-view-framed .elementor-counter__icon i {
+  font-size: 16px;
+}
+
+.elementor-counter--icon-view-framed .elementor-counter__icon svg {
+  width: 16px;
+  height: auto;
+}
+
+.elementor-counter--icon-shape-circle .elementor-counter__icon {
+  border-radius: 50%;
+}
+
+.elementor-counter--icon-shape-square .elementor-counter__icon {
+  border-radius: 0;
+}
+
+.elementor-counter__icon-wrap {
+  line-height: 1;
+  margin-bottom: 16px;
+}
+
+.elementor-counter__icon {
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.elementor-counter__icon i {
+  font-size: 50px;
+  margin-top: -2px;
+  transition: all 0.3s;
+}
+
+.elementor-counter__icon svg {
+  width: 50px;
+  height: auto;
+  margin-top: -2px;
+  transition: all 0.3s;
+}
+
+.elementor-counter__number-wrap {
+  display: inline-flex;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 100%;
+}
+
+.elementor-counter__number-prefix {
+  margin-right: 4px;
+}
+
+.elementor-counter__number-suffix {
+  margin-left: 4px;
+}
+
+.elementor-counter__title {
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.elementor-countdown {
+  text-align: center;
+}
+
+.elementor-countdown--view-stacked .elementor-countdown .countdown-row .countdown-section {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+  padding: 0;
+}
+
+.elementor-countdown--view-stacked .elementor-countdown .countdown-row .countdown-section:not(:last-child):after {
+  display: none;
+}
+
+.elementor-countdown--view-stacked .elementor-countdown .countdown-row .countdown-section > span.countdown-amount {
+  color: #FFFFFF;
+}
+
+.elementor-countdown--view-stacked .elementor-countdown .countdown-row .countdown-section > span.countdown-period {
+  color: #FFFFFF;
+}
+
+.elementor-countdown--view-framed .elementor-countdown .countdown-row .countdown-section {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: #FFFFFF;
+  margin: 15px;
+  padding: 0;
+}
+
+.elementor-countdown--view-framed .elementor-countdown .countdown-row .countdown-section:not(:last-child):after {
+  display: none;
+}
+
+.elementor-countdown--shape-circle .elementor-countdown .countdown-row .countdown-section {
+  border-radius: 50%;
+}
+
+.elementor-countdown--shape-square .elementor-countdown .countdown-row .countdown-section {
+  border-radius: 0;
+}
+
+.elementor-countdown--shape-rounded .elementor-countdown .countdown-row .countdown-section {
+  border-radius: 10px;
+}
+
+.elementor-countdown .countdown-row {
+  display: block;
+}
+
+.elementor-countdown .countdown-row .countdown-section {
+  position: relative;
+  display: inline-block;
+  margin-right: 30px;
+  padding-right: 30px;
+}
+
+.elementor-countdown .countdown-row .countdown-section:not(:last-child):after {
+  content: ":";
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 45px;
+}
+
+.elementor-countdown .countdown-row .countdown-section > span {
+  display: block;
+}
+
+.elementor-countdown .countdown-row .countdown-section > span.countdown-amount {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 45px;
+  letter-spacing: 0;
+  color: #333333;
+}
+
+.elementor-countdown .countdown-row .countdown-section > span.countdown-period {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  color: #999999;
+}
+
