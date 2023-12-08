@@ -137,13 +137,7 @@ final class Bearsthemes_Addons {
 	 * Enqueue scripts
 	 */
 	public function bearsthemes_enqueue_scripts() {
-		wp_enqueue_style( 'tooltipster', plugins_url( '/assets/css/tooltipster.css', __FILE__ ) );
-		wp_enqueue_style( 'magnific-popup', plugins_url( '/assets/css/magnific-popup.css', __FILE__ ) );
-		wp_enqueue_style( 'lemon-addons-plugin', plugins_url( '/dist/css/plugin.css', __FILE__ ) );
-
-		wp_enqueue_style( 'bearsthemes-addons-elements', plugins_url( '/assets/css/elements.css', __FILE__ ) );
-		wp_enqueue_style( 'bearsthemes-addons-woocommerce', plugins_url( '/assets/css/woocommerce.css', __FILE__ ) );
-
+		wp_enqueue_style( 'lemon-addons-plugin', plugins_url( '/dist/css/plugin.css', __FILE__ ), rand(11111, 99999) );
 		wp_enqueue_script( 'lemon-addons-plugins', plugin_dir_url( __FILE__ ) . 'dist/js/plugin.js',   array(), rand(11111, 99999999), true);
 	}
 
