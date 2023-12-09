@@ -1008,15 +1008,20 @@ class Be_Logo_Carousel extends Widget_Base {
 		if( !empty( $settings['_skin'] ) && isset( $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key] ) ) {
 			 return $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key];
 		}
-		return $settings[$key];
+		
+		if( isset( $settings[$key] ) ){
+			return $settings[$key];
+		}
+
+		return ;
 	}
 
 	protected function swiper_data() {
 		$settings = $this->get_settings_for_display();
 
-		$slides_per_view = $settings['sliders_per_view'] ? $settings['sliders_per_view'] : 1;
-		$slides_per_view_tablet = $settings['sliders_per_view_tablet'] ? $settings['sliders_per_view_tablet'] : $slides_per_view;
-		$slides_per_view_mobile = $settings['sliders_per_view_mobile'] ? $settings['sliders_per_view_mobile'] : $slides_per_view_tablet;
+		$slides_per_view = $this->get_instance_value_skin('sliders_per_view') ? $this->get_instance_value_skin('sliders_per_view') : 1;
+		$slides_per_view_tablet = $this->get_instance_value_skin('sliders_per_view_tablet') ? $this->get_instance_value_skin('sliders_per_view_tablet') : $slides_per_view;
+		$slides_per_view_mobile = $this->get_instance_value_skin('sliders_per_view_mobile') ? $this->get_instance_value_skin('sliders_per_view_mobile') : $slides_per_view_tablet;
 
 		$space_between = !empty( $this->get_instance_value_skin('space_between')['size'] ) ? $this->get_instance_value_skin('space_between')['size'] : 30;
 		$space_between_tablet = !empty( $this->get_instance_value_skin('space_between_tablet')['size'] ) ? $this->get_instance_value_skin('space_between_tablet')['size'] : $space_between;

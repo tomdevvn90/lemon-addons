@@ -68,6 +68,7 @@ class Be_Text_Animation extends Widget_Base {
                 'type' => Controls_Manager::SELECT,
                 'default' => 'bounce',
 				'options' => [
+					'none' => esc_html__( 'none', 'bearsthemes-addons' ),
 					'bounce' => esc_html__( 'bounce', 'bearsthemes-addons' ),
 					'flash'  => esc_html__( 'flash', 'bearsthemes-addons' ),
 					'pulse' => esc_html__( 'pulse', 'bearsthemes-addons' ),
@@ -123,6 +124,7 @@ class Be_Text_Animation extends Widget_Base {
                 'type' => Controls_Manager::SELECT,
                 'default' => 'fadeOut',
 				'options' => [
+					'none' => esc_html__( 'none', 'bearsthemes-addons' ),
 					'bounceInUp' => esc_html__( 'bounce', 'bearsthemes-addons' ),
 					'flash'  => esc_html__( 'flash', 'bearsthemes-addons' ),
 					'pulse' => esc_html__( 'pulse', 'bearsthemes-addons' ),

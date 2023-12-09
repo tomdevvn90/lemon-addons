@@ -52,6 +52,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Cholatse( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Tronador( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Jimara( $this ) );
+		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
 
 	}
 
@@ -1728,7 +1729,12 @@ class Be_Posts_Carousel extends Widget_Base {
 		if( !empty( $settings['_skin'] ) && isset( $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key] ) ) {
 			 return $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key];
 		}
-		return $settings[$key];
+
+		if( isset( $settings[$key] ) ){
+			return $settings[$key];
+		}
+
+		return ;
 	}
 
 	public function query_posts() {
