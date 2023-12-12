@@ -137,8 +137,8 @@ final class Bearsthemes_Addons {
 	 * Enqueue scripts
 	 */
 	public function bearsthemes_enqueue_scripts() {
-		wp_enqueue_style( 'lemon-addons-plugin', plugins_url( '/dist/css/plugin.css', __FILE__ ), rand(11111, 99999) );
-		wp_enqueue_script( 'lemon-addons-plugins', plugin_dir_url( __FILE__ ) . 'dist/js/plugin.js',   array(), rand(11111, 99999999), true);
+		wp_enqueue_style( 'lemon-addons-plugin', plugins_url( '/dist/css/plugin.css', __FILE__ ), array(), rand(11111, 99999) );
+		wp_enqueue_script( 'lemon-addons-plugin', plugin_dir_url( __FILE__ ) . 'dist/js/plugin.js',   array( 'jquery' ), rand(11111, 99999999), true);
 	}
 
 	/**

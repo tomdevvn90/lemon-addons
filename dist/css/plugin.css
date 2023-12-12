@@ -1384,6 +1384,1469 @@ img.mfp-img {
   background: #FAFAFA;
 }
 
+.elementor-products--default .elementor-product {
+  background: #FFFFFF;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.elementor-products--default .elementor-product__header {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.elementor-products--default .elementor-product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+.elementor-products--default .elementor-product__thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+  background: #e7e6e4;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0.2s;
+}
+
+.elementor-products--default .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-products--default .elementor-product__onsale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #0073a8;
+  z-index: 5;
+  border-radius: 50px;
+}
+
+.elementor-products--default .elementor-product .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #0073a8;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0 15px 0 0;
+  max-width: calc(100% - 30px);
+  opacity: 0;
+  z-index: 5;
+  transform: translateX(-50%) translateY(calc(-50% + 40px));
+}
+
+.elementor-products--default .elementor-product .button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: #0073a8;
+  border-radius: 2px 0 0 2px;
+  transition: all 0.3s;
+}
+
+.elementor-products--default .elementor-product .button .icon svg {
+  fill: #FFFFFF;
+  margin-top: -2px;
+}
+
+.elementor-products--default .elementor-product .button .text {
+  display: inline-block;
+  padding-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.elementor-products--default .elementor-product .button.add_to_cart_button {
+  padding: 0 15px 0 0;
+}
+
+.elementor-products--default .elementor-product .button.loading:after {
+  font-family: WooCommerce;
+  content: "\E01C";
+  vertical-align: top;
+  font-weight: 400;
+  margin-left: 0.53em;
+  animation: spin 2s linear infinite;
+}
+
+.elementor-products--default .elementor-product .button.added:after {
+  font-family: WooCommerce;
+  content: "\E017";
+  margin-left: 0.53em;
+  vertical-align: bottom;
+}
+
+.elementor-products--default .elementor-product .added_to_cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background: #0073a8;
+  padding: 8px 0;
+  z-index: 5;
+  opacity: 0;
+  transition: transform 0.4s ease 0.2s;
+  transform: translateY(100%);
+}
+
+.elementor-products--default .elementor-product__title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.25;
+  margin-bottom: 8px;
+}
+
+.elementor-products--default .elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--default .elementor-product__price {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #0073a8;
+  margin-bottom: 0;
+}
+
+.elementor-products--default .elementor-product__price del {
+  color: #111111;
+}
+
+.elementor-products--default .elementor-product__price ins {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.elementor-products--default .elementor-product:hover .elementor-product__overlay {
+  opacity: 1;
+}
+
+.elementor-products--default .elementor-product:hover .elementor-product__thumbnail {
+  transform: scale(1.1);
+}
+
+.elementor-products--default .elementor-product:hover .button {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.elementor-products--default .elementor-product:hover .added_to_cart {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elementor-products--skin-grid-andrus .elementor-product {
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+  background: #e7e6e4;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0.2s;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__onsale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 50px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #fed700;
+  z-index: 5;
+  border-radius: 50px;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #fed700;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0 15px 0 0;
+  max-width: calc(100% - 30px);
+  opacity: 0;
+  z-index: 5;
+  transform: translateX(-50%) translateY(calc(-50% + 40px));
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: #fed700;
+  border-radius: 2px 0 0 2px;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button .icon svg {
+  fill: #FFFFFF;
+  margin-top: -2px;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button .text {
+  display: inline-block;
+  padding-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button.add_to_cart_button {
+  padding: 0 15px 0 0;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button.loading:after {
+  font-family: WooCommerce;
+  content: "\E01C";
+  vertical-align: top;
+  font-weight: 400;
+  margin-left: 0.53em;
+  animation: spin 2s linear infinite;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .button.added:after {
+  font-family: WooCommerce;
+  content: "\E017";
+  margin-left: 0.53em;
+  vertical-align: bottom;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product .added_to_cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background: #fed700;
+  padding: 8px 0;
+  z-index: 5;
+  opacity: 0;
+  transition: transform 0.4s ease 0.2s;
+  transform: translateY(100%);
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__content {
+  padding: 25px 30px 20px;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__title {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__price {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #fed700;
+  margin-bottom: 0;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__price del {
+  color: #111111;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__price ins {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__category {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: #333333;
+  padding: 12px 30px;
+  border-top: 1px solid #e7e5e4;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__category a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product:hover .elementor-product__overlay {
+  opacity: 1;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product:hover .elementor-product__thumbnail {
+  transform: scale(1.1);
+}
+
+.elementor-products--skin-grid-andrus .elementor-product:hover .button {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.elementor-products--skin-grid-andrus .elementor-product:hover .added_to_cart {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elementor-products--skin-grid-havsula .elementor-product {
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product.has-thumbnail .elementor-product__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.93);
+  z-index: 5;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product.has-thumbnail:hover .elementor-product__content {
+  opacity: 0;
+  transform: translateY(100%);
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__thumbnail {
+  position: relative;
+  padding-bottom: 110%;
+  background: #e7e6e4;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0.2s;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__onsale {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 50px;
+  height: 30px;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 30px;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: #FED700;
+  z-index: 5;
+  border-radius: 3px;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FED700;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0 15px 0 0;
+  max-width: calc(100% - 30px);
+  opacity: 0;
+  z-index: 5;
+  transform: translateX(-50%) translateY(calc(-50% + 40px));
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: #FED700;
+  border-radius: 2px 0 0 2px;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button .icon svg {
+  fill: #FFFFFF;
+  margin-top: -2px;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button .text {
+  display: inline-block;
+  padding-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button.add_to_cart_button {
+  padding: 0 15px 0 0;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button.loading:after {
+  font-family: WooCommerce;
+  content: "\E01C";
+  vertical-align: top;
+  font-weight: 400;
+  margin-left: 0.53em;
+  animation: spin 2s linear infinite;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .button.added:after {
+  font-family: WooCommerce;
+  content: "\E017";
+  margin-left: 0.53em;
+  vertical-align: bottom;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product .added_to_cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background: #FED700;
+  padding: 8px 0;
+  z-index: 5;
+  opacity: 0;
+  transition: transform 0.4s ease 0.2s;
+  transform: translateY(100%);
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  padding: 20px 15px;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1f1f1f;
+  margin-bottom: 0;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__price {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: #FED700;
+  margin-bottom: 0;
+  padding-left: 10px;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__price del {
+  color: #111111;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__price ins {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product:hover .elementor-product__overlay {
+  opacity: 1;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product:hover .elementor-product__thumbnail {
+  transform: scale(1.1);
+}
+
+.elementor-products--skin-grid-havsula .elementor-product:hover .button {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.elementor-products--skin-grid-havsula .elementor-product:hover .added_to_cart {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elementor-products--skin-grid-batura .elementor-product {
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+  border-radius: 5px;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__thumbnail {
+  position: relative;
+  padding-bottom: 100%;
+  background: #e7e6e4;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0.2s;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background: rgba(16, 16, 16, 0.7) none repeat scroll 0 0;
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  opacity: 0;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  z-index: 11;
+  width: 80%;
+  text-align: center;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info .elementor-product__category {
+  color: #fed700;
+  font-size: 10px;
+  line-height: normal;
+  margin-bottom: 2px;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info .elementor-product__category a {
+  border: medium none;
+  color: #fed700;
+  font-size: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 1px;
+  text-transform: uppercase;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info h3.elementor-product__title {
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  line-height: normal;
+  margin: 0 0 16px;
+  text-transform: uppercase;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info h3.elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info span.elementor-product__price {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: normal;
+  font-weight: bold;
+  display: block;
+  color: #fed700;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info span.elementor-product__price del {
+  color: #ddd;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info span.elementor-product__price ins {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.add_to_cart_button {
+  background: #fed700;
+  color: #222222;
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  border: medium none;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 15px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.add_to_cart_button .text {
+  display: none;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.product_type_external {
+  background: #fed700;
+  color: #222222;
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  border: medium none;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 15px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.product_type_external .text {
+  display: none;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.button.product_type_variable {
+  background: #fed700;
+  color: #222222;
+  transform: scale(0.7);
+  -webkit-transform: scale(0.7);
+  border: medium none;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 15px;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.button.product_type_variable .text {
+  display: none;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__content .elementor-product__info a.added_to_cart.wc-forward {
+  display: block;
+  color: #fff;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.elementor-products--skin-grid-batura .elementor-product:hover .elementor-product__content {
+  opacity: 1;
+  transform: translateY(0%);
+  -webkit-transform: translateY(0%);
+}
+
+.elementor-products--skin-grid-batura .elementor-product:hover .elementor-product__thumbnail {
+  transform: scale(1.1);
+}
+
+.elementor-products--skin-grid-pumori .elementor-product {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s;
+  border-bottom: solid 1px #ececec;
+  padding: 20px 2px;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__thumbnail {
+  position: relative;
+  background: #e7e6e4;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0.2s;
+  width: 80px;
+  height: 80px;
+  border-radius: 1px;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content {
+  width: calc(100% - 86px);
+  padding-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content .elementor-product__category {
+  color: #282828;
+  font-size: 11px;
+  line-height: normal;
+  margin-bottom: 5px;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content .elementor-product__category a {
+  border: medium none;
+  color: #282828;
+  font-size: 11px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin: 0 1px;
+  text-transform: uppercase;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content h3.elementor-product__title {
+  color: #282828;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  line-height: normal;
+  margin: 0 0 10px;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content h3.elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content span.elementor-product__price {
+  font-size: 13px;
+  margin-bottom: 10px;
+  line-height: normal;
+  font-weight: bold;
+  display: block;
+  color: #282828;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content span.elementor-product__price del {
+  color: #ddd;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__content span.elementor-product__price ins {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product:hover .elementor-product__thumbnail {
+  box-shadow: 0 0 0 2px #fed700;
+}
+
+.elementor-products--skin-ramble .elementor-product {
+  position: relative;
+  background: #FFFFFF;
+  overflow: hidden;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-ramble .elementor-product.has-thumbnail .elementor-product__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  transform: translateY(100%);
+}
+
+.elementor-products--skin-ramble .elementor-product.has-thumbnail .elementor-product__content::before {
+  content: "";
+  background: #000;
+  height: 90%;
+  width: 90%;
+  position: absolute;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+.elementor-products--skin-ramble .elementor-product.has-thumbnail:hover .elementor-product__content {
+  opacity: 1;
+  transform: translateY(0);
+  -webkit-transform: translateY(0);
+}
+
+.elementor-products--skin-ramble .elementor-product.has-thumbnail:hover .elementor-product__title {
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
+}
+
+.elementor-products--skin-ramble .elementor-product.has-thumbnail:hover .elementor-product__price {
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
+  transition-delay: 0.2s;
+}
+
+.elementor-products--skin-ramble .elementor-product__header {
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-products--skin-ramble .elementor-product__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.13);
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-ramble .elementor-product__thumbnail {
+  position: relative;
+  padding-bottom: 110%;
+  background: #e7e6e4;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 1.5s cubic-bezier(0.11, 0.52, 0.53, 0.79) 0.2s;
+}
+
+.elementor-products--skin-ramble .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-ramble .elementor-product__onsale {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 100%;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #A90503;
+  background-color: #FED700;
+  z-index: 5;
+  border-radius: 3px;
+  padding: 4px;
+}
+
+.elementor-products--skin-ramble .elementor-product .button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #FED700;
+  background-color: #FFFFFF;
+  margin: 0;
+  padding: 0 15px 0 0;
+  max-width: calc(100% - 30px);
+  opacity: 0;
+  z-index: 5;
+}
+
+.elementor-products--skin-ramble .elementor-product .button .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: #FED700;
+  border-radius: 2px 0 0 2px;
+  transition: all 0.3s;
+}
+
+.elementor-products--skin-ramble .elementor-product .button .icon svg {
+  fill: #FFFFFF;
+  margin-top: -2px;
+}
+
+.elementor-products--skin-ramble .elementor-product .button .text {
+  display: inline-block;
+  padding-left: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.elementor-products--skin-ramble .elementor-product .button.add_to_cart_button {
+  padding: 0 15px 0 0;
+}
+
+.elementor-products--skin-ramble .elementor-product .button.loading:after {
+  font-family: WooCommerce;
+  content: "\E01C";
+  vertical-align: top;
+  font-weight: 400;
+  margin-left: 0.53em;
+  animation: spin 2s linear infinite;
+}
+
+.elementor-products--skin-ramble .elementor-product .button.added:after {
+  font-family: WooCommerce;
+  content: "\E017";
+  margin-left: 0.53em;
+  vertical-align: bottom;
+}
+
+.elementor-products--skin-ramble .elementor-product .added_to_cart {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #FFFFFF;
+  background: #FED700;
+  padding: 8px 0;
+  z-index: 5;
+  opacity: 0;
+  transition: transform 0.4s ease 0.2s;
+  transform: translateY(100%);
+}
+
+.elementor-products--skin-ramble .elementor-product__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 15px;
+  transition: all 0.3s;
+  height: 100%;
+  opacity: 0;
+}
+
+.elementor-products--skin-ramble .elementor-product__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.elementor-products--skin-ramble .elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-ramble .elementor-product__price {
+  display: block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  white-space: nowrap;
+  color: #FED700;
+  margin-bottom: 12px;
+  padding-left: 10px;
+}
+
+.elementor-products--skin-ramble .elementor-product__price del {
+  color: white;
+}
+
+.elementor-products--skin-ramble .elementor-product__price ins {
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+.elementor-products--skin-ramble .elementor-product:hover .elementor-product__overlay {
+  opacity: 1;
+}
+
+.elementor-products--skin-ramble .elementor-product:hover .elementor-product__thumbnail {
+  transform: scale(1.1);
+}
+
+.elementor-products--skin-ramble .elementor-product:hover .button {
+  opacity: 1;
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
+  transition-delay: 0.3s;
+}
+
+.elementor-products--skin-ramble .elementor-product:hover .added_to_cart {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elementor-products--skin-cosmetics .elementor-product {
+  text-align: center;
+  overflow: hidden;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__wrap {
+  position: relative;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__thumbnail:hover .elementor-product__overlay {
+  opacity: 1;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__thumbnail:hover .elementor-product__button-cart,
+.elementor-products--skin-cosmetics .elementor-product__thumbnail:hover .elementor-product__button-readmore {
+  transform: translateX(0px);
+  z-index: 9;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__overlay {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  -wekbit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__onsale {
+  z-index: 1;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background-color: #7c7270;
+  color: #fff;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0;
+  padding: 2px 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button {
+  box-sizing: border-box;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore {
+  width: 48%;
+  text-align: center;
+  z-index: 0;
+  transform: translateY(80px);
+  -wekbit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart a,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore a {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0.618em 1em;
+  font-weight: 700;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 132px;
+  max-height: 50px;
+  background-color: #7c7270;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 9;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button::before,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart::before,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button::before,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart::before {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 2px solid #000;
+  border-left: 0;
+  border-right: 0;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button::after,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart::after,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button::after,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart::after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: #000;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button span,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart span,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button span,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart span {
+  position: relative;
+  z-index: 9;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button .icon,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart .icon,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button .icon,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart .icon {
+  display: none;
+  margin-right: 4px;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button .icon svg,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart .icon svg,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button .icon svg,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart .icon svg {
+  fill: #fff;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button:hover::before,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart:hover::before,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button:hover::before,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart:hover::before {
+  transition-delay: 0s;
+  left: 0;
+  width: 100%;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button:hover::after,
+.elementor-products--skin-cosmetics .elementor-product__button-cart .added_to_cart:hover::after,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button:hover::after,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .added_to_cart:hover::after {
+  top: 0;
+  height: 100%;
+  transition-delay: 0.4s;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .add_to_cart_button.added,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .add_to_cart_button.added {
+  display: none;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore {
+  font-size: 22px;
+  line-height: 22px;
+  max-width: 132px;
+  max-height: 50px;
+  background-color: #7c7270;
+  width: 100%;
+  color: #fff;
+  box-sizing: border-box;
+  position: relative;
+  transition: all 600ms cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: 9;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore::before,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore::before {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  height: 100%;
+  width: 0;
+  border: 2px solid #000;
+  border-left: 0;
+  border-right: 0;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore::after,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore::after {
+  content: "";
+  position: absolute;
+  transition: inherit;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: #000;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore .ion-ios-eye,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore .ion-ios-eye {
+  line-height: 1;
+  position: relative;
+  z-index: 9;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore .ion-ios-eye svg,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore .ion-ios-eye svg {
+  width: 1em;
+  height: 1em;
+  fill: #fff;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore:hover::before,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore:hover::before {
+  transition-delay: 0s;
+  left: 0;
+  width: 100%;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__button-cart .readmore:hover::after,
+.elementor-products--skin-cosmetics .elementor-product__button-readmore .readmore:hover::after {
+  top: 0;
+  height: 100%;
+  transition-delay: 0.4s;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__content {
+  margin-top: 30px;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__title {
+  text-transform: uppercase;
+  margin-bottom: 5px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__title a:hover {
+  text-decoration: underline;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__category {
+  font-size: 15px;
+  line-height: 25px;
+  text-transform: uppercase;
+  min-height: 50px;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__category a {
+  color: inherit;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__category a:hover {
+  text-decoration: underline;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__price {
+  margin-top: 10px;
+  display: block;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__price del span {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 54px;
+  color: #999;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__price ins {
+  text-decoration: none;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__price ins span {
+  font-weight: 700;
+  font-size: 22px;
+  color: #7c7270;
+  line-height: 54px;
+  letter-spacing: 0.48px;
+}
+
 .elementor-banner-animation {
   background: #111;
   position: relative;
@@ -10832,6 +12295,234 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 
 .elementor-popup__aspect-ratio-916 {
   padding-bottom: 177.78%;
+}
+
+.elementor-banner-image-box {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.elementor-banner-image-box--inner {
+  position: relative;
+  width: 66vw;
+  min-height: 300px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 991px) {
+  .elementor-banner-image-box--inner {
+    width: 60vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .elementor-banner-image-box--inner .elementor-banner-image-box__item {
+    max-width: 220px;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box__item img {
+    display: none;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--one {
+    position: absolute;
+    bottom: calc(16% + 10vw);
+    left: calc(6% - 220px);
+    text-align: right;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--two {
+    position: relative;
+    float: left;
+    text-align: right;
+    left: calc(30% - 220px);
+    padding-bottom: 3.125vw;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--three {
+    position: relative;
+    float: right;
+    right: calc(30% - 220px);
+    padding-bottom: 3.125vw;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
+    position: absolute;
+    bottom: calc(16% + 10vw);
+    right: calc(6% - 220px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-one {
+    bottom: 16%;
+    left: -3vw;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-two {
+    bottom: calc(100% - 15vw);
+    left: 10vw;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-three {
+    bottom: calc(100% - 15vw);
+    right: 10vw;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-fourth {
+    bottom: 16%;
+    right: -3vw;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  .elementor-banner-image-box--inner .elementor-banner-image-box__item {
+    max-width: 240px;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--one {
+    left: calc(6% - 240px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--two {
+    left: calc(30% - 240px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--three {
+    right: calc(30% - 240px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
+    right: calc(6% - 240px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .elementor-banner-image-box--inner .elementor-banner-image-box__item {
+    max-width: 300px;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--one {
+    left: calc(6% - 300px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--two {
+    left: calc(30% - 300px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--three {
+    right: calc(30% - 300px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
+    right: calc(6% - 300px);
+  }
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box--banner-image {
+  position: relative;
+  line-height: 0;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item {
+  z-index: 3;
+  position: absolute;
+  animation-delay: 0.3s;
+  animation-duration: 1.75s;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item .img {
+  width: 10vw;
+  max-width: 140px;
+  max-height: 140px;
+  height: 10vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  animation: rotation 3s infinite linear;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-banner img {
+  border-radius: 100% 100% 0 0;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box--banner-image img {
+  width: 100%;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box__item {
+  display: inline-block;
+  width: 100%;
+  z-index: 6;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box__item img {
+  width: 10vw;
+  max-width: 140px;
+  max-height: 140px;
+  height: 10vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box__image img {
+  animation: rotation 3s infinite linear;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box__heading {
+  font-size: clamp(20px, 1.4vw, 26px);
+  font-weight: 700;
+  line-height: 120%;
+  color: #333333;
+  margin-top: 0;
+  margin-bottom: 10px;
+  animation-duration: 1.75s;
+}
+
+.elementor-banner-image-box--inner .elementor-banner-image-box__sub-heading {
+  font-size: clamp(16px, 1vw, 18px);
+  font-weight: 400;
+  line-height: 120%;
+  color: #555555;
+  animation-duration: 1.75s;
+}
+
+@media screen and (max-width: 767px) {
+  .elementor-banner-image-box--inner .elementor-banner-image-box__item:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image {
+    display: none;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box__wrap {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box__content {
+    margin-bottom: 0;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box__image {
+    margin-right: 16px;
+  }
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .elementor-text-editor > * {

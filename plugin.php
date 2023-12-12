@@ -112,6 +112,7 @@ class Plugin {
 			'banner-animation',
 			'products-sidebar',
 			'text-animation',
+			'banner-image-box',
 
 		);
 
@@ -250,6 +251,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Projects_Carousel\Be_Projects_Carousel() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Animation\Be_Banner_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Text_Animation\Be_Text_Animation() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );
 
 		// WooCommerce.
 		if ( $this->woocommerce_status() ) {

@@ -881,161 +881,206 @@
         });
     }
 
-    $(document).ready(function() {
-    if ($('header').hasClass('header-fixed')) {
-        HeaderScrollSticky();
+    var BannerImageBoxHandler = function( $scope, $ ) {
+  
+        var $element = $scope.find('.elementor-banner-image-box');
+
+        var bannerImage = $element.find('.elementor-banner-image-box--banner-image');
+
+        var $tlt_ele = $element.find(".tlt");
+
+        $tlt_ele.textillate({
+            loop: true,
+            initialDelay: 0,
+            delay: 50,
+        });
+
+        function bannerImageBoxPositionTop( bannerImage ) {
+            var bannerImageThumb = bannerImage.find('.banner-img');
+            var bannerImageItemTwo = bannerImage.find('.img-item-two');
+            var bannerImageTwo = bannerImage.find('.img-two');
+            var bannerImageItemThree = bannerImage.find('.img-item-three');
+            var bannerImageThree = bannerImage.find('.img-three');
+
+            var bannerImageHeight = (bannerImageThumb)? bannerImageThumb.innerHeight() : bannerImage.innerHeight();
+
+            var bannerImageTwoHeight = bannerImageTwo.innerHeight();
+            var bannerImageTwoBottom = bannerImageHeight - ( bannerImageTwoHeight / 1.35);
+            bannerImageItemTwo.css( 'bottom', bannerImageTwoBottom + 'px' );
+
+            var bannerImageThreeHeight = bannerImageThree.innerHeight();
+            var bannerImageThreeBottom = bannerImageHeight - ( bannerImageThreeHeight / 1.35);
+            bannerImageItemThree.css( 'bottom', bannerImageThreeBottom + 'px' );
+        }
+        
+        $(window).on('load', function() {
+            bannerImageBoxPositionTop( bannerImage );
+        });
+
+        $(window).on('resize', function() {
+            bannerImageBoxPositionTop( bannerImage );
+        });
+
     }
 
-    function HeaderScrollSticky() {
-        var stickMenuEl = $('header').children();
-        var offsetTop = (stickMenuEl.hasClass('header-fixed')) ? $('html').offset().top : stickMenuEl.offset().top;
-        var menuOffset = {
-                top: offsetTop,
-                height: stickMenuEl.innerHeight()
-            },
-            scroll = 0,
-            position = $(window).scrollTop();
+    $(document).ready(function() {
+        if ($('header').hasClass('header-fixed')) {
+            HeaderScrollSticky();
+        }
 
-        /* update offset */
-        $(window).on('resize', function() {
-            stickMenuEl.removeClass('stick-menu', function() {
-                menuOffset = {
+        function HeaderScrollSticky() {
+            var stickMenuEl = $('header').children();
+            var offsetTop = (stickMenuEl.hasClass('header-fixed')) ? $('html').offset().top : stickMenuEl.offset().top;
+            var menuOffset = {
                     top: offsetTop,
                     height: stickMenuEl.innerHeight()
-                };
-            });
-        })
+                },
+                scroll = 0,
+                position = $(window).scrollTop();
 
-        $(window).on('scroll', function() {
-            scroll = $(this).scrollTop();
+            /* update offset */
+            $(window).on('resize', function() {
+                stickMenuEl.removeClass('stick-menu', function() {
+                    menuOffset = {
+                        top: offsetTop,
+                        height: stickMenuEl.innerHeight()
+                    };
+                });
+            })
 
-            if (scroll >= (menuOffset.top + menuOffset.height)) {
-                if (!stickMenuEl.hasClass('stick-menu')) {
-                    stickMenuEl.addClass('stick-menu')
-                }
+            $(window).on('scroll', function() {
+                scroll = $(this).scrollTop();
 
-                // if( alwaysShow == true && firstScroll == true ) {
-                // 	firstScroll = false;
-                // 	stickMenuEl.addClass( 'stick-show' );
-                // 	console.log(alwaysShow, firstScroll);
-                // }
+                if (scroll >= (menuOffset.top + menuOffset.height)) {
+                    if (!stickMenuEl.hasClass('stick-menu')) {
+                        stickMenuEl.addClass('stick-menu')
+                    }
 
-                if (scroll > position) {
-                    /* down */
-                    if (!stickMenuEl.hasClass('stick-hide'))
-                        stickMenuEl.removeClass('stick-show stick-hide').addClass('stick-hide');
+                    // if( alwaysShow == true && firstScroll == true ) {
+                    // 	firstScroll = false;
+                    // 	stickMenuEl.addClass( 'stick-show' );
+                    // 	console.log(alwaysShow, firstScroll);
+                    // }
 
+                    if (scroll > position) {
+                        /* down */
+                        if (!stickMenuEl.hasClass('stick-hide'))
+                            stickMenuEl.removeClass('stick-show stick-hide').addClass('stick-hide');
+
+                    } else {
+                        /* up */
+                        if (!stickMenuEl.hasClass('stick-show'))
+                            stickMenuEl.removeClass('stick-show stick-hide').addClass('stick-show');
+                    }
                 } else {
-                    /* up */
-                    if (!stickMenuEl.hasClass('stick-show'))
-                        stickMenuEl.removeClass('stick-show stick-hide').addClass('stick-show');
+                    stickMenuEl.removeClass('stick-menu');
                 }
-            } else {
-                stickMenuEl.removeClass('stick-menu');
-            }
 
-            position = scroll;
-        })
-    }
-    $('#backtotop').hide();
-    $(window).scroll(function(){
-        if ($(this).scrollTop() > 500) {
-            $('#backtotop').fadeIn();
-        } else {
-            $('#backtotop').fadeOut();
+                position = scroll;
+            })
         }
+        $('#backtotop').hide();
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 500) {
+                $('#backtotop').fadeIn();
+            } else {
+                $('#backtotop').fadeOut();
+            }
+        });
+        $('#backtotop').click(function(){
+            $("html, body").animate({ scrollTop: 0 }, 'slow');
+            return false;
+        });
+    })
+
+    // Make sure you run this code under Elementor.
+    $(window).on('elementor/frontend/init', function() {
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-counter.default', CounterHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-countdown.default', CountDownHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-pie-chart.default', PieChartHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-video-play-button.default', MagnificPopupHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.default', MagnificPopupHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-pumori', MagnificPopupHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-baruntse', MagnificPopupHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-coropuna', MagnificPopupHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-cholatse', MagnificPopupHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-base-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-base-carousel.skin-grid-pumori', SwiperSliderHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-logo-carousel.default', SwiperSliderHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-grid-nevado', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-baruntse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-coropuna', SwiperSliderThumbsHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-ampato', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-andrus', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-saltoro', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-changtse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-changla', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-galloway', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-jorasses', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-cholatse', SwiperSliderHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members.skin-pumori', FilterPostHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-pumori', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-batura', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-changla', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-havsula', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-taboche', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-cerredo', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-cholatse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-jimara', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-nuptse', SwiperSliderHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts.skin-grid-yutmaru', FilterPostHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-pumori', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-baruntse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-coropuna', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-andrus', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-saltoro', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-batura', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-changtse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-taboche', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-castor', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-wilson', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jorasses', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-michelson', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cerredo', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-gangri', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-sankar', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cholatse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-tronador', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jimara', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-cosmetics', SwiperSliderHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-hardeol', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-galloway', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-jorasses', SwiperSliderHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-animation.default', BannerAnimationHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-animation.skin-full-content', BannerAnimationHandler);
+
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-image-box.default', BannerImageBoxHandler);
+
+
+        // WooCommerce.
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-andrus', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-havsula', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-ramble', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-cosmetics', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-masonry.default', ProductsMasonryHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-sidebar.default', ProductsSidebarHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-text-animation.default', TextAnimationHandler);
+
     });
-    $('#backtotop').click(function(){
-        $("html, body").animate({ scrollTop: 0 }, 'slow');
-        return false;
-    });
-})
-
-// Make sure you run this code under Elementor.
-$(window).on('elementor/frontend/init', function() {
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-counter.default', CounterHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-countdown.default', CountDownHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-pie-chart.default', PieChartHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-video-play-button.default', MagnificPopupHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.default', MagnificPopupHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-pumori', MagnificPopupHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-baruntse', MagnificPopupHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-coropuna', MagnificPopupHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-video-box.skin-cholatse', MagnificPopupHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-base-carousel.default', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-base-carousel.skin-grid-pumori', SwiperSliderHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-logo-carousel.default', SwiperSliderHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.default', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-grid-nevado', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-baruntse', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-coropuna', SwiperSliderThumbsHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-ampato', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-andrus', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-saltoro', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-changtse', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-changla', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-galloway', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-jorasses', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-cholatse', SwiperSliderHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members.skin-pumori', FilterPostHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.default', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-pumori', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-batura', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-changla', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-havsula', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-taboche', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-cerredo', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-cholatse', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-jimara', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.skin-nuptse', SwiperSliderHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts.skin-grid-yutmaru', FilterPostHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.default', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-pumori', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-baruntse', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-coropuna', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-andrus', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-saltoro', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-batura', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-changtse', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-taboche', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-castor', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-wilson', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jorasses', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-michelson', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cerredo', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-gangri', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-sankar', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cholatse', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-tronador', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jimara', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-cosmetics', SwiperSliderHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.default', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-hardeol', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-galloway', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-jorasses', SwiperSliderHandler);
-
-elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-animation.default', BannerAnimationHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-animation.skin-full-content', BannerAnimationHandler);
-
-// WooCommerce.
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.default', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-andrus', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-havsula', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-ramble', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-cosmetics', SwiperSliderHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-masonry.default', ProductsMasonryHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-products-sidebar.default', ProductsSidebarHandler);
-elementorFrontend.hooks.addAction('frontend/element_ready/be-text-animation.default', TextAnimationHandler);
-
-});
 
 })(jQuery);
