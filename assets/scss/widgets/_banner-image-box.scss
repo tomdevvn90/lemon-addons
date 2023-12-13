@@ -7,13 +7,13 @@
     &--inner{
         position: relative;
         width: 66vw;
-        min-height: 400px;
+        min-height: 350px;
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
 
-        @media screen and (max-width: 991px) {
-            width: 60vw;
+        @media screen and (max-width: 1200px) {
+            width: 58vw;
         }
         @media screen and (max-width: 767px) {
             width: 100vw;
@@ -27,15 +27,15 @@
 
             @media screen and (min-width: 768px) {
                 &__item{
-                    max-width: 220px;
+                    max-width: 200px;
                     img{
                         display: none;
                     }
                 }
                 &--one{
                     position: absolute;
-                    bottom: calc(16% + 10vw);
-                    left: calc(6% - 220px);
+                    bottom: calc(16% + 11vw);
+                    left: calc(10% - 200px);
                     text-align: right;
                 }
             
@@ -43,21 +43,21 @@
                     position: relative;
                     float: left;
                     text-align: right;
-                    left: calc(30% - 220px);
+                    left: calc(30% - 200px);
                     padding-bottom: 3.125vw;
                 }
             
                 &--three{
                     position: relative;
                     float: right;
-                    right: calc(30% - 220px);
+                    right: calc(30% - 200px);
                     padding-bottom: 3.125vw;
                 }
             
                 &--fourth{
                     position: absolute;
-                    bottom: calc(16% + 10vw);
-                    right: calc(6% - 220px);
+                    bottom: calc(16% + 11vw);
+                    right: calc(10% - 200px);
                 }
 
                 &--banner-image{
@@ -67,11 +67,11 @@
                     }
                     .img-item-two{
                         bottom: calc(100% - 15vw );
-                        left: 10vw;
+                        left: 11vw;
                     }
                     .img-item-three{
                         bottom: calc(100% - 15vw );
-                        right: 10vw;
+                        right: 11vw;
                     }
                     .img-item-fourth{
                         bottom: 16%;;
@@ -83,40 +83,60 @@
 
             @media screen and (min-width: 991px) {
                 &__item{
-                    max-width: 240px;
+                    max-width: 220px;
                 }
                 &--one{
-                    left: calc(6% - 240px);
+                    left: calc(6% - 220px);
                 }
                 &--two{
-                    left: calc(30% - 240px);
+                    left: calc(30% - 220px);
                 }
                 &--three{
-                    right: calc(30% - 240px);
+                    right: calc(30% - 220px);
                 }
                 &--fourth{
-                    right: calc(6% - 240px);
+                    right: calc(6% - 220px);
                 }
 
             }
         
             @media screen and (min-width: 1024px) {
                 &__item{
-                    max-width: 300px;
+                    max-width: 260px;
                 }
                 &--one{
-                    left: calc(6% - 300px);
+                    left: calc(6% - 260px);
                 }
                 &--two{
-                    left: calc(30% - 300px);
+                    left: calc(30% - 260px);
                 }
                 &--three{
-                    right: calc(30% - 300px);
+                    right: calc(30% - 260px);
                 }
                 &--fourth{
-                    right: calc(6% - 300px);
+                    right: calc(6% - 260px);
                 }
 
+            }
+
+            @media screen and (min-width: 1200px) {
+                &__item{
+                    max-width: 290px;
+                }
+                &--one{
+                    left: calc(6% - 290px);
+                    bottom: calc(16% + 9vw);
+                }
+                &--two{
+                    left: calc(30% - 290px);
+                }
+                &--three{
+                    right: calc(30% - 290px);
+                }
+                &--fourth{
+                    right: calc(6% - 290px);
+                    bottom: calc(16% + 9vw);
+                }
             }
 
             &--banner-image{
@@ -172,7 +192,7 @@
             }
 
             &__heading{
-                font-size: clamp(20px, 1.4vw, 26px);
+                font-size: clamp(18px, 1.4vw, 26px);
                 font-weight: 700;
                 line-height: 120%;
                 color: #333333;
@@ -182,7 +202,7 @@
             }
 
             &__sub-heading{
-                font-size: clamp(16px, 1vw, 18px);
+                font-size: clamp(15px, 1vw, 18px);
                 font-weight: 400;
                 line-height: 120%;
                 color: #555555;

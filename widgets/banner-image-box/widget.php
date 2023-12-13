@@ -83,7 +83,7 @@ class Be_Banner_Image_Box extends Widget_Base {
 				],
 				'default' => [
 					'unit' => 'px',
-					'size' => 400,
+					'size' => 350,
 				],
                 'selectors' => [
                     '{{WRAPPER}} .elementor-banner-image-box--inner' => 'min-height: {{SIZE}}{{UNIT}};',

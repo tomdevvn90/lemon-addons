@@ -12315,15 +12315,15 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 .elementor-banner-image-box--inner {
   position: relative;
   width: 66vw;
-  min-height: 400px;
+  min-height: 350px;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .elementor-banner-image-box--inner {
-    width: 60vw;
+    width: 58vw;
   }
 }
 
@@ -12339,7 +12339,7 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 
 @media screen and (min-width: 768px) {
   .elementor-banner-image-box--inner .elementor-banner-image-box__item {
-    max-width: 220px;
+    max-width: 200px;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box__item img {
@@ -12348,8 +12348,8 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--one {
     position: absolute;
-    bottom: calc(16% + 10vw);
-    left: calc(6% - 220px);
+    bottom: calc(16% + 11vw);
+    left: calc(10% - 200px);
     text-align: right;
   }
 
@@ -12357,21 +12357,21 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
     position: relative;
     float: left;
     text-align: right;
-    left: calc(30% - 220px);
+    left: calc(30% - 200px);
     padding-bottom: 3.125vw;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--three {
     position: relative;
     float: right;
-    right: calc(30% - 220px);
+    right: calc(30% - 200px);
     padding-bottom: 3.125vw;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
     position: absolute;
-    bottom: calc(16% + 10vw);
-    right: calc(6% - 220px);
+    bottom: calc(16% + 11vw);
+    right: calc(10% - 200px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-one {
@@ -12381,12 +12381,12 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-two {
     bottom: calc(100% - 15vw);
-    left: 10vw;
+    left: 11vw;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-three {
     bottom: calc(100% - 15vw);
-    right: 10vw;
+    right: 11vw;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--banner-image .img-item-fourth {
@@ -12397,45 +12397,69 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 
 @media screen and (min-width: 991px) {
   .elementor-banner-image-box--inner .elementor-banner-image-box__item {
-    max-width: 240px;
+    max-width: 220px;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--one {
-    left: calc(6% - 240px);
+    left: calc(6% - 220px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--two {
-    left: calc(30% - 240px);
+    left: calc(30% - 220px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--three {
-    right: calc(30% - 240px);
+    right: calc(30% - 220px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
-    right: calc(6% - 240px);
+    right: calc(6% - 220px);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .elementor-banner-image-box--inner .elementor-banner-image-box__item {
-    max-width: 300px;
+    max-width: 260px;
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--one {
-    left: calc(6% - 300px);
+    left: calc(6% - 260px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--two {
-    left: calc(30% - 300px);
+    left: calc(30% - 260px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--three {
-    right: calc(30% - 300px);
+    right: calc(30% - 260px);
   }
 
   .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
-    right: calc(6% - 300px);
+    right: calc(6% - 260px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .elementor-banner-image-box--inner .elementor-banner-image-box__item {
+    max-width: 290px;
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--one {
+    left: calc(6% - 290px);
+    bottom: calc(16% + 9vw);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--two {
+    left: calc(30% - 290px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--three {
+    right: calc(30% - 290px);
+  }
+
+  .elementor-banner-image-box--inner .elementor-banner-image-box--fourth {
+    right: calc(6% - 290px);
+    bottom: calc(16% + 9vw);
   }
 }
 
@@ -12494,7 +12518,7 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 }
 
 .elementor-banner-image-box--inner .elementor-banner-image-box__heading {
-  font-size: clamp(20px, 1.4vw, 26px);
+  font-size: clamp(18px, 1.4vw, 26px);
   font-weight: 700;
   line-height: 120%;
   color: #333333;
@@ -12504,7 +12528,7 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
 }
 
 .elementor-banner-image-box--inner .elementor-banner-image-box__sub-heading {
-  font-size: clamp(16px, 1vw, 18px);
+  font-size: clamp(15px, 1vw, 18px);
   font-weight: 400;
   line-height: 120%;
   color: #555555;
