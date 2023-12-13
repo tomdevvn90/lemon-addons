@@ -896,14 +896,14 @@
         });
 
         function bannerImageBoxPositionTop( bannerImage ) {
-            var bannerImageThumb = bannerImage.find('.banner-img');
+            var bannerImageThumb = bannerImage.find('.img-item-banner img');
             var bannerImageItemTwo = bannerImage.find('.img-item-two');
             var bannerImageTwo = bannerImage.find('.img-two');
             var bannerImageItemThree = bannerImage.find('.img-item-three');
             var bannerImageThree = bannerImage.find('.img-three');
 
             var bannerImageHeight = (bannerImageThumb)? bannerImageThumb.innerHeight() : bannerImage.innerHeight();
-
+            console.log( bannerImageHeight );
             var bannerImageTwoHeight = bannerImageTwo.innerHeight();
             var bannerImageTwoBottom = bannerImageHeight - ( bannerImageTwoHeight / 1.35);
             bannerImageItemTwo.css( 'bottom', bannerImageTwoBottom + 'px' );

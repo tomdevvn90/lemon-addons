@@ -83,10 +83,10 @@ class Be_Banner_Image_Box extends Widget_Base {
 				],
 				'default' => [
 					'unit' => 'px',
-					'size' => 300,
+					'size' => 400,
 				],
                 'selectors' => [
-                    '{{WRAPPER}} .elementor-banner-image-box' => 'min-height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .elementor-banner-image-box--inner' => 'min-height: {{SIZE}}{{UNIT}};',
                 ],
 			]
 		);
@@ -94,7 +94,7 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Banner Image', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -128,15 +128,6 @@ class Be_Banner_Image_Box extends Widget_Base {
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
 				],
-			]
-		);
-
-        $this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail', // Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.
-				'include' => [],
-				'default' => 'thumbnail',
 			]
 		);
 
@@ -181,15 +172,6 @@ class Be_Banner_Image_Box extends Widget_Base {
 			]
 		);
 
-        $this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail', // Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.
-				'include' => [],
-				'default' => 'thumbnail',
-			]
-		);
-
         $this->add_control(
 			'banner_image_box_two_heading',
 			[
@@ -228,15 +210,6 @@ class Be_Banner_Image_Box extends Widget_Base {
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
 				],
-			]
-		);
-
-        $this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail', // Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.
-				'include' => [],
-				'default' => 'thumbnail',
 			]
 		);
 
@@ -281,15 +254,6 @@ class Be_Banner_Image_Box extends Widget_Base {
 			]
 		);
 
-        $this->add_group_control(
-			Group_Control_Image_Size::get_type(),
-			[
-				'name' => 'thumbnail', // Usage: `{name}_size` and `{name}_custom_dimension`, in this case `thumbnail_size` and `thumbnail_custom_dimension`.
-				'include' => [],
-				'default' => 'thumbnail',
-			]
-		);
-
         $this->add_control(
 			'banner_image_box_fourth_heading',
 			[
@@ -315,6 +279,29 @@ class Be_Banner_Image_Box extends Widget_Base {
     }
 
     protected function register_design_layout_section_controls() {
+
+        $this->start_controls_section(
+			'section_design_image',
+			[
+				'label' => __( 'Image', 'bearsthemes-addons' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+        $this->add_control(
+			'banner_img_border_radius',
+			[
+				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'selectors' => [
+					'{{WRAPPER}} .img-item-banner img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this-> end_controls_section();
+
         $this->start_controls_section(
 			'section_design_content',
 			[
@@ -609,9 +596,9 @@ class Be_Banner_Image_Box extends Widget_Base {
                         </div>';
                 }
 				if( '' !== $banner_image['url'] ) {
-					echo '<div class="img-item-banner">
-                            <img class="banner-img" src="' . esc_url( $banner_image['url'] ) . '" alt=""/>
-                        </div>';
+					echo '<div class="img-item-banner">'. 
+                            Group_Control_Image_Size::get_attachment_image_html( $this->get_settings_for_display(), 'thumbnail', 'banner_image' )
+                        .'</div>';
 				}
 			?>
 			</div>

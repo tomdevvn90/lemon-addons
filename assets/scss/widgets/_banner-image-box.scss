@@ -7,13 +7,20 @@
     &--inner{
         position: relative;
         width: 66vw;
-        min-height: 300px;
+        min-height: 400px;
         max-width: 900px;
         margin-left: auto;
         margin-right: auto;
 
         @media screen and (max-width: 991px) {
             width: 60vw;
+        }
+        @media screen and (max-width: 767px) {
+            width: 100vw;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            max-width: 400px;
         }
 
         .elementor-banner-image-box{
@@ -114,6 +121,7 @@
 
             &--banner-image{
                 position: relative;
+                min-height: inherit;
                 line-height: 0;
                 .img-item{
                     z-index: 3;
@@ -148,7 +156,9 @@
                 img{
                     width: 10vw;
                     max-width: 140px;
+                    min-width: 60px;
                     max-height: 140px;
+                    min-height: 60px;
                     height: 10vw;
                     object-fit: cover;
                     border-radius: 50%;
@@ -183,6 +193,13 @@
 
                 &__item:not(:first-child){
                     margin-top: 30px;
+                }
+                &__item{
+                    width: auto;
+                    img{
+                        width: 12vw;
+                        height: 12vw;
+                    }
                 }
                 &--banner-image{
                     display: none;

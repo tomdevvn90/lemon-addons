@@ -1305,10 +1305,15 @@
                 display: flex;
                 justify-content: space-between;
             }
+            &__button-cart{
+                text-align: left;
+            }
+            &__button-readmore{
+                text-align: right;
+            }
             &__button-cart,
             &__button-readmore{
                 width: 48%;
-                text-align: center;
                 z-index: 0;
                 -webkit-transform: translateX(80px);
                 -moz-transform: translateX(80px);
@@ -1397,6 +1402,7 @@
                     }
                 }
                 .readmore{
+                    text-align: center;
                     font-size: 22px;
                     line-height: 22px;
                     max-width: 132px;
