@@ -10584,6 +10584,106 @@ img.mfp-img {
   opacity: 1;
 }
 
+.elementor-posts--skin-lemon-tattoo {
+  width: 100%;
+  overflow: hidden;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post {
+  background-color: #fff;
+  background: #fff;
+  border-radius: 3px;
+  padding: 30px;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--date {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #8abf89;
+  font-family: "Roboto", Sans-serif;
+  line-height: 1.5em;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--heading {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.5em;
+  margin: 0;
+  font-family: "Roboto", Sans-serif;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--heading > a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--excerpt {
+  margin: 20px 0 0 0;
+  display: block;
+  display: -webkit-box;
+  max-width: 100%;
+  height: auto;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--author {
+  font-size: 18px;
+  line-height: 1.5em;
+  font-weight: 500;
+  font-family: "Roboto", Sans-serif;
+  margin: 10px 0 24px 0;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--author > a {
+  font-size: inherit;
+  line-height: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: #8abf89;
+  font-family: inherit;
+  text-decoration: none;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--cta > a {
+  height: 50px;
+  width: 50px;
+  border-radius: 5px;
+  background: #fff;
+  text-align: center;
+  color: #8abf89;
+  line-height: 50px;
+  border: 1px dashed #ddd;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--cta > a svg {
+  width: 100%;
+  max-width: 20px;
+  height: auto;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--cta > a svg path {
+  fill: #8abf89;
+}
+
 .elementor-recent-posts .elementor-post {
   display: flex;
   align-items: center;

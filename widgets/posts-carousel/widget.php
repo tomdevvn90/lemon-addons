@@ -54,6 +54,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Jimara( $this ) );
 		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
 		$this->add_skin( new Skins\Skin_Wellness( $this ) );
+		$this->add_skin( new Skins\Skin_Lemon_Tattoo( $this ) );
 
 	}
 
@@ -61,15 +62,15 @@ class Be_Posts_Carousel extends Widget_Base {
 		$supported_ids = [];
 
 		$wp_query = new \WP_Query( array(
-										'post_type' => 'post',
-										'post_status' => 'publish'
-									) );
+			'post_type' => 'post',
+			'post_status' => 'publish'
+		) );
 
 		if ( $wp_query->have_posts() ) {
-	    while ( $wp_query->have_posts() ) {
-        $wp_query->the_post();
-        $supported_ids[get_the_ID()] = get_the_title();
-	    }
+	    	while ( $wp_query->have_posts() ) {
+        		$wp_query->the_post();
+        		$supported_ids[get_the_ID()] = get_the_title();
+	    	}
 		}
 
 		return $supported_ids;

@@ -3678,6 +3678,108 @@
     }
   }
 
+  // style template lemon tattoo
+  &--skin-lemon-tattoo{
+    width: 100%;
+    overflow: hidden;
+    
+    .item-post{
+      background-color: #fff;
+      background: #fff;
+      border-radius: 3px;
+      padding: 30px;
+      -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+      -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+      box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
+      position: relative;
+      margin-bottom: 30px;
+
+      &--date{
+        text-transform: uppercase;
+        font-size: 20px;
+        color: $tatto-color-primary;
+        font-family: $tatto-font-primary;
+        line-height: 1.5em;
+        font-weight: 400;
+        margin: 0 0 10px 0;
+      }
+
+      &--heading{
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.5em;
+        margin: 0;
+        font-family: $tatto-font-primary;
+        > a{
+          font-size: inherit;
+          line-height: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          letter-spacing: inherit;
+          color: inherit;
+          font-family: inherit;
+          text-decoration: none;
+        }
+      }
+
+      &--excerpt{
+        margin: 20px 0 0 0;
+        display: block;
+        display: -webkit-box;
+        max-width: 100%;
+        height: auto;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      &--author{
+        font-size:18px;
+        line-height: 1.5em;
+        font-weight: 500;
+        font-family: $tatto-font-primary;
+        margin: 10px 0 24px 0;
+        > a{
+          font-size: inherit;
+          line-height: inherit;
+          font-weight: inherit;
+          line-height: inherit;
+          letter-spacing: inherit;
+          color: $tatto-color-primary;
+          font-family: inherit;
+          text-decoration: none;
+        }
+      }
+
+      &--cta{
+        > a{
+          height: 50px;
+          width:50px;
+          border-radius: 5px;
+          background: #fff;
+          text-align: center;
+          color: $tatto-color-primary;
+          line-height: 50px;
+          border: 1px dashed #ddd;
+          position: absolute;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg{
+            width: 100%;
+            max-width: 20px;
+            height: auto;
+            path{
+              fill: $tatto-color-primary;
+            }
+          }
+        }
+      }
+    }
+  }
+  // end style template lemon tattoo
+
 }
 
 .elementor-recent-posts {
