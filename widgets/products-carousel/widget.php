@@ -38,6 +38,7 @@ class Be_Products_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Havsula( $this ) );
 		$this->add_skin( new Skins\Skin_Ramble( $this ) );
 		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
+		$this->add_skin( new Skins\Skin_Wellness( $this ) );
 
 	}
 
@@ -1679,7 +1680,7 @@ class Be_Products_Carousel extends Widget_Base {
 			'loop' => $settings['loop'] == 'yes' ? true : false,
 			'breakpoints' => array(
 				768 => array(
-				  'slidesPerView' => 2,
+				  'slidesPerView' => $slides_per_view_tablet,
 				  'spaceBetween' => $space_between_tablet,
 				), 
 				1025 => array(

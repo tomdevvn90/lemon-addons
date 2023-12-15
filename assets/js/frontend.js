@@ -1059,6 +1059,7 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-tronador', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jimara', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-cosmetics', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-wellness', SwiperSliderHandler);
 
         elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.default', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-hardeol', SwiperSliderHandler);
@@ -1077,6 +1078,7 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-havsula', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-ramble', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-cosmetics', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-wellness', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-masonry.default', ProductsMasonryHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-sidebar.default', ProductsSidebarHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-text-animation.default', TextAnimationHandler);
