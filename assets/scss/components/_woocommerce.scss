@@ -1775,7 +1775,10 @@
             }
             &__price{
                 margin-top: 10px;
-                display: block;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: flex-end;
                 del{
                     span{
                         font-weight: 400;
@@ -1785,6 +1788,7 @@
                     }
                 }
                 ins{
+                    margin-right: 4px;
                     text-decoration: none;
                     span{
                         font-weight: 700;

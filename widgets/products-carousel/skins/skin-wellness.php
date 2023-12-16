@@ -187,6 +187,7 @@ class Skin_Wellness extends Skin_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .elementor-product ,elementor-product__price' => 'justify-content: {{VALUE}};',
 				],
 			]
 		);

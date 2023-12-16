@@ -3143,7 +3143,10 @@ img.mfp-img {
 
 .elementor-products--skin-wellness .elementor-product__price {
   margin-top: 10px;
-  display: block;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .elementor-products--skin-wellness .elementor-product__price del span {
@@ -3154,6 +3157,7 @@ img.mfp-img {
 }
 
 .elementor-products--skin-wellness .elementor-product__price ins {
+  margin-right: 4px;
   text-decoration: none;
 }
 
