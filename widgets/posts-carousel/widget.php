@@ -1777,7 +1777,7 @@ class Be_Posts_Carousel extends Widget_Base {
 	protected function swiper_data() {
 		$settings = $this->get_settings_for_display();
 
-		$slides_per_view = $this->get_instance_value_skin('sliders_per_view') ? $this->get_instance_value_skin('sliders_per_view') : 1;
+		$slides_per_view = $this->get_instance_value_skin('sliders_per_view') ? $this->get_instance_value_skin('sliders_per_view') : 3;
 		$slides_per_view_tablet = $this->get_instance_value_skin('sliders_per_view_tablet') ? $this->get_instance_value_skin('sliders_per_view_tablet') : $slides_per_view;
 		$slides_per_view_mobile = $this->get_instance_value_skin('sliders_per_view_mobile') ? $this->get_instance_value_skin('sliders_per_view_mobile') : $slides_per_view_tablet;
 
@@ -1786,7 +1786,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$space_between_mobile = !empty( $this->get_instance_value_skin('space_between_mobile')['size'] ) ? $this->get_instance_value_skin('space_between_mobile')['size'] : $space_between_tablet;
 
 		$swiper_data = array(
-			'slidesPerView' => 1,
+			'slidesPerView' => $slides_per_view_mobile,
 			'spaceBetween' => $space_between_mobile,
 			'speed' => $settings['speed'],
 			'loop' => $settings['loop'] == 'yes' ? true : false,

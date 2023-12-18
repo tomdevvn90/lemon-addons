@@ -35,4 +35,4 @@ module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/
 
 /***/ })
 
-},[[0,"/js/manifest"]]]);
+},[[0,"/js/manifest","/js/vendor"]]]);
