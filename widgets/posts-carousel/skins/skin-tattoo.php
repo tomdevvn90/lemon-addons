@@ -17,7 +17,6 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 		add_action( 'elementor/element/be-posts-carousel/section_layout/before_section_end', [ $this, 'register_layout_controls' ] );
 		add_action( 'elementor/element/be-posts-carousel/section_design_layout/before_section_end', [ $this, 'registerd_design_layout_controls' ] );
 		add_action( 'elementor/element/be-posts-carousel/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
-		add_action( 'elementor/element/be-posts-carousel/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
 		add_action( 'elementor/element/be-posts-carousel/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
 
 	}
@@ -175,7 +174,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-post' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .item-post-inner' => 'text-align: {{VALUE}};',
 				],
 			]
 		);
@@ -194,24 +193,6 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 		);
 
 		$this->add_control(
-			'box_border_width',
-			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 50,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
-
-		$this->add_control(
 			'box_border_radius',
 			[
 				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
@@ -224,7 +205,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-post' => 'border-radius: {{SIZE}}{{UNIT}}',
+					'{{WRAPPER}} .item-post' => 'border-radius: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
@@ -242,188 +223,70 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-post' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-				],
-			]
-		);
-
-		$this->add_responsive_control(
-			'content_padding',
-			[
-				'label' => __( 'Content Padding', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 50,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post__content' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+					'{{WRAPPER}} .item-post' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
 			]
 		);
 
 		$this->start_controls_tabs( 'bg_effects_tabs' );
 
-		$this->start_controls_tab( 'classic_style_normal',
-			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
-			]
-		);
+			$this->start_controls_tab( 'classic_style_normal',
+				[
+					'label' => __( 'Normal', 'bearsthemes-addons' ),
+				]
+			);
 
-		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
-			[
-				'name' => 'box_shadow',
-				'selector' => '{{WRAPPER}} .elementor-post',
-			]
-		);
+				$this->add_group_control(
+					Group_Control_Box_Shadow::get_type(),
+					[
+						'name' => 'box_shadow',
+						'selector' => '{{WRAPPER}} .item-post',
+					]
+				);
 
-		$this->add_control(
-			'box_bg_color',
-			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
+				$this->add_control(
+					'box_bg_color',
+					[
+						'label' => __( 'Background Color', 'bearsthemes-addons' ),
+						'type' => Controls_Manager::COLOR,
+						'selectors' => [
+							'{{WRAPPER}} .item-post' => 'background-color: {{VALUE}}',
+						],
+					]
+				);
+			$this->end_controls_tab();
 
-		$this->add_control(
-			'box_border_color',
-			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post' => 'border-color: {{VALUE}}',
-				],
-			]
-		);
+			$this->start_controls_tab( 'classic_style_hover',
+				[
+					'label' => __( 'Hover', 'bearsthemes-addons' ),
+				]
+			);
 
-		$this->end_controls_tab();
+				$this->add_group_control(
+					Group_Control_Box_Shadow::get_type(),
+					[
+						'name' => 'box_shadow_hover',
+						'selector' => '{{WRAPPER}} .item-post:hover',
+					]
+				);
 
-		$this->start_controls_tab( 'classic_style_hover',
-			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
-			]
-		);
+				$this->add_control(
+					'box_bg_color_hover',
+					[
+						'label' => __( 'Background Color', 'bearsthemes-addons' ),
+						'type' => Controls_Manager::COLOR,
+						'selectors' => [
+							'{{WRAPPER}} .item-post:hover' => 'background-color: {{VALUE}}',
+						],
+					]
+				);
 
-		$this->add_group_control(
-			Group_Control_Box_Shadow::get_type(),
-			[
-				'name' => 'box_shadow_hover',
-				'selector' => '{{WRAPPER}} .elementor-post:hover',
-			]
-		);
-
-		$this->add_control(
-			'box_bg_color_hover',
-			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post:hover' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'box_border_color_hover',
-			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post:hover' => 'border-color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->end_controls_tab();
-
+			$this->end_controls_tab();
 		$this->end_controls_tabs();
 
 		$this->end_controls_section();
 
-  }
-
-	public function register_design_image_section_controls( Widget_Base $widget ) {
-		$this->parent = $widget;
-
-		$this->start_controls_section(
-			'section_design_image',
-			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
-				'tab' => Controls_Manager::TAB_STYLE,
-				'condition' => [
-					'skin_lm_tattoo_show_thumbnail!'=> '',
-				],
-			]
-		);
-
-        $this->add_control(
-			'overlay_bg_color',
-			[
-				'label' => __( 'Overlay Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post__overlay' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
-
-		$this->add_control(
-			'img_border_radius',
-			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px', '%' ],
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post__thumbnail' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-				],
-			]
-		);
-
-		$this->start_controls_tabs( 'thumbnail_effects_tabs' );
-
-		$this->start_controls_tab( 'normal',
-			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_filters',
-				'selector' => '{{WRAPPER}} .elementor-post__thumbnail img',
-			]
-		);
-
-		$this->end_controls_tab();
-
-		$this->start_controls_tab( 'hover',
-			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Css_Filter::get_type(),
-			[
-				'name' => 'thumbnail_hover_filters',
-				'selector' => '{{WRAPPER}} .elementor-post:hover .elementor-post__thumbnail img',
-			]
-		);
-
-		$this->end_controls_tab();
-
-		$this->end_controls_tabs();
-
-		$this->end_controls_section();
-	}
+  	}
 
     public function register_design_content_section_controls( Widget_Base $widget ) {
 		$this->parent = $widget;
@@ -436,28 +299,29 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 			]
 		);
 
+		// style title
         $this->add_control(
 			'heading_title_style',
 			[
 				'label' => __( 'Title', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_lm_tattoo_show_title!' => '',
+					'show_title!' => '',
 				],
 			]
 		);
 
 		$this->add_control(
-			'title_color',
+			'title_color_normal',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color Normal', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-post__title' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .item-post--heading' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_lm_tattoo_show_title!' => '',
+					'show_title!' => '',
 				],
 			]
 		);
@@ -469,10 +333,10 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					' {{WRAPPER}} .elementor-post__title a:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .item-post--heading:hover' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_lm_tattoo_show_title!' => '',
+					'show_title!' => '',
 				],
 			]
 		);
@@ -482,65 +346,36 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 			[
 				'name' => 'title_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-post__title',
+				'selector' => '{{WRAPPER}} .item-post--heading',
 				'condition' => [
-					'skin_lm_tattoo_show_title!' => '',
+					'show_title!' => '',
 				],
 			]
 		);
 
+		// style date
 		$this->add_control(
-			'heading_meta_style',
+			'date_style',
 			[
-				'label' => __( 'Meta', 'bearsthemes-addons' ),
+				'label' => __( 'Date', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_lm_tattoo_show_meta!' => '',
+					'show_meta!' => '',
 				],
 			]
 		);
 
 		$this->add_control(
-			'meta_color',
+			'date_color',
 			[
-				'label' => __( 'Color Text', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-post__meta li' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .item-post--date' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_lm_tattoo_show_meta!' => '',
-				],
-			]
-		);
-
-        $this->add_control(
-			'meta_color_second',
-			[
-				'label' => __( 'Color Text Second', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post__meta li a' => 'color: {{VALUE}};',
-				],
-				'condition' => [
-					'skin_lm_tattoo_show_meta!' => '',
-				],
-			]
-		);
-
-		$this->add_control(
-			'meta_color_hover',
-			[
-				'label' => __( 'Color Text Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-post__meta li:first-child,
-                    {{WRAPPER}} .elementor-post__meta li a:hover' => 'color: {{VALUE}}',
-				],
-				'condition' => [
-					'skin_lm_tattoo_show_meta!' => '',
+					'show_meta!' => '',
 				],
 			]
 		);
@@ -548,15 +383,160 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'meta_typography',
+				'name' => 'date_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-post__meta li',
+				'selector' => '{{WRAPPER}} .item-post--date',
 				'condition' => [
-					'skin_lm_tattoo_show_meta!' => '',
+					'show_meta!' => '',
 				],
 			]
 		);
 
+		// style author
+		$this->add_control(
+			'author_style',
+			[
+				'label' => __( 'Author', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_control(
+			'author_color_normal',
+			[
+				'label' => __( 'Color Normal', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-post--author' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'author_color_active',
+			[
+				'label' => __( 'Color Active', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-post--author > a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'author_typography',
+				'default' => '',
+				'selector' => '{{WRAPPER}} .item-post--author',
+			]
+		);
+
+		// style text content
+		$this->add_control(
+			'text_style',
+			[
+				'label' => __( 'Text', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_control(
+			'text_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-post--excerpt' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'text_typography',
+				'default' => '',
+				'selector' => '{{WRAPPER}} .item-post--excerpt',
+			]
+		);
+
+		// style button
+        $this->add_control(
+			'button_style',
+			[
+				'label' => __( 'Button', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->start_controls_tabs( 'button_style_tabs' );
+
+		$this->start_controls_tab( 'button_style_normal',
+			[
+				'label' => __( 'Normal', 'bearsthemes-addons' ),
+			]
+		);
+
+			$this->add_control(
+				'button_color',
+				[
+					'label' => __( 'Color', 'bearsthemes-addons' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .item-post--cta > a svg path' => 'fill: {{VALUE}}',
+					],
+				]
+			);
+
+			$this->add_control(
+				'button_bg',
+				[
+					'label' => __( 'Background Color', 'bearsthemes-addons' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .item-post--cta > a' => 'background-color: {{VALUE}}',
+					],
+				]
+			);
+
+			
+		$this->end_controls_tab();
+
+		$this->start_controls_tab( 'button_style_hover',
+			[
+				'label' => __( 'Hover', 'bearsthemes-addons' ),
+			]
+		);
+
+			$this->add_control(
+				'button_color_hv',
+				[
+					'label' => __( 'Color', 'bearsthemes-addons' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .item-post--cta > a:hover svg path' => 'fill: {{VALUE}}',
+					],
+				]
+			);
+
+			$this->add_control(
+				'button_bg_hover',
+				[
+					'label' => __( 'Background Color', 'bearsthemes-addons' ),
+					'type' => Controls_Manager::COLOR,
+					'selectors' => [
+						'{{WRAPPER}} .item-post--cta > a:hover' => 'background: {{VALUE}}',
+						'{{WRAPPER}} .item-post--cta > a:hover' => 'border-color: {{VALUE}}',
+					],
+				]
+			);
+
+		$this->end_controls_tab();
+	$this->end_controls_tabs();
 
     $this->end_controls_section();
   }

@@ -10602,6 +10602,7 @@ img.mfp-img {
   box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.1);
   position: relative;
   margin-bottom: 30px;
+  transition: all 0.25s ease-in-out;
 }
 
 .elementor-posts--skin-lemon-tattoo .item-post--date {
@@ -10620,6 +10621,11 @@ img.mfp-img {
   line-height: 1.5em;
   margin: 0;
   font-family: "Roboto", Sans-serif;
+  transition: all 0.25s ease-in-out;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--heading:hover {
+  color: #8abf89;
 }
 
 .elementor-posts--skin-lemon-tattoo .item-post--heading > a {
@@ -10677,6 +10683,16 @@ img.mfp-img {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.25s ease-in-out;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--cta > a:hover {
+  background: #8abf89;
+  border-color: #8abf89;
+}
+
+.elementor-posts--skin-lemon-tattoo .item-post--cta > a:hover svg path {
+  fill: #fff;
 }
 
 .elementor-posts--skin-lemon-tattoo .item-post--cta > a svg {
@@ -10687,6 +10703,7 @@ img.mfp-img {
 
 .elementor-posts--skin-lemon-tattoo .item-post--cta > a svg path {
   fill: #8abf89;
+  transition: all 0.25s ease-in-out;
 }
 
 .elementor-recent-posts .elementor-post {
