@@ -1573,6 +1573,7 @@
                 transition: all 0.6s;
             }
             &__onsale{
+                position: absolute;
                 top: 20px;
                 left: 0px;
                 background-color: #f35b5b;
@@ -1583,6 +1584,7 @@
                 padding: 10px 24px;
                 text-transform: uppercase;
                 font-weight: 600;
+                z-index: 3;
             }
             &__button{
                 box-sizing: border-box;
@@ -1747,14 +1749,13 @@
             }
             &__title{
                 text-transform: uppercase;
-                margin-bottom: 5px;
                 font-style: normal;
                 font-weight: 700;
                 font-size: 20px;
                 line-height: 28px;
                 letter-spacing: 0px;
                 color: #333;
-                margin-bottom: 5px;
+                margin-bottom: 10px;
                 a{
                     color: inherit;
                     &:hover{

@@ -2911,6 +2911,7 @@ img.mfp-img {
 }
 
 .elementor-products--skin-wellness .elementor-product__onsale {
+  position: absolute;
   top: 20px;
   left: 0px;
   background-color: #f35b5b;
@@ -2921,6 +2922,7 @@ img.mfp-img {
   padding: 10px 24px;
   text-transform: uppercase;
   font-weight: 600;
+  z-index: 3;
 }
 
 .elementor-products--skin-wellness .elementor-product__button {
@@ -3109,14 +3111,13 @@ img.mfp-img {
 
 .elementor-products--skin-wellness .elementor-product__title {
   text-transform: uppercase;
-  margin-bottom: 5px;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
   letter-spacing: 0px;
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
 }
 
 .elementor-products--skin-wellness .elementor-product__title a {
