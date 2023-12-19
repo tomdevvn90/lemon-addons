@@ -36,8 +36,8 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/plugins/lemon-addons/assets/js/plugin.js */"./assets/js/plugin.js");
-module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/plugins/lemon-addons/assets/scss/plugin.scss */"./assets/scss/plugin.scss");
+__webpack_require__(/*! C:\Users\Admin\Local Sites\lemonspa\app\public\wp-content\plugins\lemon-addons\assets\js\plugin.js */"./assets/js/plugin.js");
+module.exports = __webpack_require__(/*! C:\Users\Admin\Local Sites\lemonspa\app\public\wp-content\plugins\lemon-addons\assets\scss\plugin.scss */"./assets/scss/plugin.scss");
 
 
 /***/ })

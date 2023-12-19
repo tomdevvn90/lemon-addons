@@ -529,8 +529,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 					'label' => __( 'Background Color', 'bearsthemes-addons' ),
 					'type' => Controls_Manager::COLOR,
 					'selectors' => [
-						'{{WRAPPER}} .item-post--cta > a:hover' => 'background: {{VALUE}}',
-						'{{WRAPPER}} .item-post--cta > a:hover' => 'border-color: {{VALUE}}',
+						'{{WRAPPER}} .item-post--cta > a:hover' => 'background: {{VALUE}};border-color: {{VALUE}}',
 					],
 				]
 			);

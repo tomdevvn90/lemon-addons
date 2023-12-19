@@ -40,19 +40,36 @@ class Skin_Barber extends Skin_Base {
 
 	public function render() {
 		$settings = $this->parent->get_settings();
-		$category_id = $settings['category'];
-		$term = get_term_by( 'id', $category_id, 'product_cat' ) ;
-		
+		if( $settings['_skin'] ) {
+			$class_form = 'search-form-box search-form-box--' . $settings['_skin'];
+		} else {
+			$class_form = 'search-form-box  search-form-box--default';
+		}
+
+		$cat_args = array(
+			'post_type' => 'product',
+			'post_status' => 'publish'
+		);
+		$product_categories = get_terms( 'product_cat', $cat_args );
+
 		
 		?>
 
-    <div>   
-      <h3>Search Products</h3>
+    <div class="<?php echo $class_form; ?>">   
+      <h3><?php echo $settings['title'] ?></h3>
       <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
         <input type="text" name="s" placeholder="Search Products"/>
         <input type="hidden" name="post_type" value="products" />
-        <input type="hidden" name="product_cat" value="<?php echo $term->slug;  ?>" />
-        <input type="submit" alt="Search" value="Search" />
+				<select id="cars" name="product_cat">
+					<?php
+						if( !empty($product_categories) ){
+							foreach ($product_categories as $key => $category) {
+								echo '<option value="'.$category->slug.'">'.$category->name.'</option>';
+							}
+						}
+					?>
+				</select>
+        <input type="submit" alt="Search" value="<?php echo $settings['button_text'] ?>" />
       </form>
     </div>
 
