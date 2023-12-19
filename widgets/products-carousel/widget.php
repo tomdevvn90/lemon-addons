@@ -1921,7 +1921,7 @@ class Be_Products_Carousel extends Widget_Base {
 
 	protected function render_post() {
 		$settings = $this->get_settings_for_display();
-		print_r( $this->get_instance_value_skin('sliders_per_view') );
+
 		?>
 		<div class="swiper-slide">
 			<article id="post-<?php the_ID();  ?>" <?php post_class( 'elementor-product' ); ?>>
