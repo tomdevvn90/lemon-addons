@@ -5,16 +5,24 @@
   !*** ./assets/js/plugin.js ***!
   \*****************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ (function(module, exports) {
 
-/* WEBPACK VAR INJECTION */(function(jQuery) {(function ($) {
-  "use strict";
+// (function ($) {
+//     "use strict";
 
-  $(window).on("scroll", function () {});
-  $(window).on("load", function () {});
-  $(document).ready(function () {});
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
+//     $(window).on("scroll", function () {
+
+//     });
+
+//     $(window).on("load", function () {
+
+//     });
+
+//     $(document).ready(function () {
+
+//     })
+
+// })(jQuery);
 
 /***/ }),
 
@@ -36,10 +44,10 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Admin\Local Sites\lemonspa\app\public\wp-content\plugins\lemon-addons\assets\js\plugin.js */"./assets/js/plugin.js");
-module.exports = __webpack_require__(/*! C:\Users\Admin\Local Sites\lemonspa\app\public\wp-content\plugins\lemon-addons\assets\scss\plugin.scss */"./assets/scss/plugin.scss");
+__webpack_require__(/*! /Users/vuongvovan/Local Sites/lemon-dev/app/public/wp-content/plugins/lemon-addons/assets/js/plugin.js */"./assets/js/plugin.js");
+module.exports = __webpack_require__(/*! /Users/vuongvovan/Local Sites/lemon-dev/app/public/wp-content/plugins/lemon-addons/assets/scss/plugin.scss */"./assets/scss/plugin.scss");
 
 
 /***/ })
 
-},[[0,"/js/manifest","/js/vendor"]]]);
+},[[0,"/js/manifest"]]]);

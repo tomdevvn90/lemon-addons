@@ -48,7 +48,7 @@ class Be_Testimonial_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_List_Galloway( $this ) );
 		$this->add_skin( new Skins\Skin_List_Jorasses( $this ) );
 		$this->add_skin( new Skins\Skin_List_Cholatse( $this ) );
-		$this->add_skin( new Skins\Skin_List_Tronador( $this ) );
+		$this->add_skin( new Skins\Skin_Lemon_Tattoo( $this ) );
 
 	}
 

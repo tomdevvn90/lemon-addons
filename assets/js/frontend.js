@@ -1024,6 +1024,7 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-galloway', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-jorasses', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-cholatse', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-lemon-tattoo', SwiperSliderHandler);
 
         elementorFrontend.hooks.addAction('frontend/element_ready/be-members.skin-pumori', FilterPostHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-members-carousel.default', SwiperSliderHandler);
