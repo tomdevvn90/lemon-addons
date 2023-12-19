@@ -8,6 +8,7 @@ use Elementor\Group_Control_Css_Filter;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
+use Elementor\Icons_Manager;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -1485,18 +1486,18 @@ class Be_Projects_Carousel extends Widget_Base {
 		<?php
 	}
 
-	protected function render_icon( $icon ) {
-		$icon_html = '';
+	protected function render_swiper_button_icon( $type ) {
+		$direction = 'next' === $type ? 'right' : 'left';
+		$icon_settings = $this->get_settings_for_display( 'arrow_' . $type . '_icon' );
 
-		if( !empty( $icon['value'] ) ) {
-			if( 'svg' !== $icon['library'] ) {
-				$icon_html = '<i class="' . esc_attr( $icon['value'] ) . '" aria-hidden="true"></i>';
-			} else {
-				$icon_html = file_get_contents($icon['value']['url']);;
-			}
+		if ( empty( $icon_settings['value'] ) ) {
+			$icon_settings = [
+				'library' => 'eicons',
+				'value' => 'eicon-chevron-' . $direction,
+			];
 		}
 
-		return $icon_html;
+		Icons_Manager::render_icon( $icon_settings, [ 'aria-hidden' => 'true' ] );
 	}
 
 	protected function render_navigation() {
@@ -1509,9 +1510,7 @@ class Be_Projects_Carousel extends Widget_Base {
 		?>
 		<div class="elementor-swiper-button elementor-swiper-button-prev">
 			<?php
-				if( '' !== $this->render_icon( $settings['arrow_prev_icon'] ) ) {
-					echo $this->render_icon( $settings['arrow_prev_icon'] );
-				}
+				$this->render_swiper_button_icon( 'prev' );
 
 				if( ( 'both' === $settings['navigation'] || 'text' === $settings['navigation'] ) && '' !== $settings['arrow_prev_text'] ) {
 					echo '<span>' . $settings['arrow_prev_text'] . '</span>';
@@ -1525,9 +1524,7 @@ class Be_Projects_Carousel extends Widget_Base {
 					echo '<span>' . $settings['arrow_next_text'] . '</span>';
 				}
 
-				if( '' !== $this->render_icon( $settings['arrow_next_icon'] ) ) {
-					echo $this->render_icon( $settings['arrow_next_icon'] );
-				}
+				$this->render_swiper_button_icon( 'next' );
 			?>
 		</div>
 		<?php
