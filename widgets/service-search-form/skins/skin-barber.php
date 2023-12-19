@@ -21,7 +21,7 @@ class Skin_Barber extends Skin_Base {
 	
 	}
 
-	public function get_id() {
+	public function get_id() { 
 		return 'skin-barber';
 	}
 
