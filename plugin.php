@@ -113,6 +113,7 @@ class Plugin {
 			'products-sidebar',
 			'text-animation',
 			'banner-image-box',
+			'service-search-form',
 
 		);
 
@@ -252,6 +253,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Animation\Be_Banner_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Text_Animation\Be_Text_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Search_Form\Be_Search_Form() );
 
 		// WooCommerce.
 		if ( $this->woocommerce_status() ) {
