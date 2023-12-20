@@ -114,14 +114,14 @@ class Skin_Grid_Nevado extends Skin_Base {
 			]
 		);
 
-    $this->add_responsive_control(
+		$breakpoints = $this->parent->get_breakpoints();
+
+    	$this->add_responsive_control(
 			'sliders_per_view',
 			[
 				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '2',
-				'tablet_default' => '2',
-				'mobile_default' => '1',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -131,7 +131,7 @@ class Skin_Grid_Nevado extends Skin_Base {
 					'6' => '6',
 				],
 				'separator' => 'before',
-			]
+			] + $breakpoints
 		);
 
 		$this->add_group_control(
