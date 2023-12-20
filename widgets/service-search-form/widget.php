@@ -100,6 +100,15 @@ class Be_Search_Form extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'placeholder',
+			[
+				'label' => __( 'Placeholder', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::TEXT,
+				'label_block' => true,
+				'default' => __( 'Search...', 'bearsthemes-addons' ),
+			]
+		);
 		
 		$this->add_control(
 			'button_text',
@@ -154,7 +163,23 @@ class Be_Search_Form extends Widget_Base {
 				'type' => Controls_Manager::HEADING,
 			]
 		);
+		$this->add_responsive_control(
+			'title_space',
+			[
+				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .search-form-box__title' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 
+				],
+			]
+		);
 		$this->add_control(
 			'title_color',
 			[
@@ -196,6 +221,24 @@ class Be_Search_Form extends Widget_Base {
 			]
 		);
 
+		$this->add_responsive_control(
+			'decs_space',
+			[
+				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .search-form-box__desc' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+
+				],
+			]
+		);
+
 		$this->add_control(
 			'desc_color',
 			[
@@ -222,6 +265,25 @@ class Be_Search_Form extends Widget_Base {
 			[
 				'label' => __( 'Form Field', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+		$this->add_responsive_control(
+			'field_space',
+			[
+				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .search-form-box form input.field' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .search-form-box form select.field' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+
+				],
 			]
 		);
 
@@ -335,6 +397,23 @@ class Be_Search_Form extends Widget_Base {
 			[
 				'label' => __( 'Button Submit', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
+			]
+		);
+		$this->add_responsive_control(
+			'button_space',
+			[
+				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .search-form-box__submit' => 'margin-top: {{SIZE}}{{UNIT}};',
+
+				],
 			]
 		);
 		$this->start_controls_tabs( 'button_effects_tabs' );
@@ -535,7 +614,7 @@ class Be_Search_Form extends Widget_Base {
 				echo '<div class="search-form-box__desc">' . $settings['desc'] . '</div>';
 			}?>
       <form role="search" action="<?php echo site_url('/'); ?>" method="get" id="searchform">
-        <input class="field" type="text" name="s" placeholder="Search Products"/>
+        <input class="field" type="text" name="s" placeholder="<?php echo $settings['placeholder'] ?>"/>
         <input type="hidden" name="post_type" value="products" />
 				<select class="field" id="cars" name="product_cat">
 					<?php
