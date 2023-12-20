@@ -114,6 +114,7 @@ class Plugin {
 			'text-animation',
 			'banner-image-box',
 			'service-search-form',
+			'be-team-carousel',
 
 		);
 
@@ -254,6 +255,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Text_Animation\Be_Text_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Search_Form\Be_Search_Form() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Be_Team_Carousel() );
 
 		// WooCommerce.
 		if ( $this->woocommerce_status() ) {
