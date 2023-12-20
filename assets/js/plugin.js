@@ -1,16 +1,16 @@
-(function ($) {
-    "use strict";
+// (function ($) {
+//     "use strict";
 
-    $(window).on("scroll", function () {
+//     $(window).on("scroll", function () {
         
-    });
+//     });
     
-    $(window).on("load", function () {
+//     $(window).on("load", function () {
 
-    });
+//     });
 
-    $(document).ready(function () {
+//     $(document).ready(function () {
       
-    })
+//     })
 
-})(jQuery); 
+// })(jQuery); 

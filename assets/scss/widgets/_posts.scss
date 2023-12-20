@@ -3719,8 +3719,8 @@
       &--date{
         text-transform: uppercase;
         font-size: 20px;
-        color: $tatto-color-primary;
-        font-family: $tatto-font-primary;
+        color: $tattoo-color-primary;
+        font-family: $tattoo-font-primary;
         line-height: 1.5em;
         font-weight: 400;
         margin: 0 0 10px 0;
@@ -3731,11 +3731,11 @@
         font-weight: 700;
         line-height: 1.5em;
         margin: 0;
-        font-family: $tatto-font-primary;
+        font-family: $tattoo-font-primary;
         transition: $transition;
 
         &:hover{
-          color: $tatto-color-primary;
+          color: $tattoo-color-primary;
         }
 
         > a{
@@ -3766,7 +3766,7 @@
         font-size:18px;
         line-height: 1.5em;
         font-weight: 500;
-        font-family: $tatto-font-primary;
+        font-family: $tattoo-font-primary;
         margin: 10px 0 24px 0;
         > a{
           font-size: inherit;
@@ -3774,7 +3774,7 @@
           font-weight: inherit;
           line-height: inherit;
           letter-spacing: inherit;
-          color: $tatto-color-primary;
+          color: $tattoo-color-primary;
           font-family: inherit;
           text-decoration: none;
         }
@@ -3787,7 +3787,7 @@
           border-radius: 5px;
           background: #fff;
           text-align: center;
-          color: $tatto-color-primary;
+          color: $tattoo-color-primary;
           line-height: 50px;
           border: 1px dashed #ddd;
           position: absolute;
@@ -3797,8 +3797,8 @@
           transition: $transition;
 
           &:hover{
-            background: $tatto-color-primary;
-            border-color: $tatto-color-primary;
+            background: $tattoo-color-primary;
+            border-color: $tattoo-color-primary;
             svg{
               path{
                 fill: #fff;
@@ -3811,7 +3811,7 @@
             max-width: 20px;
             height: auto;
             path{
-              fill: $tatto-color-primary;
+              fill: $tattoo-color-primary;
               transition: $transition;
             }
           }
