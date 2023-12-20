@@ -1,5 +1,8 @@
 .search-form-box{
-  &--default {
-    padding: 20px;
+  form > *{
+    margin-bottom:10px;
+  }
+  input.search-form-box__submit {
+    width: 100%;
   }
 }
