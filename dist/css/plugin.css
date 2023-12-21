@@ -1562,6 +1562,16 @@ img.mfp-img {
   text-decoration: none;
 }
 
+.elementor-products--default .elementor-product__star-rating {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.elementor-products--default .elementor-product__star-rating .star-rating {
+  float: none;
+}
+
 .elementor-products--default .elementor-product:hover .elementor-product__overlay {
   opacity: 1;
 }
@@ -1763,6 +1773,17 @@ img.mfp-img {
   text-decoration: none;
 }
 
+.elementor-products--skin-grid-andrus .elementor-product__star-rating {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.elementor-products--skin-grid-andrus .elementor-product__star-rating .star-rating {
+  float: none;
+  color: #fed700;
+}
+
 .elementor-products--skin-grid-andrus .elementor-product__category {
   font-size: 14px;
   font-weight: 700;
@@ -1872,6 +1893,20 @@ img.mfp-img {
   border-radius: 3px;
 }
 
+.elementor-products--skin-grid-havsula .elementor-product__star-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: inline-block;
+  font-size: 16px;
+  z-index: 5;
+}
+
+.elementor-products--skin-grid-havsula .elementor-product__star-rating .star-rating {
+  float: none;
+  color: #FED700;
+}
+
 .elementor-products--skin-grid-havsula .elementor-product .button {
   display: flex;
   align-items: center;
@@ -1971,6 +2006,7 @@ img.mfp-img {
   font-weight: 700;
   line-height: 1.25;
   color: #1f1f1f;
+  margin-top: 0;
   margin-bottom: 0;
 }
 
@@ -2183,6 +2219,17 @@ img.mfp-img {
   letter-spacing: 1px;
 }
 
+.elementor-products--skin-grid-batura .elementor-product__star-rating {
+  margin-top: 10px;
+  font-size: 16px;
+  display: flex;
+}
+
+.elementor-products--skin-grid-batura .elementor-product__star-rating .star-rating {
+  float: none;
+  color: #fed700;
+}
+
 .elementor-products--skin-grid-batura .elementor-product:hover .elementor-product__content {
   opacity: 1;
   transform: translateY(0%);
@@ -2267,7 +2314,7 @@ img.mfp-img {
 
 .elementor-products--skin-grid-pumori .elementor-product__content span.elementor-product__price {
   font-size: 13px;
-  margin-bottom: 10px;
+  margin-top: 8px;
   line-height: normal;
   font-weight: bold;
   display: block;
@@ -2281,6 +2328,16 @@ img.mfp-img {
 .elementor-products--skin-grid-pumori .elementor-product__content span.elementor-product__price ins {
   font-weight: inherit;
   text-decoration: none;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__star-rating {
+  margin-top: 8px;
+  display: inline-block;
+  font-size: 14px;
+}
+
+.elementor-products--skin-grid-pumori .elementor-product__star-rating .star-rating {
+  float: none;
 }
 
 .elementor-products--skin-grid-pumori .elementor-product:hover .elementor-product__thumbnail {
@@ -2326,6 +2383,12 @@ img.mfp-img {
 }
 
 .elementor-products--skin-ramble .elementor-product.has-thumbnail:hover .elementor-product__price {
+  animation-name: fadeInUp;
+  animation-duration: 1.5s;
+  transition-delay: 0.1s;
+}
+
+.elementor-products--skin-ramble .elementor-product.has-thumbnail:hover .elementor-product__star-rating {
   animation-name: fadeInUp;
   animation-duration: 1.5s;
   transition-delay: 0.2s;
@@ -2494,7 +2557,6 @@ img.mfp-img {
   white-space: nowrap;
   color: #FED700;
   margin-bottom: 12px;
-  padding-left: 10px;
 }
 
 .elementor-products--skin-ramble .elementor-product__price del {
@@ -2504,6 +2566,17 @@ img.mfp-img {
 .elementor-products--skin-ramble .elementor-product__price ins {
   font-weight: inherit;
   text-decoration: none;
+}
+
+.elementor-products--skin-ramble .elementor-product__star-rating {
+  margin-bottom: 15px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.elementor-products--skin-ramble .elementor-product__star-rating .star-rating {
+  float: none;
+  color: #FED700;
 }
 
 .elementor-products--skin-ramble .elementor-product:hover .elementor-product__overlay {
@@ -2859,6 +2932,16 @@ img.mfp-img {
   letter-spacing: 0.48px;
 }
 
+.elementor-products--skin-cosmetics .elementor-product__star-rating {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.elementor-products--skin-cosmetics .elementor-product__star-rating .star-rating {
+  float: none;
+}
+
 .elementor-products--skin-wellness .elementor-product {
   overflow: hidden;
 }
@@ -3172,6 +3255,16 @@ img.mfp-img {
   color: #f35b5b;
   line-height: 30px;
   letter-spacing: 0.48px;
+}
+
+.elementor-products--skin-wellness .elementor-product__star-rating {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.elementor-products--skin-wellness .elementor-product__star-rating .star-rating {
+  float: none;
 }
 
 .elementor-banner-animation {

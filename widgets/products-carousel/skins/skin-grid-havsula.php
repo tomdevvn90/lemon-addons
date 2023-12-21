@@ -133,6 +133,18 @@ class Skin_Grid_Havsula extends Skin_Base {
 				'default' => 'yes',
 			]
 		);
+
+		$this->add_control(
+			'show_star_rating',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'default' => 'yes',
+			]
+		);
+
 	}
 
 	public function registerd_design_layout_controls( Widget_Base $widget ) {
@@ -640,6 +652,56 @@ class Skin_Grid_Havsula extends Skin_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_star_rating_style',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'skin_grid_havsula_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_grid_havsula_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_size',
+			[
+				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'default' => [
+					'size' => 16,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'font-size: {{SIZE}}{{UNIT}}',
+				],
+				'condition' => [
+					'skin_grid_havsula_show_star_rating!' => '',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -658,6 +720,12 @@ class Skin_Grid_Havsula extends Skin_Base {
 		  					<div class="elementor-product__overlay"></div>
 
 		  					<?php echo $this->parent->on_sales(); ?>
+							
+							<?php
+							if( '' !== $this->parent->get_instance_value_skin('show_star_rating') ) {
+								echo $this->parent->star_rating_html();
+							}
+							?>
 
 		  					<div class="elementor-product__thumbnail">
 		  						<?php the_post_thumbnail( $this->parent->get_instance_value_skin('thumbnail_size') ); ?>

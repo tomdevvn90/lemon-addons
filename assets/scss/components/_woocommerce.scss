@@ -181,6 +181,15 @@
                 }
             }
 
+            &__star-rating {
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 16px;
+                .star-rating{
+                    float: none;
+                }
+            }
+
             &:hover {
                 .elementor-product {
                     &__overlay {
@@ -400,6 +409,16 @@
                 }
             }
 
+            &__star-rating {
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 16px;
+                .star-rating{
+                    float: none;
+                    color: #fed700;
+                }
+            }
+
             &__category {
                 font-size: 14px;
                 font-weight: 700;
@@ -531,6 +550,19 @@
                 border-radius: 3px;
             }
 
+            &__star-rating {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                display: inline-block;
+                font-size: 16px;
+                z-index: 5;
+                .star-rating{
+                    float: none;
+                    color: #FED700;
+                }
+            }
+
             .button {
                 display: flex;
                 align-items: center;
@@ -636,6 +668,7 @@
                 font-weight: 700;
                 line-height: 1.25;
                 color: #1f1f1f;
+                margin-top: 0;
                 margin-bottom: 0;
 
                 a {
@@ -857,6 +890,16 @@
                 }
             }
 
+            &__star-rating {
+                margin-top: 10px;
+                font-size: 16px;
+                display: flex;
+                .star-rating{
+                    float: none;
+                    color: #fed700;
+                }
+            }
+
             &:hover {
                 .elementor-product {
                     &__content {
@@ -948,7 +991,7 @@
 
                 span.elementor-product__price {
                     font-size: 13px;
-                    margin-bottom: 10px;
+                    margin-top: 8px;
                     line-height: normal;
                     font-weight: bold;
                     display: block;
@@ -962,6 +1005,15 @@
                         font-weight: inherit;
                         text-decoration: none;
                     }
+                }
+            }
+
+            &__star-rating {
+                margin-top: 8px;
+                display: inline-block;
+                font-size: 14px;
+                .star-rating{
+                    float: none;
                 }
             }
 
@@ -1018,6 +1070,11 @@
                             animation-duration: 1.5s;
                         }
                         &__price {
+                            animation-name: fadeInUp;
+                            animation-duration: 1.5s;
+                            transition-delay: .1s;
+                        }
+                        &__star-rating{
                             animation-name: fadeInUp;
                             animation-duration: 1.5s;
                             transition-delay: .2s;
@@ -1195,7 +1252,6 @@
                 white-space: nowrap;
                 color: #FED700;
                 margin-bottom: 12px;
-                padding-left: 10px;
                 del {
                     color: #ffff;
                 }
@@ -1203,6 +1259,16 @@
                 ins {
                     font-weight: inherit;
                     text-decoration: none;
+                }
+            }
+
+            &__star-rating {
+                margin-bottom: 15px;
+                display: inline-block;
+                font-size: 16px;
+                .star-rating{
+                    float: none;
+                    color: #FED700;
                 }
             }
 
@@ -1517,6 +1583,16 @@
                     }
                 }
             }
+
+            &__star-rating {
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 16px;
+                .star-rating{
+                    float: none;
+                }
+            }
+
         }
     }
 
@@ -1798,6 +1874,15 @@
                         line-height: 30px;
                         letter-spacing: 0.48px;
                     }
+                }
+            }
+
+            &__star-rating {
+                margin-top: 10px;
+                display: inline-block;
+                font-size: 16px;
+                .star-rating{
+                    float: none;
                 }
             }
         }

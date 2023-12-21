@@ -135,6 +135,17 @@ class Skin_Wellness extends Skin_Base {
 		);
 
 		$this->add_control(
+			'show_star_rating',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'default' => 'yes',
+			]
+		);
+
+		$this->add_control(
 			'show_category',
 			[
 				'label' => __( 'Category', 'bearsthemes-addons' ),
@@ -187,7 +198,7 @@ class Skin_Wellness extends Skin_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product' => 'text-align: {{VALUE}};',
-					'{{WRAPPER}} .elementor-product ,elementor-product__price' => 'justify-content: {{VALUE}};',
+					'{{WRAPPER}} .elementor-product .elementor-product__price' => 'justify-content: {{VALUE}};',
 				],
 			]
 		);
@@ -667,6 +678,56 @@ class Skin_Wellness extends Skin_Base {
 		);
 
 		$this->add_control(
+			'heading_star_rating_style',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'skin_wellness_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_wellness_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_size',
+			[
+				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'default' => [
+					'size' => 16,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'font-size: {{SIZE}}{{UNIT}}',
+				],
+				'condition' => [
+					'skin_wellness_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
 			'heading_category_style',
 			[
 				'label' => __( 'Category', 'bearsthemes-addons' ),
@@ -766,6 +827,11 @@ class Skin_Wellness extends Skin_Base {
 							if( '' !== $this->parent->get_instance_value_skin('show_price') ) {
 								echo $this->parent->price_html();
 							}
+
+							if( '' !== $this->parent->get_instance_value_skin('show_star_rating') ) {
+								echo $this->parent->star_rating_html();
+							}
+							
 						?>
 					</div>
 				</div>
