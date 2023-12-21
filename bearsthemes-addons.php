@@ -133,12 +133,43 @@ final class Bearsthemes_Addons {
 
 	}
 
+	public function bearsthemes_load_elementor_breakpoint_variables() {
+	
+		$breakpoints_default = \Elementor\Plugin::$instance->breakpoints->get_default_config();
+		$breakpoints_active = \Elementor\Plugin::$instance->breakpoints->get_active_breakpoints();
+
+		$breakpoints =  ':root{';
+
+		if( !empty( $breakpoints_default ) ){
+			foreach ($breakpoints_default as $key => $breakpoint ) {
+				$value = $breakpoint['default_value'];
+				$variable = "--e-global-default-break-$key: {$value}px;";
+				$breakpoints .= $variable;
+			}
+		}
+
+		if( !empty( $breakpoints_active ) ){
+			foreach ($breakpoints_active as $key => $breakpoint ) {
+				$value = $breakpoint->get_value();
+				$variable = "--e-global-active-break-$key: {$value}px;";
+				$breakpoints .= $variable;
+			}
+		}
+
+		$breakpoints .=  '}';
+
+		return $breakpoints;
+	}
+
 	/**
 	 * Enqueue scripts
 	 */
 	public function bearsthemes_enqueue_scripts() {
 		wp_enqueue_style( 'lemon-addons-plugin', plugins_url( '/dist/css/plugin.css', __FILE__ ), array(), rand(11111, 99999) );
 		wp_enqueue_script( 'lemon-addons-plugin', plugin_dir_url( __FILE__ ) . 'dist/js/plugin.js',   array( 'jquery' ), rand(11111, 99999999), true);
+	
+		$breakpoint_variables = $this->bearsthemes_load_elementor_breakpoint_variables();
+		wp_add_inline_style( 'lemon-addons-plugin', $breakpoint_variables );
 	}
 
 	/**
