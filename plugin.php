@@ -114,11 +114,8 @@ class Plugin {
 			'text-animation',
 			'banner-image-box',
 			'service-search-form',
-<<<<<<< HEAD
 			'before-after',
-=======
 			'be-team-carousel',
->>>>>>> 962237f8d2b25a530b17385740b61e86a31accc9
 
 		);
 
@@ -261,11 +258,8 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Text_Animation\Be_Text_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Search_Form\Be_Search_Form() );
-<<<<<<< HEAD
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Before_After\Be_Before_After() );
-=======
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Be_Team_Carousel() );
->>>>>>> 962237f8d2b25a530b17385740b61e86a31accc9
 
 		// WooCommerce.
 		if ( $this->woocommerce_status() ) {
