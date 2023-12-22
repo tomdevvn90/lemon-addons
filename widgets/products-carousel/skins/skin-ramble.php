@@ -24,14 +24,14 @@ class Skin_Ramble extends Skin_Base {
     public function register_layout_controls(Widget_Base $widget) {
         $this->parent = $widget;
 
+		$breakpoints = $this->parent->get_breakpoints();
+
         $this->add_responsive_control(
 			'sliders_per_view',
 			[
 				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
-				'tablet_default' => '2',
-				'mobile_default' => '1',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -40,7 +40,7 @@ class Skin_Ramble extends Skin_Base {
 					'5' => '5',
 					'6' => '6',
 				],
-			]
+			] + $breakpoints
 		);
 
 		$this->add_control(
@@ -121,6 +121,18 @@ class Skin_Ramble extends Skin_Base {
 				'default' => 'yes',
 			]
 		);
+
+		$this->add_control(
+			'show_star_rating',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'default' => 'yes',
+			]
+		);
+
     }
 
     public function registerd_design_layout_controls(Widget_Base $widget) {
@@ -149,7 +161,7 @@ class Skin_Ramble extends Skin_Base {
 				'label' => __( 'Alignment', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
-					'left' => [
+					'flex-start' => [
 						'title' => __( 'Left', 'bearsthemes-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
@@ -157,13 +169,13 @@ class Skin_Ramble extends Skin_Base {
 						'title' => __( 'Center', 'bearsthemes-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
-					'right' => [
+					'flex-end' => [
 						'title' => __( 'Right', 'bearsthemes-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-product' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .elementor-product__content' => 'align-items: {{VALUE}};',
 				],
 			]
 		);
@@ -627,6 +639,56 @@ class Skin_Ramble extends Skin_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_star_rating_style',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'skin_grid_havsula_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_grid_havsula_show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_size',
+			[
+				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'default' => [
+					'size' => 16,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'font-size: {{SIZE}}{{UNIT}}',
+				],
+				'condition' => [
+					'skin_grid_havsula_show_star_rating!' => '',
+				],
+			]
+		);
+
 		$this->end_controls_section();
     }
 
@@ -646,31 +708,33 @@ class Skin_Ramble extends Skin_Base {
         }
 		?>
 		<div class="swiper-slide">
-	      <article id="post-<?php the_ID();  ?>" <?php post_class( $product_class ); ?>>
-              <a href="<?php echo get_the_permalink(); ?>">
-    	  			<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
-    	  				<div class="elementor-product__header">
+	      	<article id="post-<?php the_ID();  ?>" <?php post_class( $product_class ); ?>>
+				<?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+					<div class="elementor-product__header">
 
-    	  					<div class="elementor-product__thumbnail">
-    	  						<?php the_post_thumbnail( $this->parent->get_instance_value_skin('thumbnail_size') ); ?>
-    	  					</div>
-    	  				</div>
-    	  			<?php } ?>
+						<div class="elementor-product__thumbnail">
+							<?php the_post_thumbnail( $this->parent->get_instance_value_skin('thumbnail_size') ); ?>
+						</div>
+					</div>
+				<?php } ?>
 
-    	  			<div class="elementor-product__content animated">
-    	  				<?php
-    	  					if( '' !== $this->parent->get_instance_value_skin('show_title') ) {
-    	  						the_title( '<h3 class="elementor-product__title"><a href="' . get_the_permalink() . '">', '</a><sup> ' . $this->parent->on_sales() . ' </sup></h3>' );
-    	  					}
+				<div class="elementor-product__content animated">
+					<?php
+						if( '' !== $this->parent->get_instance_value_skin('show_title') ) {
+							the_title( '<h3 class="elementor-product__title"><a href="' . get_the_permalink() . '">', '</a><sup> ' . $this->parent->on_sales() . ' </sup></h3>' );
+						}
 
-    	  					if( '' !== $this->parent->get_instance_value_skin('show_price') ) {
-    	  						echo $this->parent->price_html();
-    	  					}
+						if( '' !== $this->parent->get_instance_value_skin('show_price') ) {
+							echo $this->parent->price_html();
+						}
 
-                            echo $this->parent->button_add_to_cart();
-    	  				?>
-    	  			</div>
-                </a>
+						if( '' !== $this->parent->get_instance_value_skin('show_star_rating') ) {
+							echo $this->parent->star_rating_html();
+						}
+
+						echo $this->parent->button_add_to_cart();
+					?>
+				</div>
 	  		</article>
 		</div>
 	<?php

@@ -12,3 +12,10 @@ $break-lg: 1200px;
 
 $container: 1200px;
 $space: 30px;
+
+$e-break-mobile: var(--e-global-active-break-mobile,--e-global-default-break-mobile);
+$e-break-mobile_extra: var(--e-global-active-break-mobile_extra,--e-global-default-break-mobile_extra);
+$e-break-tablet: var(--e-global-active-break-tablet,--e-global-default-break-tablet);
+$e-break-tablet_extra: var(--e-global-active-break-tablet_extra,--e-global-default-break-tablet_extra);
+$e-break-laptop: var(--e-global-active-break-laptop,--e-global-default-break-laptop);
+$e-break-widescreen: var(--e-global-active-break-widescreen,--e-global-default-break-widescreen);

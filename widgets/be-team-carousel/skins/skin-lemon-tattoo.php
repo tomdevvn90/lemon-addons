@@ -1,5 +1,5 @@
 <?php
-namespace BearsthemesAddons\Widgets\Testimonial_Carousel\Skins;
+namespace BearsthemesAddons\Widgets\Team_Carousel\Skins;
 
 use Elementor\Widget_Base;
 use Elementor\Skin_Base;
@@ -14,23 +14,23 @@ use Elementor\Group_Control_Box_Shadow;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Skin_Grid_Nevado extends Skin_Base {
+class Skin_Lemon_Tattoo extends Skin_Base {
 
 	protected function _register_controls_actions() {
-		add_action( 'elementor/element/be-testimonial-carousel/section_layout/before_section_end', [ $this, 'register_layout_section_controls' ] );
-		add_action( 'elementor/element/be-testimonial-carousel/section_design_layout/before_section_end', [ $this, 'register_design_latyout_section_controls' ] );
-		add_action( 'elementor/element/be-testimonial-carousel/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
-		add_action( 'elementor/element/be-testimonial-carousel/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
+		add_action( 'elementor/element/be-team-carousel/section_layout/before_section_end', [ $this, 'register_layout_section_controls' ] );
+		add_action( 'elementor/element/be-team-carousel/section_design_layout/before_section_end', [ $this, 'register_design_latyout_section_controls' ] );
+		add_action( 'elementor/element/be-team-carousel/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
+		add_action( 'elementor/element/be-team-carousel/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
 
 	}
 
 	public function get_id() {
-		return 'skin-grid-nevado';
+		return 'skin-lemon-tattoo';
 	}
 
 
 	public function get_title() {
-		return __( 'Grid Nevado', 'bearsthemes-addons' );
+		return __( 'Lemon Tattoo', 'bearsthemes-addons' );
 	}
 
 	public function register_layout_section_controls( Widget_Base $widget ) {
@@ -38,9 +38,17 @@ class Skin_Grid_Nevado extends Skin_Base {
 
 		$repeater = new Repeater();
 
+        $repeater->add_control(
+			'list_name', [
+				'label' => __( 'Name', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => __( 'Name' , 'bearsthemes-addons' ),
+			]
+		);
+
 		$repeater->add_control(
 			'list_content', [
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.' , 'bearsthemes-addons' ),
 			]
@@ -56,25 +64,8 @@ class Skin_Grid_Nevado extends Skin_Base {
 			]
 		);
 
-		$repeater->add_control(
-			'list_name', [
-				'label' => __( 'Name', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Name' , 'bearsthemes-addons' ),
-			]
-		);
-
-		$repeater->add_control(
-			'list_job', [
-				'label' => __( 'Job', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Job' , 'bearsthemes-addons' ),
-			]
-		);
-
 		$this->add_control(
-			'list',
-			[
+			'list',[
 				'label' => __( 'Slides', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
@@ -97,41 +88,9 @@ class Skin_Grid_Nevado extends Skin_Base {
 						'list_name' => __( 'Name #3', 'bearsthemes-addons' ),
 						'list_job' => 'Job #3',
 					],
-          [
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
-						'list_image' => Utils::get_placeholder_image_src(),
-						'list_name' => __( 'Name #4', 'bearsthemes-addons' ),
-						'list_job' => 'Job #4',
-					],
-          [
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
-						'list_image' => Utils::get_placeholder_image_src(),
-						'list_name' => __( 'Name #5', 'bearsthemes-addons' ),
-						'list_job' => 'Job #5',
-					],
 				],
 				'title_field' => '{{{ list_name }}}',
 			]
-		);
-
-		$breakpoints = $this->parent->get_breakpoints();
-
-    	$this->add_responsive_control(
-			'sliders_per_view',
-			[
-				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => '2',
-				'options' => [
-					'1' => '1',
-					'2' => '2',
-					'3' => '3',
-					'4' => '4',
-					'5' => '5',
-					'6' => '6',
-				],
-				'separator' => 'before',
-			] + $breakpoints
 		);
 
 		$this->add_group_control(
@@ -169,111 +128,107 @@ class Skin_Grid_Nevado extends Skin_Base {
 					],
 				],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-testimonial' => 'text-align: {{VALUE}};',
+					'{{WRAPPER}} .item-team-inner' => 'text-align: {{VALUE}};',
 				],
 			]
 		);
-
 	}
 
 	public function register_design_content_section_controls( Widget_Base $widget ) {
 		$this->parent = $widget;
 
-    $this->start_controls_section(
-			'section_design_content',
-			[
+        $this->start_controls_section(
+			'section_design_content',[
 				'label' => __( 'Content', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
-    $this->add_control(
-			'heading_content_style',
-			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::HEADING,
-			]
-		);
-
-		$this->add_control(
-			'content_color',
-			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .elementor-testimonial__content' => 'color: {{VALUE}};',
-				],
-			]
-		);
-
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'content_typography',
-				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-testimonial__content',
-			]
-		);
-
-		$this->add_control(
-			'heading_name_style',
-			[
+        $this->add_control(
+			'name_style',[
 				'label' => __( 'Name', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'name_color',
-			[
+			'name_color',[
 				'label' => __( 'Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-testimonial__name' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .item-team--name' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
+			Group_Control_Typography::get_type(),[
 				'name' => 'name_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-testimonial__name',
+				'selector' => '{{WRAPPER}} .item-team--name',
 			]
 		);
 
 		$this->add_control(
-			'heading_job_style',
-			[
-				'label' => __( 'Job', 'bearsthemes-addons' ),
+			'desc_style',[
+				'label' => __( 'Description', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
-			'job_color',
-			[
+			'desc_color',[
 				'label' => __( 'Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-testimonial__job' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .item-team--desc' => 'color: {{VALUE}};',
 				],
 			]
 		);
 
 		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'job_typography',
+			Group_Control_Typography::get_type(),[
+				'name' => 'desc_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-testimonial__job',
+				'selector' => '{{WRAPPER}} .item-team--desc',
 			]
 		);
 
+        $this->add_control(
+			'icon_style',[
+				'label' => __( 'Icon Quocte', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+			]
+		);
+
+        $this->add_control(
+			'ic_quocte_color',[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .item-team--desc svg path' => 'fill: {{VALUE}};',
+				],
+			]
+		);
+
+        $this->add_responsive_control(
+			'icon_fontsize',[
+				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .item-team--desc svg' => 'max-width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
     $this->end_controls_section();
   }
 
@@ -295,7 +250,7 @@ class Skin_Grid_Nevado extends Skin_Base {
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-testimonial__thumbnail' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .elementor-team__thumbnail' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -313,49 +268,38 @@ class Skin_Grid_Nevado extends Skin_Base {
 		$this->parent->render_loop_header();
 
 		foreach ( $this->parent->get_instance_value_skin( 'list' ) as $index => $item ) {
-		?>
+            $thumbnail = wp_get_attachment_image_src( $item['list_image']['id'], $this->parent->get_instance_value_skin( 'thumbnail_size' ) );
+        ?>
 
-		<div class="swiper-slide">
-			<div class="elementor-testimonial">
+            <div class="swiper-slide"> 
+				<div class="item-team"> 
+					<div class="item-team-inner"> 
+						<div class="item-team--thumbnail"> 
+							<?php if(!empty($thumbnail) && isset($thumbnail)): ?>
+								<img src="<?= esc_url( $attachment[0] ) ?>" alt="avatar" />
+							<?php else: ?>
+								<img src="<?= esc_url( $item['list_image']['url'] ) ?>" />
+							<?php endif; ?>		
+						</div>
 
-        <?php
+						<div class="item-team-content">
+						   	<?php if( '' !== $item['list_content'] ): ?>
+								<div class="item-team--desc"> 
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M4.7 17.7c-1-1.1-1.6-2.3-1.6-4.3 0-3.5 2.5-6.6 6-8.2l.9 1.3c-3.3 1.8-4 4.1-4.2 5.6.5-.3 1.2-.4 1.9-.3 1.8.2 3.2 1.6 3.2 3.5 0 .9-.4 1.8-1 2.5-.7.7-1.5 1-2.5 1-1.1 0-2.1-.5-2.7-1.1zm10 0c-1-1.1-1.6-2.3-1.6-4.3 0-3.5 2.5-6.6 6-8.2l.9 1.3c-3.3 1.8-4 4.1-4.2 5.6.5-.3 1.2-.4 1.9-.3 1.8.2 3.2 1.6 3.2 3.5 0 .9-.4 1.8-1 2.5s-1.5 1-2.5 1c-1.1 0-2.1-.5-2.7-1.1z" fill="#8abf89" opacity="1" data-original="#000000" class=""></path></g></svg>
+									<?= $item['list_content'] ?>
+									<svg xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0" viewBox="0 0 24 24" style="enable-background:new 0 0 512 512" xml:space="preserve" class=""><g><path d="M19.3 6.3c1 1.1 1.6 2.3 1.6 4.3 0 3.5-2.5 6.6-6 8.2l-.9-1.3c3.3-1.8 4-4.1 4.2-5.6-.5.3-1.2.4-1.9.3-1.8-.2-3.2-1.6-3.2-3.5 0-.9.4-1.8 1-2.5.7-.7 1.5-1 2.5-1 1.1 0 2.1.5 2.7 1.1zm-10 0c1 1.1 1.6 2.3 1.6 4.3 0 3.5-2.5 6.6-6 8.2L4 17.5c3.3-1.8 4-4.1 4.2-5.6-.5.3-1.2.4-1.9.3-1.8-.2-3.2-1.7-3.2-3.5 0-.9.4-1.8 1-2.5.7-.7 1.5-1 2.5-1 1.1 0 2.1.5 2.7 1.1z" fill="#8abf89" opacity="1" data-original="#000000" class=""></path></g></svg>
+								</div>
+							<?php endif; ?>
 
-					if( '' !== $item['list_content'] ) {
-						echo '<div class="elementor-testimonial__content">' .
-              bearsthemes_addons_get_icon_svg( 'quote', 60 ) .
-              $item['list_content'] .
-            '</div>';
-					}
-				?>
-
-				<div class="elementor-testimonial__header">
-					<div class="elementor-testimonial__thumbnail">
-						<?php
-							$attachment = wp_get_attachment_image_src( $item['list_image']['id'], $this->parent->get_instance_value_skin( 'thumbnail_size' ) );
-							if( !empty( $attachment ) ) {
-								echo '<img src=" ' . esc_url( $attachment[0] ) . ' " alt="">';
-							} else {
-								echo '<img src=" ' . esc_url( $item['list_image']['url'] ) . ' " alt="">';
-							}
-						?>
-					</div>
-					<div class="elementor-testimonial__infor">
-						<?php
-							if( '' !== $item['list_name'] ) {
-								echo '<h3 class="elementor-testimonial__name">' . $item['list_name'] . '</h3>';
-							}
-							if( '' !== $item['list_job'] ) {
-								echo '<div class="elementor-testimonial__job">' . $item['list_job'] . '</div>';
-							}
-						?>
+							<?php if( '' !== $item['list_name'] ): ?>
+								<h3 class="item-team--name"> <?= $item['list_name'] ?> </h3>
+							<?php endif; ?>	
+						</div>
 					</div>
 				</div>
-
 			</div>
-		</div>
 
-		<?php
-		}
+		<?php }
 
 		$this->parent->render_loop_footer();
 

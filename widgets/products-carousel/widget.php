@@ -9,6 +9,7 @@ use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
 use Elementor\Icons_Manager;
+use \Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -81,6 +82,48 @@ class Be_Products_Carousel extends Widget_Base {
 		return $supported_taxonomies;
 	}
 
+	public function get_breakpoints(){
+		$breakpoints_active = Plugin::$instance->breakpoints->get_active_breakpoints();
+		
+		$breakpoints = array();
+		
+		if( !empty( $breakpoints_active ) ){
+			$slide_show = 4;
+			
+			foreach ($breakpoints_active as $key => $breakpoint ) {
+				$breakpoint_key = $key . '_default';
+				
+				switch ($key) {
+					case 'widescreen':
+						$slide_show = 4;
+						break;
+					case 'laptop':
+						$slide_show = 3;
+						break;
+					case 'tablet_extra':
+						$slide_show = 3;
+						break;
+					case 'tablet':
+						$slide_show = 2;
+						break;
+					case 'mobile_extra':
+						$slide_show = 2;
+						break;
+					case 'mobile':
+						$slide_show = 1;
+						break;
+					default:
+						$slide_show = 4;
+						break;
+				}
+	
+				$breakpoints[$breakpoint_key] = $slide_show;
+			}
+		}
+
+		return $breakpoints;
+	}
+
 	protected function register_layout_section_controls() {
 		$this->start_controls_section(
 			'section_layout',
@@ -89,14 +132,14 @@ class Be_Products_Carousel extends Widget_Base {
 			]
 		);
 
+		$breakpoints = $this->get_breakpoints();
+
 		$this->add_responsive_control(
 			'sliders_per_view',
 			[
 				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '4',
-				'tablet_default' => '2',
-				'mobile_default' => '1',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -108,7 +151,7 @@ class Be_Products_Carousel extends Widget_Base {
 				'condition' => [
 					'_skin' => '',
 				],
-			]
+			] + $breakpoints
 		);
 
 		$this->add_control(
@@ -194,6 +237,20 @@ class Be_Products_Carousel extends Widget_Base {
 			'show_price',
 			[
 				'label' => __( 'Price', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'default' => 'yes',
+				'condition' => [
+					'_skin' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'show_star_rating',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => __( 'Show', 'bearsthemes-addons' ),
 				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
@@ -974,6 +1031,56 @@ class Be_Products_Carousel extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_star_rating_style',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_size',
+			[
+				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'default' => [
+					'size' => 16,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'font-size: {{SIZE}}{{UNIT}}',
+				],
+				'condition' => [
+					'show_star_rating!' => '',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -1667,6 +1774,48 @@ class Be_Products_Carousel extends Widget_Base {
 		return $query = new \WP_Query( $args );
 	}
 
+	protected function swiper_breakpoints() {
+		$settings = $this->get_settings_for_display();
+
+		$devices_list = array_reverse( Plugin::$instance->breakpoints->get_active_devices_list() );
+		$breakpoints_active = Plugin::$instance->breakpoints->get_active_breakpoints();
+
+		$swiper_breakpoints = array();
+
+		if( !empty($devices_list) ){
+			$slide_show = $this->get_instance_value_skin('sliders_per_view') ? $this->get_instance_value_skin('sliders_per_view') : 4;
+			$space_between = !empty( $this->get_instance_value_skin('space_between')['size'] ) ? $this->get_instance_value_skin('space_between')['size'] : 30;
+	
+			foreach ( $devices_list as $key => $device ) {
+			
+				$desktop_point = Plugin::$instance->breakpoints->get_device_min_breakpoint($device);
+				
+				if( $device == 'desktop' ){
+					$slide_show = $this->get_instance_value_skin( 'sliders_per_view' );
+					$swiper_breakpoints[$desktop_point] = array(
+						'slidesPerView' => $slide_show,
+						'spaceBetween' => $space_between,
+					);
+	
+				}else{
+	
+					$slide_show = $this->get_instance_value_skin( 'sliders_per_view_'.$device ) ? $this->get_instance_value_skin( 'sliders_per_view_'.$device ) : $slide_show;
+					$space_between = !empty( $this->get_instance_value_skin( 'space_between_'.$device )['size']) ? $this->get_instance_value_skin( 'space_between_'.$device )['size'] : $space_between;
+	
+					$swiper_breakpoints[$desktop_point] = array(
+						'slidesPerView' => $slide_show,
+						'spaceBetween' => $space_between,
+					);
+	
+				}
+	
+			}
+		}
+
+		return $swiper_breakpoints;
+
+	}
+
 	protected function swiper_data() {
 		$settings = $this->get_settings_for_display();
 
@@ -1678,22 +1827,14 @@ class Be_Products_Carousel extends Widget_Base {
 		$space_between_tablet = !empty( $this->get_instance_value_skin('space_between_tablet')['size'] ) ? $this->get_instance_value_skin('space_between_tablet')['size'] : $space_between;
 		$space_between_mobile = !empty( $this->get_instance_value_skin('space_between_mobile')['size'] ) ? $this->get_instance_value_skin('space_between_mobile')['size'] : $space_between_tablet;
 
+		$breakpoints = $this->swiper_breakpoints();
+
 		$swiper_data = array(
 			'slidesPerView' => $slides_per_view_mobile,
 			'spaceBetween' => $space_between_mobile,
 			'speed' => $settings['speed'],
 			'loop' => $settings['loop'] == 'yes' ? true : false,
-			'breakpoints' => array(
-				768 => array(
-				  'slidesPerView' => $slides_per_view_tablet,
-				  'spaceBetween' => $space_between_tablet,
-				), 
-				1025 => array(
-				  'slidesPerView' => $slides_per_view,
-				  'spaceBetween' => $space_between,
-				)
-			),
-
+			'breakpoints' => $breakpoints,
 		);
 
 		if( '' !== $settings['navigation'] ) {
@@ -1730,17 +1871,26 @@ class Be_Products_Carousel extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		$classes = 'elementor-swiper swiper-container';
-
+		
 		if( $settings['_skin'] ) {
 			$classes .= ' elementor-products--' . $settings['_skin'];
 		} else {
 			$classes .= ' elementor-products--default';
 		}
 
+		if( !empty($settings['navigation']) ) {
+			$classes .= ' has-navigation';
+		}
+
+		if( !empty($settings['pagination']) ) {
+			$classes .= ' has-pagination';
+		}
+
 		?>
 		<div class="<?php echo esc_attr( $classes ); ?>" data-swiper="<?php echo esc_attr( $this->swiper_data() ); ?>">
 		<div class="swiper-wrapper">
 		<?php
+		
 	}
 
 	protected function render_swiper_button_icon( $type ) {
@@ -1921,6 +2071,18 @@ class Be_Products_Carousel extends Widget_Base {
 		);
 	}
 
+	public function star_rating_html() {
+		global $product;
+
+		$rating  = $product->get_average_rating();
+		$count   = $product->get_rating_count();
+
+		return sprintf(
+			'<div class="woocommerce elementor-product__star-rating">%s</div>',
+			wc_get_rating_html( $rating, $count )
+		);
+	}
+
 	protected function render_post() {
 		$settings = $this->get_settings_for_display();
 
@@ -1950,6 +2112,10 @@ class Be_Products_Carousel extends Widget_Base {
 
 							if( '' !== $settings['show_price'] ) {
 								echo $this->price_html();
+							}
+
+							if( '' !== $settings['show_star_rating'] ) {
+								echo $this->star_rating_html();
 							}
 						?>
 					</div>

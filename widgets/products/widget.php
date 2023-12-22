@@ -199,6 +199,20 @@ class Be_Products extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'show_star_rating',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => __( 'Show', 'bearsthemes-addons' ),
+				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'default' => 'yes',
+				'condition' => [
+					'_skin' => '',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -937,6 +951,56 @@ class Be_Products extends Widget_Base {
 			]
 		);
 
+		$this->add_control(
+			'heading_star_rating_style',
+			[
+				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::HEADING,
+				'condition' => [
+					'show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_color',
+			[
+				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'show_star_rating!' => '',
+				],
+			]
+		);
+
+		$this->add_control(
+			'star_rating_size',
+			[
+				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => [ 'px' ],
+				'default' => [
+					'size' => 16,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'font-size: {{SIZE}}{{UNIT}}',
+				],
+				'condition' => [
+					'show_star_rating!' => '',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
@@ -1409,6 +1473,18 @@ class Be_Products extends Widget_Base {
 		);
 	}
 
+	public function star_rating_html() {
+		global $product;
+
+		$rating  = $product->get_average_rating();
+		$count   = $product->get_rating_count();
+
+		return sprintf(
+			'<div class="woocommerce elementor-product__star-rating">%s</div>',
+			wc_get_rating_html( $rating, $count )
+		);
+	}
+
 	protected function render_post() {
 		$settings = $this->get_settings_for_display();
 
@@ -1437,6 +1513,10 @@ class Be_Products extends Widget_Base {
 
 							if( '' !== $settings['show_price'] ) {
 								echo $this->price_html();
+							}
+
+							if( '' !== $settings['show_star_rating'] ) {
+								echo $this->star_rating_html();
 							}
 						?>
 					</div>

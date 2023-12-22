@@ -37,14 +37,14 @@ class Skin_Changla extends Skin_Base {
 	public function register_layout_controls( Widget_Base $widget ) {
 		$this->parent = $widget;
 
+		$breakpoints = $this->parent->get_breakpoints();
+
 		$this->add_responsive_control(
 			'sliders_per_view',
 			[
 				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
-				'tablet_default' => '2',
-				'mobile_default' => '1',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -53,7 +53,7 @@ class Skin_Changla extends Skin_Base {
 					'5' => '5',
 					'6' => '6',
 				],
-			]
+			] + $breakpoints
 		);
 
 		$this->add_control(

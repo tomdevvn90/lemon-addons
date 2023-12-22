@@ -50,4 +50,4 @@ module.exports = __webpack_require__(/*! C:\Users\Admin\Local Sites\lemonspa\app
 
 /***/ })
 
-},[[0,"/js/manifest","/js/vendor"]]]);
+},[[0,"/js/manifest"]]]);

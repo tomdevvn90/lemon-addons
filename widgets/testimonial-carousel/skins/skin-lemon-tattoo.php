@@ -276,7 +276,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 					<div class="item-testimonial-inner"> 
 						<div class="item-testimonial--thumbnail"> 
 							<?php if(!empty($thumbnail) && isset($thumbnail)): ?>
-								<img src="<?= esc_url( $attachment[0] ) ?>" alt="avatar" />
+								<img src="<?= esc_url( $thumbnail[0] ) ?>" alt="avatar" />
 							<?php else: ?>
 								<img src="<?= esc_url( $item['list_image']['url'] ) ?>" />
 							<?php endif; ?>		

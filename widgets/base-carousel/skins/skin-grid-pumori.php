@@ -84,14 +84,14 @@ class Skin_Grid_Pumori extends Skin_Base {
 			]
 		);
 
+		$breakpoints = $this->parent->get_breakpoints();
+
 		$this->add_responsive_control(
 			'sliders_per_view',
 			[
 				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '5',
-				'tablet_default' => '4',
-				'mobile_default' => '2',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -101,7 +101,7 @@ class Skin_Grid_Pumori extends Skin_Base {
 					'6' => '6',
 				],
 				'separator' => 'before',
-			]
+			] + $breakpoints
 		);
 
 		$this->add_group_control(
