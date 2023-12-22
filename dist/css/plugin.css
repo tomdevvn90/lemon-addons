@@ -3173,15 +3173,15 @@ img.mfp-img {
   opacity: 0;
 }
 
-.elementor-products--skin-wellness .elementor-product__button-cart .readmore .ion-ios-eye,
-.elementor-products--skin-wellness .elementor-product__button-readmore .readmore .ion-ios-eye {
+.elementor-products--skin-wellness .elementor-product__button-cart .readmore .icon,
+.elementor-products--skin-wellness .elementor-product__button-readmore .readmore .icon {
   line-height: 1;
   position: relative;
   z-index: 9;
 }
 
-.elementor-products--skin-wellness .elementor-product__button-cart .readmore .ion-ios-eye svg,
-.elementor-products--skin-wellness .elementor-product__button-readmore .readmore .ion-ios-eye svg {
+.elementor-products--skin-wellness .elementor-product__button-cart .readmore .icon svg,
+.elementor-products--skin-wellness .elementor-product__button-readmore .readmore .icon svg {
   width: 1em;
   height: 1em;
   fill: #fff;
@@ -3265,6 +3265,337 @@ img.mfp-img {
 
 .elementor-products--skin-wellness .elementor-product__star-rating .star-rating {
   float: none;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product {
+  overflow: hidden;
+  text-align: center;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__wrap {
+  position: relative;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail {
+  position: relative;
+  overflow: hidden;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__overlay {
+  opacity: 1;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__button-cart,
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__button-readmore {
+  z-index: 9;
+  opacity: 1;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__button-cart .button,
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__button-cart .added_to_cart,
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__button-readmore .button,
+.elementor-products--skin-grid-tattoo .elementor-product__thumbnail:hover .elementor-product__button-readmore .added_to_cart {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__overlay {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  -wekbit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__onsale {
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  background-color: #8abf89;
+  color: #fff;
+  font-size: 15px;
+  line-height: 25px;
+  letter-spacing: 0;
+  padding: 10px 24px;
+  text-transform: uppercase;
+  font-weight: 600;
+  z-index: 3;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button {
+  box-sizing: border-box;
+  position: absolute;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  z-index: 9;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart {
+  text-align: left;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore {
+  text-align: right;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore {
+  width: 50%;
+  text-align: center;
+  z-index: 0;
+  margin: 0 5px;
+  max-height: 70px;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -wekbit-transition: all 0.6s;
+  transition: all 0.6s;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart a,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore a {
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 24px;
+  padding: 0.618em 1em;
+  font-weight: 700;
+  border-radius: 3px;
+  display: inline-block;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button,
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  text-align: center;
+  background-color: #8abf89;
+  color: #fff;
+  transform: translateY(-40px);
+  -webkit-transform: translateY(-40px);
+  transition-delay: 0.05s;
+  -wekbit-transition: all 0.4s;
+  transition: all 0.4s;
+  opacity: 0;
+  z-index: 9;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button span,
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart span,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button span,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart span {
+  position: relative;
+  z-index: 9;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button .icon svg,
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart .icon svg,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button .icon svg,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart .icon svg {
+  fill: #fff;
+  width: 1em;
+  height: 1em;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button .text,
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart .text,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button .text,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart .text {
+  display: none;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button:hover,
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart:hover,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button:hover,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart:hover {
+  background-color: #333;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button {
+  opacity: 0;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .add_to_cart_button.added,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .add_to_cart_button.added {
+  display: none;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart {
+  overflow: hidden;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart::before,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 16px;
+  background-color: #8abf89;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg aria-hidden='true' class='e-font-icon-svg e-fas-check' viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg' fill='%23fff'%3E%3Cpath d='M173.898 439.404l-166.4-166.4c-9.997-9.997-9.997-26.206 0-36.204l36.203-36.204c9.997-9.998 26.207-9.998 36.204 0L192 312.69 432.095 72.596c9.997-9.997 26.207-9.997 36.204 0l36.203 36.204c9.997 9.997 9.997 26.206 0 36.204l-294.4 294.401c-9.998 9.997-26.207 9.997-36.204-.001z'%3E%3C/path%3E%3C/svg%3E");
+  -wekbit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .added_to_cart:hover::before,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .added_to_cart:hover::before {
+  background-color: #333;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .readmore,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .readmore {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 22px;
+  line-height: 22px;
+  width: 50px;
+  height: 50px;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+  box-sizing: border-box;
+  position: relative;
+  transform: translateY(40px);
+  -webkit-transform: translateY(40px);
+  -wekbit-transition: all 0.4s;
+  transition: all 0.4s;
+  z-index: 9;
+  opacity: 0;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .readmore .icon,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .readmore .icon {
+  line-height: 1;
+  position: relative;
+  z-index: 9;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .readmore .icon svg,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .readmore .icon svg {
+  width: 1em;
+  height: 1em;
+  fill: #333;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .readmore:hover,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .readmore:hover {
+  background-color: #8abf89;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__button-cart .readmore:hover .icon svg,
+.elementor-products--skin-grid-tattoo .elementor-product__button-readmore .readmore:hover .icon svg {
+  fill: #fff;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__content {
+  margin-top: 0;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__title {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0px;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__title a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__title a:hover {
+  text-decoration: underline;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__category {
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 25px;
+  color: #999;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__category a {
+  color: inherit;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__category a:hover {
+  text-decoration: underline;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__price {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #8abf89;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__price del span {
+  font-weight: 400;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__price ins {
+  margin-right: 4px;
+  text-decoration: none;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__star-rating {
+  margin-top: 10px;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.elementor-products--skin-grid-tattoo .elementor-product__star-rating .star-rating {
+  float: none;
+  color: #8abf89;
 }
 
 .elementor-banner-animation {

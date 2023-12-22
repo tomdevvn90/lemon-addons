@@ -38,6 +38,7 @@ class Be_Products extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Havsula( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Batura( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Pumori( $this ) );
+		$this->add_skin( new Skins\Skin_Grid_Tattoo( $this ) );
 
 	}
 

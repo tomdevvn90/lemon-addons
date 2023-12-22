@@ -1,5 +1,5 @@
 <?php
-namespace BearsthemesAddons\Widgets\Products_Carousel\Skins;
+namespace BearsthemesAddons\Widgets\Products\Skins;
 
 use Elementor\Widget_Base;
 use Elementor\Skin_Base;
@@ -12,38 +12,38 @@ use Elementor\Group_Control_Box_Shadow;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Skin_Wellness extends Skin_Base {
+class Skin_Grid_Tattoo extends Skin_Base {
 
 	protected function _register_controls_actions() {
-		add_action( 'elementor/element/be-products-carousel/section_layout/before_section_end', [ $this, 'register_layout_controls' ] );
-		add_action( 'elementor/element/be-products-carousel/section_design_layout/before_section_end', [ $this, 'registerd_design_layout_controls' ] );
-		add_action( 'elementor/element/be-products-carousel/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
-		add_action( 'elementor/element/be-products-carousel/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
-		add_action( 'elementor/element/be-products-carousel/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
+		add_action( 'elementor/element/be-products/section_layout/before_section_end', [ $this, 'register_layout_controls' ] );
+		add_action( 'elementor/element/be-products/section_design_layout/before_section_end', [ $this, 'registerd_design_layout_controls' ] );
+		add_action( 'elementor/element/be-products/section_design_layout/after_section_end', [ $this, 'register_design_box_section_controls' ] );
+		add_action( 'elementor/element/be-products/section_design_layout/after_section_end', [ $this, 'register_design_image_section_controls' ] );
+		add_action( 'elementor/element/be-products/section_design_layout/after_section_end', [ $this, 'register_design_content_section_controls' ] );
 
 	}
 
 	public function get_id() {
-		return 'skin-wellness';
+		return 'skin-grid-tattoo';
 	}
 
 
 	public function get_title() {
-		return __( 'Grid Wellness', 'bearsthemes-addons' );
+		return __( 'Grid Tattoo', 'bearsthemes-addons' );
 	}
 
 
 	public function register_layout_controls( Widget_Base $widget ) {
 		$this->parent = $widget;
 
-		$breakpoints = $this->parent->get_breakpoints();
-
 		$this->add_responsive_control(
-			'sliders_per_view',
+			'columns',
 			[
-				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
+				'label' => __( 'Columns', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
-				'default' => '4',
+				'default' => '3',
+				'tablet_default' => '2',
+				'mobile_default' => '1',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -52,15 +52,16 @@ class Skin_Wellness extends Skin_Base {
 					'5' => '5',
 					'6' => '6',
 				],
-			] + $breakpoints
+				'prefix_class' => 'elementor-grid%s-',
+			]
 		);
 
 		$this->add_control(
-			'posts_count',
+			'posts_per_page',
 			[
-				'label' => __( 'Posts Count', 'bearsthemes-addons' ),
+				'label' => __( 'Posts Per Page', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::NUMBER,
-				'default' => 6,
+				'default' => 3,
 			]
 		);
 
@@ -83,7 +84,7 @@ class Skin_Wellness extends Skin_Base {
 				'default' => 'medium',
 				'exclude' => [ 'custom' ],
 				'condition' => [
-					'skin_wellness_show_thumbnail!'=> '',
+					'skin_grid_tattoo_show_thumbnail!'=> '',
 				],
 			]
 		);
@@ -107,7 +108,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__thumbnail' => 'padding-bottom: calc( {{SIZE}} * 100% );',
 				],
 				'condition' => [
-					'skin_wellness_show_thumbnail!'=> '',
+					'skin_grid_tattoo_show_thumbnail!'=> '',
 				],
 			]
 		);
@@ -160,24 +161,47 @@ class Skin_Wellness extends Skin_Base {
 	public function registerd_design_layout_controls( Widget_Base $widget ) {
 		$this->parent = $widget;
 
-		$this->add_responsive_control(
-			'space_between',
+		$this->add_control(
+			'column_gap',
 			[
-				'label' => __( 'Space Between', 'bearsthemes-addons' ),
+				'label' => __( 'Columns Gap', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 30,
+				],
 				'range' => [
 					'px' => [
 						'min' => 0,
 						'max' => 100,
 					],
 				],
-				'default' => [
-					'size' => 30,
+				'selectors' => [
+					'{{WRAPPER}}' => '--grid-column-gap: {{SIZE}}{{UNIT}}',
 				],
 			]
 		);
 
-		$this->add_responsive_control(
+		$this->add_control(
+			'row_gap',
+			[
+				'label' => __( 'Rows Gap', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SLIDER,
+				'default' => [
+					'size' => 35,
+				],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}}' => '--grid-row-gap: {{SIZE}}{{UNIT}}',
+				],
+			]
+		);
+
+		$this->add_control(
 			'alignment',
 			[
 				'label' => __( 'Alignment', 'bearsthemes-addons' ),
@@ -198,7 +222,7 @@ class Skin_Wellness extends Skin_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product' => 'text-align: {{VALUE}};',
-					'{{WRAPPER}} .elementor-product .elementor-product__price' => 'justify-content: {{VALUE}};',
+                    '{{WRAPPER}} .elementor-product .elementor-product__price' => 'justify-content: {{VALUE}};',
 				],
 			]
 		);
@@ -381,7 +405,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'Image', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -393,7 +417,7 @@ class Skin_Wellness extends Skin_Base {
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
-					'{{WRAPPER}} .elementor-product__thumbnail' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .elementor-product__header' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -454,7 +478,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'On sale', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -469,7 +493,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__onsale' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -484,7 +508,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__onsale' => 'background-color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -496,7 +520,7 @@ class Skin_Wellness extends Skin_Base {
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-product__onsale',
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -507,7 +531,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'Add to cart', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -523,12 +547,12 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product .button .icon svg' => 'fill: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
 
-		$this->add_control(
+        $this->add_control(
 			'add_to_cart_primary_color_hover',
 			[
 				'label' => __( 'Primary Color Hover', 'bearsthemes-addons' ),
@@ -554,12 +578,12 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product .button' => 'background-color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
 
-		$this->add_control(
+        $this->add_control(
 			'add_to_cart_secondary_color_hover',
 			[
 				'label' => __( 'Secondary Color Hover', 'bearsthemes-addons' ),
@@ -581,7 +605,7 @@ class Skin_Wellness extends Skin_Base {
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-product .button',
 				'condition' => [
-					'skin_wellness_show_thumbnail!' => '',
+					'skin_grid_tattoo_show_thumbnail!' => '',
 				],
 			]
 		);
@@ -592,7 +616,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'Title', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_wellness_show_title!' => '',
+					'skin_grid_tattoo_show_title!' => '',
 				],
 			]
 		);
@@ -607,7 +631,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__title' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_title!' => '',
+					'skin_grid_tattoo_show_title!' => '',
 				],
 			]
 		);
@@ -622,7 +646,7 @@ class Skin_Wellness extends Skin_Base {
 					' {{WRAPPER}} .elementor-product__title a:hover' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_title!' => '',
+					'skin_grid_tattoo_show_title!' => '',
 				],
 			]
 		);
@@ -634,7 +658,7 @@ class Skin_Wellness extends Skin_Base {
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-product__title',
 				'condition' => [
-					'skin_wellness_show_title!' => '',
+					'skin_grid_tattoo_show_title!' => '',
 				],
 			]
 		);
@@ -645,7 +669,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'Price', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_wellness_show_price!' => '',
+					'skin_grid_tattoo_show_price!' => '',
 				],
 			]
 		);
@@ -658,22 +682,9 @@ class Skin_Wellness extends Skin_Base {
 				'default' => '',
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product__price' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .elementor-product__price ins span' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_price!' => '',
-				],
-			]
-		);
-
-        $this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'price_typography',
-				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-product__price span',
-				'condition' => [
-					'skin_wellness_show_price!' => '',
+					'skin_grid_tattoo_show_price!' => '',
 				],
 			]
 		);
@@ -685,22 +696,22 @@ class Skin_Wellness extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					' {{WRAPPER}} .elementor-product__price del span' => 'color: {{VALUE}};',
+					' {{WRAPPER}} .elementor-product__price del' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_price!' => '',
+					'skin_grid_tattoo_show_price!' => '',
 				],
 			]
 		);
 
-        $this->add_group_control(
+		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'price_del_typography',
+				'name' => 'price_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-product__price del span',
+				'selector' => '{{WRAPPER}} .elementor-product__price',
 				'condition' => [
-					'skin_wellness_show_price!' => '',
+					'skin_grid_tattoo_show_price!' => '',
 				],
 			]
 		);
@@ -711,7 +722,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_wellness_show_star_rating!' => '',
+					'skin_grid_tattoo_show_star_rating!' => '',
 				],
 			]
 		);
@@ -726,7 +737,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_star_rating!' => '',
+					'skin_grid_tattoo_show_star_rating!' => '',
 				],
 			]
 		);
@@ -750,7 +761,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__star-rating .star-rating' => 'font-size: {{SIZE}}{{UNIT}}',
 				],
 				'condition' => [
-					'skin_wellness_show_star_rating!' => '',
+					'skin_grid_tattoo_show_star_rating!' => '',
 				],
 			]
 		);
@@ -761,7 +772,7 @@ class Skin_Wellness extends Skin_Base {
 				'label' => __( 'Category', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
-					'skin_wellness_show_category!' => '',
+					'skin_grid_tattoo_show_category!' => '',
 				],
 			]
 		);
@@ -776,7 +787,7 @@ class Skin_Wellness extends Skin_Base {
 					'{{WRAPPER}} .elementor-product__category' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_category!' => '',
+					'skin_grid_tattoo_show_category!' => '',
 				],
 			]
 		);
@@ -791,7 +802,7 @@ class Skin_Wellness extends Skin_Base {
 					' {{WRAPPER}} .elementor-product__category a:hover' => 'color: {{VALUE}};',
 				],
 				'condition' => [
-					'skin_wellness_show_category!' => '',
+					'skin_grid_tattoo_show_category!' => '',
 				],
 			]
 		);
@@ -803,7 +814,7 @@ class Skin_Wellness extends Skin_Base {
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-product__category',
 				'condition' => [
-					'skin_wellness_show_category!' => '',
+					'skin_grid_tattoo_show_category!' => '',
 				],
 			]
 		);
@@ -819,52 +830,51 @@ class Skin_Wellness extends Skin_Base {
     }
 
 		?>
-		<div class="swiper-slide">
-			<article id="post-<?php the_ID();  ?>" <?php post_class( $product_class ); ?>>
-				<div class="elementor-produc__wrap">
-                    <div class="elementor-product__thumbnail">
-                        <div class="elementor-product__overlay"></div>
-                        <?php echo $this->parent->on_sales(); ?>
-                        <?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
-                            <?php the_post_thumbnail( $this->parent->get_instance_value_skin('thumbnail_size') ); ?>
-                        <?php } ?>
-                        <div class="elementor-product__button">
-                            <div class="elementor-product__button-cart">
-                                <?php echo $this->parent->button_add_to_cart(); ?>
-                            </div>
-                            <div class="elementor-product__button-readmore">
-                                <a class="button readmore" href="<?php echo get_the_permalink(); ?>" title="View detail">
-                                    <span class="icon">
-                                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-eye" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
-                                    </span>
-                                </a>
-                            </div>
+        <article id="post-<?php the_ID();  ?>" <?php post_class( $product_class ); ?>>
+            <div class="elementor-produc__wrap">
+                <div class="elementor-product__thumbnail">
+                    <div class="elementor-product__overlay"></div>
+                    <?php echo $this->parent->on_sales(); ?>
+                    <?php if( '' !== $this->parent->get_instance_value_skin('show_thumbnail') ) { ?>
+                        <?php the_post_thumbnail( $this->parent->get_instance_value_skin('thumbnail_size') ); ?>
+                    <?php } ?>
+                    <div class="elementor-product__button">
+                        <div class="elementor-product__button-cart">
+                            <?php echo $this->parent->button_add_to_cart(); ?>
+                        </div>
+                        <div class="elementor-product__button-readmore">
+                            <a class="button readmore" href="<?php echo get_the_permalink(); ?>" title="View detail">
+                                <span class="icon">
+                                    <svg aria-hidden="true" class="e-font-icon-svg e-fas-eye" viewBox="0 0 576 512" xmlns="http://www.w3.org/2000/svg"><path d="M572.52 241.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400a144 144 0 1 1 144-144 143.93 143.93 0 0 1-144 144zm0-240a95.31 95.31 0 0 0-25.31 3.79 47.85 47.85 0 0 1-66.9 66.9A95.78 95.78 0 1 0 288 160z"></path></svg>
+                                </span>
+                            </a>
                         </div>
                     </div>
-				
-					<div class="elementor-product__content">
-						<?php
-                            if( '' !== $this->parent->get_instance_value_skin('show_category') ) {
-                                the_terms( get_the_ID(), 'product_cat', '<div class="elementor-product__category">' , ', ', '</div>' );
-                            }
+                </div>
+            
+                <div class="elementor-product__content">
+                    <?php
 
-							if( '' !== $this->parent->get_instance_value_skin('show_title') ) {
-								the_title( '<h3 class="elementor-product__title"><a href="' . get_the_permalink() . '">', '</a></h3>' );
-							}
+                        if( '' !== $this->parent->get_instance_value_skin('show_title') ) {
+                            the_title( '<h3 class="elementor-product__title"><a href="' . get_the_permalink() . '">', '</a></h3>' );
+                        }
 
-							if( '' !== $this->parent->get_instance_value_skin('show_price') ) {
-								echo $this->parent->price_html();
-							}
+                        if( '' !== $this->parent->get_instance_value_skin('show_price') ) {
+                            echo $this->parent->price_html();
+                        }
 
-							if( '' !== $this->parent->get_instance_value_skin('show_star_rating') ) {
-								echo $this->parent->star_rating_html();
-							}
-							
-						?>
-					</div>
-				</div>
-			</article>
-		</div>
+                        if( '' !== $this->parent->get_instance_value_skin('show_star_rating') ) {
+                            echo $this->parent->star_rating_html();
+                        }
+
+                        if( '' !== $this->parent->get_instance_value_skin('show_category') ) {
+                            the_terms( get_the_ID(), 'product_cat', '<div class="elementor-product__category">' , ', ', '</div>' );
+                        }
+                        
+                    ?>
+                </div>
+            </div>
+        </article>
 		<?php
 	}
 
@@ -888,6 +898,8 @@ class Skin_Wellness extends Skin_Base {
 		} else {
 		    // no posts found
 		}
+
+		$this->parent->pagination();
 
 		wp_reset_postdata();
 	}
