@@ -114,6 +114,7 @@ class Plugin {
 			'text-animation',
 			'banner-image-box',
 			'service-search-form',
+			'before-after',
 			'be-team-carousel',
 
 		);
@@ -177,6 +178,8 @@ class Plugin {
 		wp_register_script( 'jquery-textillate', plugins_url( '/assets/js/jquery.textillate.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'jquery-lettering', plugins_url( '/assets/js/jquery.lettering.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'jquery-isotope', plugins_url( '/assets/js/isotope.pkgd.min.js', __FILE__ ), [ 'jquery' ], false, true );
+		wp_register_script( 'jquery.twentytwenty', plugins_url( '/assets/js/jquery.twentytwenty.js', __FILE__ ), [ 'jquery' ], false, true );
+		wp_register_script( 'jquery.event.move', plugins_url( '/assets/js/jquery.event.move.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'bearsthemes-addons', plugins_url( '/assets/js/frontend.js', __FILE__ ), [ 'jquery','jquery-isotope', 'elementor-swiper' ], false, true );
 		wp_localize_script( 'bearsthemes-addons', 'products_data_ajax', array(
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
@@ -255,6 +258,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Text_Animation\Be_Text_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Search_Form\Be_Search_Form() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Before_After\Be_Before_After() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Be_Team_Carousel() );
 
 		// WooCommerce.

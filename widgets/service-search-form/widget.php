@@ -192,17 +192,6 @@ class Be_Search_Form extends Widget_Base {
 			]
 		);
 
-		$this->add_control(
-			'title_color_hover',
-			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .search-form-box__title a:hover' => 'color: {{VALUE}};',
-				],
-			]
-		);
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
@@ -325,8 +314,7 @@ class Be_Search_Form extends Widget_Base {
 			[
 				'name' => 'typography_form_field',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .search-form-box form input.field',
-				'selector' => '{{WRAPPER}} .search-form-box form select.field'
+				'selector' => '{{WRAPPER}} .search-form-box form input.field, {{WRAPPER}} .search-form-box form select.field',
 			]
 		);
 
