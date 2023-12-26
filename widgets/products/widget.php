@@ -39,6 +39,7 @@ class Be_Products extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Grid_Batura( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Pumori( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Tattoo( $this ) );
+		$this->add_skin( new Skins\Skin_Grid_Cosmetics( $this ) );
 
 	}
 
@@ -1479,6 +1480,10 @@ class Be_Products extends Widget_Base {
 
 		$rating  = $product->get_average_rating();
 		$count   = $product->get_rating_count();
+
+		if( $count == 0){
+			return;
+		}
 
 		return sprintf(
 			'<div class="woocommerce elementor-product__star-rating">%s</div>',
