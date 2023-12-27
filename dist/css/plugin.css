@@ -11554,17 +11554,30 @@ img.mfp-img {
   transition: all 0.3s;
 }
 
-.elementor-posts--skin-grid-cosmetics .elementor-post:nth-child(2n) {
-  flex-direction: row-reverse;
-}
+@media screen and (min-width: 768px) {
+  .elementor-posts--skin-grid-cosmetics .elementor-post:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
 
-.elementor-posts--skin-grid-cosmetics .elementor-post:nth-child(2n) .elementor-post__content {
-  text-align: right;
-}
+  .elementor-posts--skin-grid-cosmetics .elementor-post:nth-child(2n) .elementor-post__content {
+    text-align: right;
+  }
 
-.elementor-posts--skin-grid-cosmetics .elementor-post:nth-child(2n) .elementor-post__date::before {
-  right: -165px;
-  left: inherit;
+  .elementor-posts--skin-grid-cosmetics .elementor-post:nth-child(2n) .elementor-post__date::before {
+    right: -9vw;
+    left: inherit;
+  }
+
+  .elementor-posts--skin-grid-cosmetics .elementor-post .elementor-post__date::before {
+    position: absolute;
+    content: " ";
+    width: 7vw;
+    height: 7px;
+    background-color: #84c340;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -9vw;
+  }
 }
 
 .elementor-posts--skin-grid-cosmetics .elementor-post.animate__show {
@@ -11598,6 +11611,7 @@ img.mfp-img {
   left: 0;
   width: 100%;
   height: 100%;
+  max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: all 0.3s;
@@ -11606,7 +11620,7 @@ img.mfp-img {
 .elementor-posts--skin-grid-cosmetics .elementor-post__content {
   text-align: left;
   width: 50%;
-  padding: 28px 100px;
+  padding: 1.5vw 5vw;
 }
 
 .elementor-posts--skin-grid-cosmetics .elementor-post__date {
@@ -11616,17 +11630,6 @@ img.mfp-img {
   color: #999;
   position: relative;
   margin-bottom: 28px;
-}
-
-.elementor-posts--skin-grid-cosmetics .elementor-post__date::before {
-  position: absolute;
-  content: " ";
-  width: 140px;
-  height: 7px;
-  background-color: #84c340;
-  top: 50%;
-  transform: translateY(-50%);
-  left: -165px;
 }
 
 .elementor-posts--skin-grid-cosmetics .elementor-post__date .first {
@@ -11781,33 +11784,6 @@ img.mfp-img {
   .elementor-posts--skin-grid-cosmetics .elementor-filter-wrap .elementor-filter li:not(:last-child) {
     margin-right: 40px;
   }
-
-  .elementor-posts--skin-grid-cosmetics .elementor-post__content {
-    padding-left: 20px;
-  }
-
-  .elementor-posts--skin-grid-cosmetics .elementor-post__date {
-    font-size: 16px;
-    margin-bottom: 4px;
-  }
-
-  .elementor-posts--skin-grid-cosmetics .elementor-post__title {
-    font-size: 24px;
-    margin-bottom: 8px;
-  }
-
-  .elementor-posts--skin-grid-cosmetics .elementor-post__excerpt {
-    font-size: 16px;
-    margin-bottom: 8px;
-  }
-
-  .elementor-posts--skin-grid-cosmetics .elementor-post__read-more {
-    font-size: 16px;
-  }
-
-  .elementor-posts--skin-grid-cosmetics .elementor-post__read-more svg {
-    margin-left: 8px;
-  }
 }
 
 @media (max-width: 767.98px) {
@@ -11847,7 +11823,6 @@ img.mfp-img {
   .elementor-posts--skin-grid-cosmetics .elementor-post__content {
     width: 100%;
     text-align: center;
-    padding-left: 0;
   }
 }
 

@@ -3876,16 +3876,32 @@
       overflow: hidden;
       -webkit-transition: all .3s;
       transition: all .3s;
-      &:nth-child(2n){
-        flex-direction: row-reverse;
-        .elementor-post {
-          &__content{
-            text-align: right;
+      @media screen and (min-width: $break-sm ){
+        &:nth-child(2n){
+          flex-direction: row-reverse;
+          .elementor-post {
+            &__content{
+              text-align: right;
+            }
+            &__date {
+              &::before{
+                right: -9vw;
+                left: inherit;
+              }
+            }
           }
-          &__date {
+        }
+        .elementor-post {
+          &__date{
             &::before{
-              right: -165px;
-              left: inherit;
+              position: absolute;
+              content: " ";
+              width: 7vw;
+              height: 7px;
+              background-color: #84c340;
+              top: 50%;
+              transform: translateY(-50%);
+              left: -9vw;
             }
           }
         }
@@ -3924,6 +3940,7 @@
           left: 0;
           width: 100%;
           height: 100%;
+          max-height: 100%;
           object-fit: cover;
           -webkit-transition: all .3s;
           transition: all .3s;
@@ -3932,7 +3949,7 @@
       &__content {
         text-align: left;
         width: 50%;
-        padding: 28px 100px;
+        padding: 1.5vw 5vw;
       }
       &__date {
         font-size: 17px;
@@ -3941,16 +3958,6 @@
         color: #999;
         position: relative;
         margin-bottom: 28px;
-        &::before{
-          position: absolute;
-          content: " ";
-          width: 140px;
-          height: 7px;
-          background-color: #84c340;
-          top: 50%;
-          transform: translateY(-50%);
-          left: -165px;
-        }
         .first{
           vertical-align: middle;
           font-size: 70px;
@@ -4091,29 +4098,6 @@
           margin-right: 40px;
         }
       }
-      .elementor-post {
-        &__content {
-          padding-left: 20px;
-        }
-        &__date {
-          font-size: 16px;
-          margin-bottom: 4px;
-        }
-        &__title {
-          font-size: 24px;
-          margin-bottom: 8px;
-        }
-        &__excerpt {
-          font-size: 16px;
-          margin-bottom: 8px;
-        }
-        &__read-more {
-          font-size: 16px;
-          svg {
-            margin-left: 8px;
-          }
-        }
-      }
     }
 
     @media( max-width: $break-sm - 0.02 ) {
@@ -4144,7 +4128,6 @@
         &__content {
           width: 100%;
           text-align: center;
-          padding-left: 0;
         }
       }
     }
