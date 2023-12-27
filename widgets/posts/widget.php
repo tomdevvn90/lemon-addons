@@ -63,6 +63,7 @@ class Be_Posts extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Cobble_Gamin( $this ) );
 		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
 		$this->add_skin( new Skins\Skin_Wellness( $this ) );
+		$this->add_skin( new Skins\Skin_Grid_Cosmetics( $this ) );
 
 	}
 
