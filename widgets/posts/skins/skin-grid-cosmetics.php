@@ -612,6 +612,7 @@ class Skin_Grid_Cosmetics extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
+					'{{WRAPPER}} .elementor-post__date::before' => 'background-color: {{VALUE}};',
 					'{{WRAPPER}} .elementor-post__date .first' => 'color: {{VALUE}};',
 					'{{WRAPPER}} .elementor-post__date .first svg' => 'fill: {{VALUE}};',
 				],
@@ -786,6 +787,10 @@ class Skin_Grid_Cosmetics extends Skin_Base {
 				'default' => '',
 				'selectors' => [
 					' {{WRAPPER}} .elementor-post__read-more:hover' => 'color: {{VALUE}};',
+					' {{WRAPPER}} .elementor-post__read-more:hover::before' => 'background: {{VALUE}};',
+					' {{WRAPPER}} .elementor-post__read-more:hover::after' => 'background: {{VALUE}};',
+					' {{WRAPPER}} .elementor-post__read-more:hover .read-more-wrap::before' => 'background: {{VALUE}};',
+					' {{WRAPPER}} .elementor-post__read-more:hover .read-more-wrap::after' => 'background: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_grid_cosmetics_show_read_more!' => '',

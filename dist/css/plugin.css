@@ -11580,6 +11580,11 @@ img.mfp-img {
   }
 }
 
+.elementor-posts--skin-grid-cosmetics .elementor-post:hover .elementor-post__thumbnail img {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
 .elementor-posts--skin-grid-cosmetics .elementor-post.animate__show {
   animation-duration: 1s;
   animation-duration: 1s;
@@ -11614,7 +11619,7 @@ img.mfp-img {
   max-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: all 0.3s;
+  transition: 1s cubic-bezier(0.75, 0.12, 0.43, 0.84);
 }
 
 .elementor-posts--skin-grid-cosmetics .elementor-post__content {
