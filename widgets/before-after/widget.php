@@ -95,21 +95,8 @@ class Be_Before_After extends Widget_Base {
 				'type' => Controls_Manager::SELECT,
 				'default' => 'horizontal',
 				'options' => [
-					'horizontal' => 'Horizontal',
-					'vertical' => 'Vertical',
-				],
-			]
-		);
-
-		$this->add_control(
-			'orientation',
-			[
-				'label' => __( 'Orientation', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::SELECT,
-				'default' => 'horizontal',
-				'options' => [
-					'horizontal' => 'Horizontal',
-					'vertical' => 'Vertical',
+					'horizontal' => esc_html__( 'Horizontal', 'bearsthemes-addons'),
+					'vertical' => esc_html__('Vertical', 'bearsthemes-addons'),
 				],
 			]
 		);
