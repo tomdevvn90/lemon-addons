@@ -923,6 +923,13 @@
 
     }
 
+    var BeforeAfterImageHandler = function( $scope, $ ) {
+        var twentytwentyContainer = $scope.find('.twentytwenty-container');
+        var data_twentytwenty = twentytwentyContainer.data('twentytwenty');
+
+        twentytwentyContainer.twentytwenty(data_twentytwenty);
+    }
+
     $(document).ready(function() {
         if ($('header').hasClass('header-fixed')) {
             HeaderScrollSticky();
@@ -994,12 +1001,7 @@
     })
     $(window).load(function() {
 
-        
-        /* Active before after */
-    		if ($('.twentytwenty-container').length) {
-    			$(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.5});
-    			$(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.5, orientation: 'vertical'});
-    		}
+    
     })
 
     // Make sure you run this code under Elementor.
@@ -1083,6 +1085,7 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-animation.skin-full-content', BannerAnimationHandler);
 
         elementorFrontend.hooks.addAction('frontend/element_ready/be-banner-image-box.default', BannerImageBoxHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-before-after.default', BeforeAfterImageHandler);
 
 
         // WooCommerce.
