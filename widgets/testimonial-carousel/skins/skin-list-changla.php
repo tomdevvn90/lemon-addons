@@ -75,6 +75,26 @@ class Skin_List_Changla extends Skin_Base {
 			]
 		);
 
+		$breakpoints = $this->parent->get_breakpoints();
+
+		$this->add_responsive_control(
+			'sliders_per_view',
+			[
+				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => '1',
+				'options' => [
+					'1' => '1',
+					'2' => '2',
+					'3' => '3',
+					'4' => '4',
+					'5' => '5',
+					'6' => '6',
+				],
+				'separator' => 'before',
+			] + $breakpoints
+		);
+
 	}
 
 
