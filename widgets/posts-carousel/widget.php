@@ -40,6 +40,7 @@ class Be_Posts_Carousel extends Widget_Base {
 	}
 
 	protected function register_skins() {
+		$this->add_skin( new Skins\Skin_Grid_Beauty( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Pumori( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Baruntse( $this ) );
 		$this->add_skin( new Skins\Skin_Grid_Coropuna( $this ) );
@@ -61,6 +62,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
 		$this->add_skin( new Skins\Skin_Wellness( $this ) );
 		$this->add_skin( new Skins\Skin_Lemon_Tattoo( $this ) );
+		
 
 	}
 

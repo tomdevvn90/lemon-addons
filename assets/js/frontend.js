@@ -1075,6 +1075,7 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-cosmetics', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-wellness', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-lemon-tattoo', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-beauty', SwiperSliderHandler);
 
         elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.default', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-projects-carousel.skin-grid-hardeol', SwiperSliderHandler);
