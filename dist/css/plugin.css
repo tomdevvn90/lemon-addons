@@ -11915,6 +11915,17 @@ img.mfp-img {
   color: inherit;
 }
 
+.elementor-posts--skin-grid-beauty .elementor-post__excerpt {
+  color: #444;
+  font-size: 16px;
+  line-height: 26px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+
 .elementor-posts--skin-grid-beauty .elementor-post__meta {
   padding-left: 0;
   list-style: none;
@@ -11954,6 +11965,13 @@ img.mfp-img {
   text-transform: uppercase;
   color: #92c054;
   letter-spacing: 0.5px;
+}
+
+.elementor-posts--skin-grid-beauty .elementor-post__meta li svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: #92c054;
 }
 
 .elementor-posts--skin-grid-beauty .elementor-post:hover .elementor-post__thumbnail img {

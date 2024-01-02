@@ -4224,6 +4224,16 @@
               color: inherit;
             }
         }
+        &__excerpt{
+          color: #444;
+          font-size: 16px;
+          line-height: 26px;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+        }
         &__meta{
             padding-left: 0;
             list-style: none;
@@ -4257,6 +4267,12 @@
                     text-transform: uppercase;
                     color: #92c054;
                     letter-spacing: 0.5px;
+                }
+                svg{
+                  display: inline-block;
+                  width: 1em;
+                  height: 1em;
+                  fill: #92c054;
                 }
             }
         }
