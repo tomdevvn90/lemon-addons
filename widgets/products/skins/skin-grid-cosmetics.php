@@ -784,7 +784,7 @@ class Skin_Grid_Cosmetics extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-product__category' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-product__category a' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_grid_cosmetics_show_category!' => '',
@@ -812,7 +812,7 @@ class Skin_Grid_Cosmetics extends Skin_Base {
 			[
 				'name' => 'category_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-product__category',
+				'selector' => '{{WRAPPER}} .elementor-product__category a',
 				'condition' => [
 					'skin_grid_cosmetics_show_category!' => '',
 				],
