@@ -588,6 +588,21 @@ class Skin_Grid_Beauty extends Skin_Base {
 			]
 		);
 
+		$this->add_control(
+			'meta_primary_bg_color',
+			[
+				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'type' => Controls_Manager::COLOR,
+				'default' => '',
+				'selectors' => [
+					'{{WRAPPER}} .elementor-post__meta li.meta-date' => 'background: {{VALUE}};',
+				],
+				'condition' => [
+					'skin_grid_beauty_show_meta!' => '',
+				],
+			]
+		);
+
         $this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
