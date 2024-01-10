@@ -11982,6 +11982,10 @@ img.mfp-img {
   opacity: 1;
 }
 
+.elementor-posts--skin-lemon-dentist .item-post {
+  transition: all 0.25s ease-in-out;
+}
+
 .elementor-posts--skin-lemon-dentist .item-post-warp {
   width: 100%;
   height: auto;

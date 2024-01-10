@@ -311,42 +311,59 @@ class Skin_Lemon_dentist extends Skin_Base {
 			]
 		);
 
-		$this->add_control(
-			'title_color_normal',
-			[
-				'label' => __( 'Color Normal', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .item-post--heading' => 'color: {{VALUE}};',
-				],
-				'condition' => [
-					'show_title!' => '',
-				],
-			]
-		);
+        $this->start_controls_tabs( 'title_style_tabs' );
 
-		$this->add_control(
-			'title_color_hover',
-			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .item-post--heading:hover' => 'color: {{VALUE}};',
-				],
-				'condition' => [
-					'show_title!' => '',
-				],
-			]
-		);
+        $this->start_controls_tab( 'title_style_normal',
+            [
+                'label' => __( 'Normal', 'bearsthemes-addons' ),
+            ]
+        );
+
+            $this->add_control(
+                'title_color',[
+                    'label' => __( 'Color', 'bearsthemes-addons' ),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '',
+                    'selectors' => [
+                        '{{WRAPPER}} .item-post--heading a' => 'color: {{VALUE}};',
+                    ],
+                    'condition' => [
+                        'show_title!' => '',
+                    ],
+                ]
+            );
+
+        $this->end_controls_tab();
+
+        $this->start_controls_tab( 'title_style_hover',
+            [
+                'label' => __( 'Hover', 'bearsthemes-addons' ),
+            ]
+        );
+
+            $this->add_control(
+                'title_color_hv',[
+                    'label' => __( 'Color', 'bearsthemes-addons' ),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '',
+                    'selectors' => [
+                        '{{WRAPPER}} .item-post--heading a:hover' => 'color: {{VALUE}};',
+                    ],
+                    'condition' => [
+                        'show_title!' => '',
+                    ],
+                ]
+            );
+            
+            $this->end_controls_tab();
+        $this->end_controls_tabs(); 
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'title_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .item-post--heading',
+				'selector' => '{{WRAPPER}} .item-post--heading a',
 				'condition' => [
 					'show_title!' => '',
 				],
@@ -365,20 +382,80 @@ class Skin_Lemon_dentist extends Skin_Base {
 			]
 		);
 
-		$this->add_control(
-			'date_color',
-			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .item-post--date' => 'color: {{VALUE}};',
-				],
-				'condition' => [
-					'show_meta!' => '',
-				],
-			]
-		);
+        $this->start_controls_tabs( 'date_style_tabs' );
+
+            $this->start_controls_tab( 'date_style_normal',
+                [
+                    'label' => __( 'Normal', 'bearsthemes-addons' ),
+                ]
+            );
+
+                $this->add_control(
+                    'date_color',[
+                        'label' => __( 'Color', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--date' => 'color: {{VALUE}};',
+                        ],
+                        'condition' => [
+                            'show_meta!' => '',
+                        ],
+                    ]
+                );
+
+                $this->add_control(
+                    'date_bg',[
+                        'label' => __( 'Background', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--date' => 'background: {{VALUE}};',
+                        ],
+                        'condition' => [
+                            'show_meta!' => '',
+                        ],
+                    ]
+                );
+
+            $this->end_controls_tab();
+
+            $this->start_controls_tab( 'date_style_hover',
+                [
+                    'label' => __( 'Hover', 'bearsthemes-addons' ),
+                ]
+            );
+
+                $this->add_control(
+                    'date_color_hv',[
+                        'label' => __( 'Color', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--date:hover' => 'color: {{VALUE}};',
+                        ],
+                        'condition' => [
+                            'show_meta!' => '',
+                        ],
+                    ]
+                );
+
+                $this->add_control(
+                    'date_bg_hv',[
+                        'label' => __( 'Background', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--date:hover' => 'background-color: {{VALUE}};',
+                        ],
+                        'condition' => [
+                            'show_meta!' => '',
+                        ],
+                    ]
+                );
+                
+            $this->end_controls_tab();
+        $this->end_controls_tabs(); 
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
@@ -392,47 +469,77 @@ class Skin_Lemon_dentist extends Skin_Base {
 			]
 		);
 
-		// style author
+		// style comment
 		$this->add_control(
-			'author_style',
+			'btn_cmt_style',
 			[
-				'label' => __( 'Author', 'bearsthemes-addons' ),
+				'label' => __( 'Button Comment', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
-		$this->add_control(
-			'author_color_normal',
-			[
-				'label' => __( 'Color Normal', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .item-post--author' => 'color: {{VALUE}};',
-				],
-			]
-		);
+        $this->start_controls_tabs( 'btn_cmt_style_tabs' );
 
-		$this->add_control(
-			'author_color_active',
-			[
-				'label' => __( 'Color Active', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .item-post--author > a' => 'color: {{VALUE}};',
-				],
-			]
-		);
+            $this->start_controls_tab( 'btn_cmt_style_normal',
+                [
+                    'label' => __( 'Normal', 'bearsthemes-addons' ),
+                ]
+            );
 
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'author_typography',
-				'default' => '',
-				'selector' => '{{WRAPPER}} .item-post--author',
-			]
-		);
+                $this->add_control(
+                    'btn_cmt_color',[
+                        'label' => __( 'Color', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--comment svg path' => 'fill: {{VALUE}};',
+                        ],
+                    ]
+                );
+
+                $this->add_control(
+                    'btn_cmt_bg',[
+                        'label' => __( 'Background', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--comment a' => 'background: {{VALUE}};',
+                        ],
+                    ]
+                );
+
+            $this->end_controls_tab();
+
+            $this->start_controls_tab( 'btn_cmt_style_hover',
+                [
+                    'label' => __( 'Hover', 'bearsthemes-addons' ),
+                ]
+            );
+
+                $this->add_control(
+                    'btn_cmt_color_hv',[
+                        'label' => __( 'Color', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--comment:hover svg path' => 'fill: {{VALUE}};',
+                        ],
+                    ]
+                );
+
+                $this->add_control(
+                    'btn_cmt_bg_hv',[
+                        'label' => __( 'Background', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--comment a:hover' => 'background-color: {{VALUE}};',
+                        ],
+                    ]
+                );
+                
+            $this->end_controls_tab();
+        $this->end_controls_tabs();  
 
 		// style text content
 		$this->add_control(
@@ -443,17 +550,46 @@ class Skin_Lemon_dentist extends Skin_Base {
 			]
 		);
 
-		$this->add_control(
-			'text_color',
-			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'default' => '',
-				'selectors' => [
-					'{{WRAPPER}} .item-post--excerpt' => 'color: {{VALUE}};',
-				],
-			]
-		);
+        $this->start_controls_tabs( 'text_style_tabs' );
+
+            $this->start_controls_tab( 'text_style_normal',
+                [
+                    'label' => __( 'Normal', 'bearsthemes-addons' ),
+                ]
+            );
+
+                $this->add_control(
+                    'text_color',[
+                        'label' => __( 'Color', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post--excerpt' => 'color: {{VALUE}};',
+                        ],
+                    ]
+                );
+
+            $this->end_controls_tab();
+
+            $this->start_controls_tab( 'text_style_hover',
+                [
+                    'label' => __( 'Hover', 'bearsthemes-addons' ),
+                ]
+            );
+
+                $this->add_control(
+                    'text_color_Hover',[
+                        'label' => __( 'Color', 'bearsthemes-addons' ),
+                        'type' => Controls_Manager::COLOR,
+                        'default' => '',
+                        'selectors' => [
+                            '{{WRAPPER}} .item-post:hover .item-post--excerpt' => 'color: {{VALUE}};',
+                        ],
+                    ]
+                );
+
+            $this->end_controls_tab();
+        $this->end_controls_tabs();    
 
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),

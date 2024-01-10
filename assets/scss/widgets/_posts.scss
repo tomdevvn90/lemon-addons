@@ -4292,6 +4292,7 @@
   // style template lemon dentist
   &--skin-lemon-dentist{
     .item-post{
+      transition: $transition;
       &-warp{
         width: 100%;
         height: auto;
