@@ -62,7 +62,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
 		$this->add_skin( new Skins\Skin_Wellness( $this ) );
 		$this->add_skin( new Skins\Skin_Lemon_Tattoo( $this ) );
-		
+		$this->add_skin( new Skins\Skin_Lemon_Dentist( $this ) );
 
 	}
 

@@ -4289,6 +4289,149 @@
     }
   }
 
+  // style template lemon dentist
+  &--skin-lemon-dentist{
+    .item-post{
+      &-warp{
+        width: 100%;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        &:hover{
+          .item-post-meta{
+            p{
+              opacity: 1;
+              &.item-post--date{
+                transform: translateX(0px);
+              }
+
+              &.item-post--comment{
+                transform: translateY(0px);
+              }
+            }
+          }
+        }
+      }
+
+      &-inner{
+        text-align: center;
+      }
+
+      &-meta{
+        position: absolute;
+        bottom: 30px;
+        left: 0px;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        padding-top: 32px;
+
+        p{
+          margin: 0;
+          transition: all 0.5s ease-in-out;
+          opacity: 0;
+        }
+      }
+
+      &--date{
+        font-size: 13px;
+        line-height: 23px;
+        font-weight: 600;
+        background-color: $dentist-color-primary;
+        color: #fff;
+        padding: 12px 31px;
+        border-radius: 20px;
+        font-family: $dentist-font-primary;
+        transform: translateX(-200px);
+      }
+
+      &--comment{
+        transform: translateY(-200px);
+        a{
+          font-size: 0px;
+          position: relative;
+          border-radius: 50%;
+          height: 47px;
+          width: 47px;
+          background-color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        svg{
+          width: 100%;
+          height: auto;
+          max-width: 22px;
+          path{
+            fill: #fff;
+          }
+        }
+      }
+
+      &--cta{
+        margin: 16px 0 0 0;
+        a{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          svg{
+            width: 100%;
+            height: auto;
+            max-width: 12px;
+            path{
+              fill: $dentist-color-primary;
+            }
+          }
+
+          span{
+            color: $dentist-color-primary;
+            font-size: 13px;
+            line-height: 23px;
+            font-weight: 700;
+            position: relative;
+            font-family: $dentist-font-primary;
+            display: inline-block;
+          }
+        }
+      }
+
+      &--heading{
+        margin: 32px 0 0 0;
+        > a{
+          font-family: $dentist-font-primary;
+          font-style: normal;
+          font-weight: 600;
+          font-size: 20px;
+          line-height: 125%;
+          letter-spacing: 0px;
+          color: #444;
+        }
+      }
+
+      &--excerpt{
+        font-size: 16px;
+        line-height: 125%;
+        font-weight: 400;
+        color:#555;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        letter-spacing: 0px;
+        margin: 16px 0 0 0;
+        font-family: $dentist-font-primary;
+        p{
+          margin: 0;
+        }
+      }
+    }
+  }
+
 }
 
 .elementor-recent-posts {

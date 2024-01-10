@@ -11982,6 +11982,148 @@ img.mfp-img {
   opacity: 1;
 }
 
+.elementor-posts--skin-lemon-dentist .item-post-warp {
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post-warp:hover .item-post-meta p {
+  opacity: 1;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post-warp:hover .item-post-meta p.item-post--date {
+  transform: translateX(0px);
+}
+
+.elementor-posts--skin-lemon-dentist .item-post-warp:hover .item-post-meta p.item-post--comment {
+  transform: translateY(0px);
+}
+
+.elementor-posts--skin-lemon-dentist .item-post-inner {
+  text-align: center;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post-meta {
+  position: absolute;
+  bottom: 30px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: 32px;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post-meta p {
+  margin: 0;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--date {
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 600;
+  background-color: #0181e4;
+  color: #fff;
+  padding: 12px 31px;
+  border-radius: 20px;
+  font-family: "Poppins", Sans-serif;
+  transform: translateX(-200px);
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--comment {
+  transform: translateY(-200px);
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--comment a {
+  font-size: 0px;
+  position: relative;
+  border-radius: 50%;
+  height: 47px;
+  width: 47px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--comment svg {
+  width: 100%;
+  height: auto;
+  max-width: 22px;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--comment svg path {
+  fill: #fff;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--cta {
+  margin: 16px 0 0 0;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--cta a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--cta a svg {
+  width: 100%;
+  height: auto;
+  max-width: 12px;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--cta a svg path {
+  fill: #0181e4;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--cta a span {
+  color: #0181e4;
+  font-size: 13px;
+  line-height: 23px;
+  font-weight: 700;
+  position: relative;
+  font-family: "Poppins", Sans-serif;
+  display: inline-block;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--heading {
+  margin: 32px 0 0 0;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--heading > a {
+  font-family: "Poppins", Sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 125%;
+  letter-spacing: 0px;
+  color: #444;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--excerpt {
+  font-size: 16px;
+  line-height: 125%;
+  font-weight: 400;
+  color: #555;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  letter-spacing: 0px;
+  margin: 16px 0 0 0;
+  font-family: "Poppins", Sans-serif;
+}
+
+.elementor-posts--skin-lemon-dentist .item-post--excerpt p {
+  margin: 0;
+}
+
 .elementor-recent-posts .elementor-post {
   display: flex;
   align-items: center;
