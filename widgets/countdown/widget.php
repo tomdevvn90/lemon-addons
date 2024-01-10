@@ -26,7 +26,7 @@ class Be_CountDown extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'jquery-countdown-plugin', 'jquery-countdown', 'bearsthemes-addons' ];
+		return [ 'jquery-countdown-plugin', 'jquery-countdown', 'lemon-addons-plugin' ];
 	}
 
 	protected function register_layout_section_controls() {

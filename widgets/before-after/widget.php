@@ -32,7 +32,7 @@ class Be_Before_After extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'jquery.event.move', 'jquery.twentytwenty', 'bearsthemes-addons' ];
+		return [ 'jquery.event.move', 'jquery.twentytwenty', 'lemon-addons-plugin' ];
 	}
 
 	protected function register_layout_section_controls() {

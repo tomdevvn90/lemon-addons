@@ -30,7 +30,7 @@ class Be_Products_Masonry extends Widget_Base {
 
 	public function get_script_depends() {
 		//return [ 'jquery-isotope' ];
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons-plugin' ];
 	}
 
     protected function get_supported_ids() {

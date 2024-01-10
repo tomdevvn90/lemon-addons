@@ -27,7 +27,7 @@ class Be_Counter extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'elementor-waypoints', 'jquery-numerator', 'bearsthemes-addons' ];
+		return [ 'elementor-waypoints', 'jquery-numerator', 'lemon-addons-plugin' ];
 	}
 
 	protected function register_layout_section_controls() {

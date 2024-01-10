@@ -33,7 +33,7 @@ class Be_Uber_Menu extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'jquery-magnific-popup', 'bearsthemes-addons' ];
+		return [ 'jquery-magnific-popup', 'lemon-addons-plugin' ];
 	}
 
 	protected function get_supported_post_ids() {

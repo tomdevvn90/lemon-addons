@@ -32,7 +32,7 @@ class Be_Search_Form extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons-plugin' ];
 	}
 
 	protected function register_skins() {

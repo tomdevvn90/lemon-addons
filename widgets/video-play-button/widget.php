@@ -30,7 +30,7 @@ class Be_Video_Play_Button extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'jquery-magnific-popup', 'bearsthemes-addons' ];
+		return [ 'jquery-magnific-popup', 'lemon-addons-plugin' ];
 	}
 
 	protected function register_layout_section_controls() {

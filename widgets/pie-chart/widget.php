@@ -26,7 +26,7 @@ class Be_Pie_Chart extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'elementor-waypoints', 'jquery-progressbar', 'bearsthemes-addons' ];
+		return [ 'elementor-waypoints', 'jquery-progressbar', 'lemon-addons-plugin' ];
 	}
 
 	protected function register_layout_section_controls() {

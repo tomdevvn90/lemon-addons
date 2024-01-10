@@ -39,7 +39,7 @@ class Be_Banner_Image_Box extends Widget_Base {
             'jquery-particles',
             'jquery-textillate',
             'jquery-lettering',
-            'bearsthemes-addons',
+            'lemon-addons-plugin',
 		];
     }
 
