@@ -181,6 +181,10 @@ class Plugin {
 		wp_register_script( 'jquery.twentytwenty', plugins_url( '/assets/js/jquery.twentytwenty.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'jquery.event.move', plugins_url( '/assets/js/jquery.event.move.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'bearsthemes-addons', plugins_url( '/assets/js/frontend.js', __FILE__ ), [ 'jquery','jquery-isotope', 'elementor-swiper' ], false, true );
+		wp_enqueue_script( 'lemon-addons-plugin', plugins_url( '/dist/js/plugin.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true);
+		wp_enqueue_script( 'lemon-addons-plugin-vendor', plugins_url( '/dist/js/vendor.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true );
+		wp_enqueue_script( 'lemon-addons-plugin-manifest', plugins_url( '/dist/js/manifest.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true );
+		
 		wp_localize_script( 'bearsthemes-addons', 'products_data_ajax', array(
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
 			'current_page' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,

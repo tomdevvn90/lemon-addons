@@ -30,6 +30,7 @@
         "lightgallery": "^2.7.1",
         "progressbar.js": "^1.1.0",
         "slick-carousel": "^1.8.1",
+        "swiper": "^11.0.5",
         "waypoints": "^4.0.1"
     }
 }
