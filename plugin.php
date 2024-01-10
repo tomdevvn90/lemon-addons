@@ -105,10 +105,6 @@ class Plugin {
 			'posts',
 			'recent-posts',
 			'posts-carousel',
-			'members',
-			'members-carousel',
-			'projects',
-			'projects-carousel',
 			'banner-animation',
 			'products-sidebar',
 			'text-animation',
@@ -254,10 +250,6 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Posts\Be_Posts() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Recent_Posts\Be_Recent_Posts() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Posts_Carousel\Be_Posts_Carousel() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Members\Be_Members() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Members_Carousel\Be_Members_Carousel() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Projects\Be_Projects() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Projects_Carousel\Be_Projects_Carousel() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Animation\Be_Banner_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Text_Animation\Be_Text_Animation() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );

@@ -138,6 +138,10 @@ class Be_Logo_Carousel extends Widget_Base {
 						'list_image' => Utils::get_placeholder_image_src(),
 						'list_url' => '',
 					],
+					[
+						'list_image' => Utils::get_placeholder_image_src(),
+						'list_url' => '',
+					],
 				],
 			]
 		);
