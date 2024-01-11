@@ -4439,6 +4439,16 @@
       padding: 40px 0;
       text-align: center;
 
+      &:hover{
+        .elementor-post {
+          &__thumbnail {
+            img{
+              transform: scale(1.1);
+            }
+          }
+        }
+      }
+
       &:nth-child(odd){
         .elementor-post__content {
           &::after{
@@ -4469,6 +4479,7 @@
           }
         }
       }
+
       &.has-thumbnail {
         &:nth-child(odd){
           .elementor-post__content {

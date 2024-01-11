@@ -12134,6 +12134,10 @@ img.mfp-img {
   text-align: center;
 }
 
+.elementor-posts--skin-list-spa-beauty .elementor-post:hover .elementor-post__thumbnail img {
+  transform: scale(1.1);
+}
+
 .elementor-posts--skin-list-spa-beauty .elementor-post:nth-child(odd) .elementor-post__content::after {
   content: "";
   position: absolute;
