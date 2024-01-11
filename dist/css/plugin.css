@@ -12128,6 +12128,231 @@ img.mfp-img {
   margin: 0;
 }
 
+.elementor-posts--skin-list-spa-beauty .elementor-post {
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post:nth-child(odd) .elementor-post__content::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% + 80px);
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: #ebebeb solid 7px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post:nth-child(even) .elementor-post__content::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% + 80px);
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: #ebebeb solid 7px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail {
+  display: flex;
+  align-items: center;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail:nth-child(odd) .elementor-post__content::after {
+  left: -50px;
+  height: 100%;
+  width: calc(100% + 50px);
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail:nth-child(even) .elementor-post__content::after {
+  height: 100%;
+  width: calc(100% + 50px);
+}
+
+@media (min-width: 768px) {
+  .elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail:nth-child(2n) {
+    flex-direction: row-reverse;
+  }
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail .elementor-post__thumbnail-wrap {
+  position: relative;
+  z-index: 4;
+  width: 50%;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail .elementor-post__content {
+  position: relative;
+  z-index: 3;
+  width: 50%;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__thumbnail {
+  position: relative;
+  padding-bottom: 66%;
+  background: #e7e6e4;
+  overflow: hidden;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__thumbnail img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: all 0.3s;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__content {
+  position: relative;
+  z-index: 3;
+  background: #FFFFFF;
+  padding: 40px 60px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__meta {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__meta li {
+  margin: 0 8px 10px;
+  display: inline-block;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #fff;
+  background: #24ca24;
+  padding: 5px 20px;
+  border-radius: 30px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__meta li a {
+  color: inherit;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__meta li svg {
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  margin: -3px 4px 0 1px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #1D2440;
+  letter-spacing: 0.01em;
+  color: #303030;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+  margin-bottom: 16px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__title a {
+  color: inherit;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__cat-links {
+  margin-bottom: 12px;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__excerpt {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #555;
+  margin-bottom: 20px;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  display: -webkit-box;
+}
+
+@media screen and (min-width: 768px) {
+  .elementor-posts--skin-list-spa-beauty .elementor-post__excerpt {
+    min-height: 66px;
+  }
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__excerpt p {
+  margin: 0;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__read-more {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: #1D2440;
+  background: #ebebeb;
+  padding: 12px 35px;
+  border-radius: 30px;
+  transition: all 0.3s;
+}
+
+.elementor-posts--skin-list-spa-beauty .elementor-post__read-more:hover {
+  color: #FFFFFF;
+  background: #24ca24;
+}
+
+@media (max-width: 1024px) {
+  .elementor-posts--skin-list-spa-beauty .elementor-post {
+    padding: 20px 0;
+  }
+
+  .elementor-posts--skin-list-spa-beauty .elementor-post__content {
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .elementor-posts--skin-list-spa-beauty .elementor-post {
+    padding: 0;
+    flex-direction: column;
+  }
+
+  .elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail:nth-child(odd) .elementor-post__content::after {
+    display: none;
+  }
+
+  .elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail:nth-child(even) .elementor-post__content::after {
+    display: none;
+  }
+
+  .elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail .elementor-post__thumbnail-wrap {
+    width: 100%;
+    margin: 0;
+  }
+
+  .elementor-posts--skin-list-spa-beauty .elementor-post.has-thumbnail .elementor-post__content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .elementor-posts--skin-list-spa-beauty .elementor-post__content {
+    padding: 30px 20px;
+  }
+}
+
 .elementor-recent-posts .elementor-post {
   display: flex;
   align-items: center;
