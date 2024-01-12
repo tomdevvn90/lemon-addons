@@ -189,7 +189,7 @@ class Skin_List_Spa_Beauty extends Skin_Base {
 	public function registerd_design_layout_controls( Widget_Base $widget ) {
 		$this->parent = $widget;
 
-		$this->add_control(
+		$this->add_responsive_control(
 			'row_gap',
 			[
 				'label' => __( 'Rows Gap', 'bearsthemes-addons' ),
