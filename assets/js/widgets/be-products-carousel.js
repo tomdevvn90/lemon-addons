@@ -38,6 +38,7 @@ import { Navigation, Pagination } from 'swiper/modules';
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-ramble', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-cosmetics', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-wellness', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-list-spa', SwiperSliderHandler);
     });
 
 })(jQuery); 

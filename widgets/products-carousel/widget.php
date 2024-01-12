@@ -45,6 +45,7 @@ class Be_Products_Carousel extends Widget_Base {
 		$this->add_skin( new Skins\Skin_Ramble( $this ) );
 		$this->add_skin( new Skins\Skin_Cosmetics( $this ) );
 		$this->add_skin( new Skins\Skin_Wellness( $this ) );
+		$this->add_skin( new Skins\Skin_List_Spa( $this ) );
 
 	}
 
