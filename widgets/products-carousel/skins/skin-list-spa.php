@@ -9,6 +9,7 @@ use Elementor\Group_Control_Css_Filter;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
 use Elementor\Group_Control_Box_Shadow;
+use \Elementor\Group_Control_Background;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
@@ -316,14 +317,12 @@ class Skin_List_Spa extends Skin_Base {
 			]
 		);
 
-		$this->add_control(
-			'box_bg_color',
+        $this->add_group_control(
+			Group_Control_Background::get_type(),
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-product' => 'background-color: {{VALUE}}',
-				],
+				'name' => 'background',
+				'types' => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .elementor-product',
 			]
 		);
 
@@ -354,14 +353,12 @@ class Skin_List_Spa extends Skin_Base {
 			]
 		);
 
-		$this->add_control(
-			'box_bg_color_hover',
+        $this->add_group_control(
+			Group_Control_Background::get_type(),
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .elementor-product:hover' => 'background-color: {{VALUE}}',
-				],
+				'name' => 'background_hover',
+				'types' => [ 'classic', 'gradient' ],
+				'selector' => '{{WRAPPER}} .elementor-product:hover',
 			]
 		);
 
