@@ -4039,14 +4039,14 @@ img.mfp-img {
   font-weight: 400;
 }
 
-.elementor-products--skin-list-spa .elementor-product__price span {
+.elementor-products--skin-list-spa .elementor-product__price {
   color: #24ca24;
   font-size: 20px;
   line-height: 22px;
   font-weight: 400;
 }
 
-.elementor-products--skin-list-spa .elementor-product__price del span {
+.elementor-products--skin-list-spa .elementor-product__price del {
   font-size: 15px;
 }
 

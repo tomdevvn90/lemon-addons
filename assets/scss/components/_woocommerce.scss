@@ -2576,16 +2576,12 @@
             }
 
             &__price{
-                span{
-                    color: #24ca24;
-                    font-size: 20px;
-                    line-height: 22px;
-                    font-weight: 400;
-                }
+                color: #24ca24;
+                font-size: 20px;
+                line-height: 22px;
+                font-weight: 400;
                 del{
-                    span{
-                        font-size: 15px;
-                    }
+                    font-size: 15px;
                 }
             }
 

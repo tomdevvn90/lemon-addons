@@ -665,8 +665,7 @@ class Skin_List_Spa extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					'{{WRAPPER}} .elementor-product__price span' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .elementor-product__price del span' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .elementor-product__price' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_list_spa_show_price!' => '',
@@ -679,7 +678,7 @@ class Skin_List_Spa extends Skin_Base {
 			[
 				'name' => 'price_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-product__price span',
+				'selector' => '{{WRAPPER}} .elementor-product__price,{{WRAPPER}} .elementor-product__price del',
 				'condition' => [
 					'skin_list_spa_show_price!' => '',
 				],
@@ -693,7 +692,7 @@ class Skin_List_Spa extends Skin_Base {
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
-					' {{WRAPPER}} .elementor-product__price del span' => 'color: {{VALUE}};',
+					' {{WRAPPER}} .elementor-product__price del' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'skin_list_spa_show_price!' => '',
@@ -706,7 +705,7 @@ class Skin_List_Spa extends Skin_Base {
 			[
 				'name' => 'price_del_typography',
 				'default' => '',
-				'selector' => '{{WRAPPER}} .elementor-product__price del span',
+				'selector' => '{{WRAPPER}} .elementor-product__price del',
 				'condition' => [
 					'skin_list_spa_show_price!' => '',
 				],
