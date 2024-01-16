@@ -57,6 +57,7 @@ class Be_Posts extends Widget_Base {
 		$this->add_skin( new Skins\Skin_List_Hardeol( $this ) );
 		$this->add_skin( new Skins\Skin_List_Nevado( $this ) );
 		$this->add_skin( new Skins\Skin_List_Changla( $this ) );
+		$this->add_skin( new Skins\Skin_List_Spa_Beauty( $this ) );
 
 		$this->add_skin( new Skins\Skin_Cobble_Grouse( $this ) );
 		$this->add_skin( new Skins\Skin_Cobble_Vaccine( $this ) );

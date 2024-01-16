@@ -988,6 +988,7 @@ __webpack_require__.r(__webpack_exports__);
     elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-ramble', SwiperSliderHandler);
     elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-cosmetics', SwiperSliderHandler);
     elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-wellness', SwiperSliderHandler);
+    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-list-spa', SwiperSliderHandler);
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
