@@ -153,7 +153,6 @@ class Plugin {
 	 */
 	public function widget_styles() {
 		wp_register_style( 'animate', plugins_url( '/assets/css/animate.css', __FILE__ ), false );
-		wp_register_style( 'plugin-backend', plugins_url( '/dist/css/plugin.css', __FILE__ ), false );
 	}
 
 	/**

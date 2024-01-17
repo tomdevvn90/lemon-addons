@@ -1,7 +1,4 @@
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/swiper-bundle.min.css'
-import 'swiper/swiper.min.css'
-
 
 (function ($) {
     "use strict";
