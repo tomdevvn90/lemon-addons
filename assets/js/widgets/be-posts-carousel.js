@@ -1,30 +1,31 @@
 import { Navigation, Pagination } from 'swiper/modules';
 
-
 (function ($) {
     "use strict";
 
     const PostCarouselHandler = function($scope, $) {
-        // console.log("check")
-        // console.log($scope)
-
         const $widgetCarousel = $('.elementor-widget-be-posts-carousel')
+        if ($widgetCarousel.length === 0) return;
         
-        if ($widgetCarousel.length > 0) {
+        $scope.each(function () {
+            const $selector = $(this).find('.swiper-container');
+            let $dataSwiper = $selector.data('swiper');
+            // let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
 
-            $scope.each(function () {
-                const $selector = $(this).find('.swiper-container');
-                let $dataSwiper = $selector.data('swiper');
-                console.log($dataSwiper)
-                let opt_df = {
-       
-                    modules: [Navigation, Pagination],
-                };
-    
-                let widgetSlider =  new Swiper($selector[0],  $dataSwiper)
-            })
-        }
-    
+            let opt_df = {
+                paginationClickable: true,
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                modules: [Navigation, Pagination],
+			};
+
+            let widgetSwiperCarousel =  new Swiper($selector[0],  Object.assign({}, opt_df, $dataSwiper));
+        })
     };
 
     // Make sure you run this code under Elementor.

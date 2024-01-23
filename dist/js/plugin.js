@@ -706,12 +706,14 @@ __webpack_require__.r(__webpack_exports__);
 (function ($) {
   "use strict";
 
-  var SwiperSliderHandler = function SwiperSliderHandler($scope, $) {
-    var $selector = $scope.find('.swiper-container');
-    if ($selector.length > 0) {
+  var LogoCarouselHandler = function LogoCarouselHandler($scope, $) {
+    var $widgetCarousel = $('.elementor-widget-be-logo-carousel');
+    if ($widgetCarousel.length === 0) return;
+    $scope.each(function () {
+      var $selector = $(this).find('.swiper-container');
       var $dataSwiper = $selector.data('swiper');
+      console.log($dataSwiper);
       var opt_df = {
-        loop: true,
         paginationClickable: true,
         navigation: {
           nextEl: '.swiper-button-next',
@@ -722,13 +724,15 @@ __webpack_require__.r(__webpack_exports__);
         },
         modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
       };
-      var widgetSlider = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
-    }
+      var widgetSliderss = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
+
+      // let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
+    });
   };
 
   // Make sure you run this code under Elementor.
   $(window).on('elementor/frontend/init', function () {
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-logo-carousel.default', SwiperSliderHandler);
+    elementorFrontend.hooks.addAction('frontend/element_ready/be-logo-carousel.default', LogoCarouselHandler);
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -827,21 +831,26 @@ __webpack_require__.r(__webpack_exports__);
   "use strict";
 
   var PostCarouselHandler = function PostCarouselHandler($scope, $) {
-    // console.log("check")
-    // console.log($scope)
-
     var $widgetCarousel = $('.elementor-widget-be-posts-carousel');
-    if ($widgetCarousel.length > 0) {
-      $scope.each(function () {
-        var $selector = $(this).find('.swiper-container');
-        var $dataSwiper = $selector.data('swiper');
-        console.log($dataSwiper);
-        var opt_df = {
-          modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-        };
-        var widgetSlider = new Swiper($selector[0], $dataSwiper);
-      });
-    }
+    if ($widgetCarousel.length === 0) return;
+    $scope.each(function () {
+      var $selector = $(this).find('.swiper-container');
+      var $dataSwiper = $selector.data('swiper');
+      // let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
+
+      var opt_df = {
+        paginationClickable: true,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        },
+        pagination: {
+          el: '.swiper-pagination'
+        },
+        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
+      };
+      var widgetSwiperCarousel = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
+    });
   };
 
   // Make sure you run this code under Elementor.
