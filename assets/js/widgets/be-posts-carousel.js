@@ -4,57 +4,57 @@ import { Navigation, Pagination } from 'swiper/modules';
 (function ($) {
     "use strict";
 
-    const SwiperSliderHandler = function($scope, $) {
+    const PostCarouselHandler = function($scope, $) {
+        // console.log("check")
+
+
+        // console.log($scope)
+
+        const $widgetCarousel = $('.elementor-widget-be-posts-carousel')
         
-        const $selector = $scope.find('.swiper-container');
-        if ($selector.length > 0) {
-            
-            let $dataSwiper = $selector.data('swiper');
+        if ($widgetCarousel.length > 0) {
 
-            let opt_df = {
-                loop: true,
-                paginationClickable: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                modules: [Navigation, Pagination],
-			};
-
-            const widgetSlider =  new Swiper($selector[0],  Object.assign({}, opt_df, $dataSwiper))
+            $scope.each(function () {
+                const $selector = $(this).find('.swiper-container');
+                let $dataSwiper = $selector.data('swiper');
+                console.log($dataSwiper)
+                let opt_df = {
+       
+                    modules: [Navigation, Pagination],
+                };
+    
+                let widgetSlider =  new Swiper($selector[0],  $dataSwiper)
+            })
         }
     
     };
 
     // Make sure you run this code under Elementor.
     $(window).on('elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.default', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-pumori', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-baruntse', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-coropuna', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-andrus', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-saltoro', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-batura', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-changtse', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-taboche', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-castor', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-wilson', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jorasses', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-michelson', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cerredo', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-gangri', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-sankar', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cholatse', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-tronador', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jimara', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-cosmetics', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-wellness', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-lemon-tattoo', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-beauty', SwiperSliderHandler);
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-lemon-dentist', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.default', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-pumori', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-baruntse', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-coropuna', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-andrus', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-saltoro', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-batura', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-changtse', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-taboche', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-castor', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-wilson', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jorasses', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-michelson', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cerredo', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-gangri', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-sankar', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-cholatse', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-tronador', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-jimara', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-cosmetics', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-wellness', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-lemon-tattoo', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-grid-beauty', PostCarouselHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.skin-lemon-dentist', PostCarouselHandler);
     });
 
 })(jQuery); 
