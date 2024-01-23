@@ -10,21 +10,7 @@ import { Navigation, Pagination } from 'swiper/modules';
         $scope.each(function () {
             const $selector = $(this).find('.swiper-container');
             let $dataSwiper = $selector.data('swiper');
-            // let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
-
-            let opt_df = {
-                paginationClickable: true,
-                navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                },
-                pagination: {
-                    el: '.swiper-pagination',
-                },
-                modules: [Navigation, Pagination],
-			};
-
-            let widgetSwiperCarousel =  new Swiper($selector[0],  Object.assign({}, opt_df, $dataSwiper));
+            let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
         })
     };
 

@@ -836,20 +836,7 @@ __webpack_require__.r(__webpack_exports__);
     $scope.each(function () {
       var $selector = $(this).find('.swiper-container');
       var $dataSwiper = $selector.data('swiper');
-      // let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
-
-      var opt_df = {
-        paginationClickable: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-      };
-      var widgetSwiperCarousel = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
+      var widgetSwiperCarousel = new Swiper($selector[0], $dataSwiper);
     });
   };
 
