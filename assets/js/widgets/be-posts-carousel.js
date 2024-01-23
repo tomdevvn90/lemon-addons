@@ -6,8 +6,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 
     const PostCarouselHandler = function($scope, $) {
         // console.log("check")
-
-
         // console.log($scope)
 
         const $widgetCarousel = $('.elementor-widget-be-posts-carousel')

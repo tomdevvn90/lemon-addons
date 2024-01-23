@@ -828,7 +828,6 @@ __webpack_require__.r(__webpack_exports__);
 
   var PostCarouselHandler = function PostCarouselHandler($scope, $) {
     // console.log("check")
-
     // console.log($scope)
 
     var $widgetCarousel = $('.elementor-widget-be-posts-carousel');
