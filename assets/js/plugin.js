@@ -6,7 +6,7 @@ import './components/general';
 
 // all widgets
 import './widgets/be-team-carousel';
-import './widgets/be-posts-carousel';
+// import './widgets/be-posts-carousel';
 import './widgets/be-testimonial-carousel';
 import './widgets/be-logo-carousel';
 import './widgets/be-base-carousel';

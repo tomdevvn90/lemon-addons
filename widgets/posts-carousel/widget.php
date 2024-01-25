@@ -36,7 +36,7 @@ class Be_Posts_Carousel extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'lemon-addons-plugin' ];
+		return [ 'bearsthemes-addons' ];
 	}
 
 	protected function register_skins() {
