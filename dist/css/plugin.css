@@ -15411,9 +15411,10 @@ body .grid-masonry .elementor-product .elementor-product__content .elementor-pro
   line-height: 30px;
   right: -10px;
   border-radius: 50% !important;
-  background: #FED700 !important;
+  background: #000 !important;
   top: -10px !important;
   opacity: 1;
+  color: #fff !important;
 }
 
 .twentytwenty-horizontal .twentytwenty-handle:before,
