@@ -5,7 +5,7 @@ import 'swiper/swiper.min.css'
 import './components/general';
 
 // all widgets
-import './widgets/be-team-carousel';
+// import './widgets/be-team-carousel';
 // import './widgets/be-posts-carousel';
 // import './widgets/be-testimonial-carousel';
 // import './widgets/be-logo-carousel';
