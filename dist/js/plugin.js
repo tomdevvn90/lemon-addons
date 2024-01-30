@@ -94,29 +94,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_general__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/general */ "./assets/js/components/general.js");
 /* harmony import */ var _components_general__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_general__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var _widgets_be_team_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/be-team-carousel */ "./assets/js/widgets/be-team-carousel.js");
-/* harmony import */ var _widgets_be_testimonial_carousel__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/be-testimonial-carousel */ "./assets/js/widgets/be-testimonial-carousel.js");
-/* harmony import */ var _widgets_be_logo_carousel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/be-logo-carousel */ "./assets/js/widgets/be-logo-carousel.js");
-/* harmony import */ var _widgets_be_base_carousel__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/be-base-carousel */ "./assets/js/widgets/be-base-carousel.js");
-/* harmony import */ var _widgets_be_products_carousel__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/be-products-carousel */ "./assets/js/widgets/be-products-carousel.js");
-/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/be-products-sidebar */ "./assets/js/widgets/be-products-sidebar.js");
-/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/be-text-animations */ "./assets/js/widgets/be-text-animations.js");
-/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/be-before-after */ "./assets/js/widgets/be-before-after.js");
-/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_before_after__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/be-banner-image-box */ "./assets/js/widgets/be-banner-image-box.js");
-/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/be-banner-animation */ "./assets/js/widgets/be-banner-animation.js");
-/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_12__);
-/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/be-posts */ "./assets/js/widgets/be-posts.js");
-/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_posts__WEBPACK_IMPORTED_MODULE_13__);
-/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./widgets/be-video-box */ "./assets/js/widgets/be-video-box.js");
-/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_video_box__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./widgets/be-pie-chart */ "./assets/js/widgets/be-pie-chart.js");
-/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_15__);
-/* harmony import */ var _widgets_be_counter__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./widgets/be-counter */ "./assets/js/widgets/be-counter.js");
-/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./widgets/be-countdown */ "./assets/js/widgets/be-countdown.js");
-/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_17___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_countdown__WEBPACK_IMPORTED_MODULE_17__);
+/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/be-products-sidebar */ "./assets/js/widgets/be-products-sidebar.js");
+/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/be-text-animations */ "./assets/js/widgets/be-text-animations.js");
+/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/be-before-after */ "./assets/js/widgets/be-before-after.js");
+/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_before_after__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/be-banner-image-box */ "./assets/js/widgets/be-banner-image-box.js");
+/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/be-banner-animation */ "./assets/js/widgets/be-banner-animation.js");
+/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/be-posts */ "./assets/js/widgets/be-posts.js");
+/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_posts__WEBPACK_IMPORTED_MODULE_9__);
+/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/be-video-box */ "./assets/js/widgets/be-video-box.js");
+/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_video_box__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/be-pie-chart */ "./assets/js/widgets/be-pie-chart.js");
+/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _widgets_be_counter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/be-counter */ "./assets/js/widgets/be-counter.js");
+/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/be-countdown */ "./assets/js/widgets/be-countdown.js");
+/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_countdown__WEBPACK_IMPORTED_MODULE_13__);
 
 
 
@@ -126,10 +122,10 @@ __webpack_require__.r(__webpack_exports__);
 // all widgets
 
 // import './widgets/be-posts-carousel';
-
-
-
-
+// import './widgets/be-testimonial-carousel';
+// import './widgets/be-logo-carousel';
+// import './widgets/be-base-carousel';
+// import './widgets/be-products-carousel';
 
 
 
@@ -551,50 +547,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./assets/js/widgets/be-base-carousel.js":
-/*!***********************************************!*\
-  !*** ./assets/js/widgets/be-base-carousel.js ***!
-  \***********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-
-(function ($) {
-  "use strict";
-
-  var SwiperSliderHandler = function SwiperSliderHandler($scope, $) {
-    var $selector = $scope.find('.swiper-container');
-    if ($selector.length > 0) {
-      var $dataSwiper = $selector.data('swiper');
-      var opt_df = {
-        loop: true,
-        paginationClickable: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-      };
-      var widgetSlider = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
-    }
-  };
-
-  // Make sure you run this code under Elementor.
-  $(window).on('elementor/frontend/init', function () {
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-base-carousel.default', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-base-carousel.skin-grid-pumori', SwiperSliderHandler);
-  });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
 /***/ "./assets/js/widgets/be-before-after.js":
 /*!**********************************************!*\
   !*** ./assets/js/widgets/be-before-after.js ***!
@@ -685,53 +637,6 @@ __webpack_require__.r(__webpack_exports__);
   // Make sure you run this code under Elementor.
   $(window).on('elementor/frontend/init', function () {
     elementorFrontend.hooks.addAction('frontend/element_ready/be-counter.default', CounterHandler);
-  });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./assets/js/widgets/be-logo-carousel.js":
-/*!***********************************************!*\
-  !*** ./assets/js/widgets/be-logo-carousel.js ***!
-  \***********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-
-(function ($) {
-  "use strict";
-
-  var LogoCarouselHandler = function LogoCarouselHandler($scope, $) {
-    var $widgetCarousel = $('.elementor-widget-be-logo-carousel');
-    if ($widgetCarousel.length === 0) return;
-    $scope.each(function () {
-      var $selector = $(this).find('.swiper-container');
-      var $dataSwiper = $selector.data('swiper');
-      console.log($dataSwiper);
-      var opt_df = {
-        paginationClickable: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-      };
-      var widgetSliderss = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
-
-      // let widgetSwiperCarousel =  new Swiper($selector[0],  $dataSwiper)
-    });
-  };
-
-  // Make sure you run this code under Elementor.
-  $(window).on('elementor/frontend/init', function () {
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-logo-carousel.default', LogoCarouselHandler);
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -882,55 +787,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./assets/js/widgets/be-products-carousel.js":
-/*!***************************************************!*\
-  !*** ./assets/js/widgets/be-products-carousel.js ***!
-  \***************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-
-(function ($) {
-  "use strict";
-
-  var SwiperSliderHandler = function SwiperSliderHandler($scope, $) {
-    var $selector = $scope.find('.swiper-container');
-    if ($selector.length > 0) {
-      var $dataSwiper = $selector.data('swiper');
-      var opt_df = {
-        loop: true,
-        paginationClickable: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-      };
-      var widgetSlider = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
-    }
-  };
-
-  // Make sure you run this code under Elementor.
-  $(window).on('elementor/frontend/init', function () {
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.default', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-andrus', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-grid-havsula', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-ramble', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-cosmetics', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-wellness', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-products-carousel.skin-list-spa', SwiperSliderHandler);
-  });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
 /***/ "./assets/js/widgets/be-products-sidebar.js":
 /*!**************************************************!*\
   !*** ./assets/js/widgets/be-products-sidebar.js ***!
@@ -995,114 +851,6 @@ __webpack_require__.r(__webpack_exports__);
   // Make sure you run this code under Elementor.
   $(window).on('elementor/frontend/init', function () {
     elementorFrontend.hooks.addAction('frontend/element_ready/be-team-carousel.default', SwiperSliderHandler);
-  });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./assets/js/widgets/be-testimonial-carousel.js":
-/*!******************************************************!*\
-  !*** ./assets/js/widgets/be-testimonial-carousel.js ***!
-  \******************************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-
-(function ($) {
-  "use strict";
-
-  var SwiperSliderHandler = function SwiperSliderHandler($scope, $) {
-    var $selector = $scope.find('.swiper-container');
-    if (!$selector.length) return;
-    var $dataSwiper = $selector.data('swiper');
-    var opt_df = {
-      loop: true,
-      paginationClickable: true,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
-      },
-      pagination: {
-        el: '.swiper-pagination'
-      },
-      modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-    };
-    var widgetSlider = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
-  };
-
-  // const SwiperSliderThumbsHandler = function($scope, $) {
-
-  //     const $isWidget =  $('.elementor-testimonials--skin-list-coropuna')
-  //     if (!$isWidget.length) return;
-
-  //     const $parent = $('.swiper-main.elementor-testimonials--skin-list-coropuna')
-
-  //console.log($scope);
-
-  // const $selector_thumbs = $scope.find('.swiper-thumbs .swiper-container');
-  // if (!$selector_thumbs.length) return;
-
-  // let opt_df = {
-  //     loop: true,
-  //     paginationClickable: true,
-  //     navigation: {
-  //         nextEl: '.swiper-button-next',
-  //         prevEl: '.swiper-button-prev',
-  //     },
-  //     pagination: {
-  //         el: '.swiper-pagination',
-  //     },
-  //     modules: [Navigation, Pagination],
-  // };
-
-  // let $dataSwiperThumbs = $selector_thumbs.data('swiper');
-  // const thumbSwiper = new Swiper($selector_thumbs[0],  Object.assign({}, opt_df, $dataSwiperThumbs))
-
-  //     console.log($dataSwiperThumbs)
-  // let v = $('.swiper-thumbs')
-  // var $selector = $scope.find('.swiper-main .swiper-container'),
-  //     $dataSwiper = $selector.data('swiper');
-
-  // // $dataSwiper['thumbs'] = {
-  // //     swiper: thumbSwiper,
-  // // };
-
-  // let opt_df_s = {
-  //     loop: true,
-  //     navigation: {
-  //         nextEl: ".swiper-button-next",
-  //         prevEl: ".swiper-button-prev",
-  //       },
-  //       thumbs: {
-  //         swiper: thumbSwiper,
-  //       },
-
-  // };
-
-  // console.log(v)
-
-  // const mainSwiper = new Swiper($selector[0],  Object.assign({}, opt_df_s, $dataSwiper))
-  // };
-
-  // Make sure you run this code under Elementor.
-  $(window).on('elementor/frontend/init', function () {
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.default', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-grid-nevado', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-baruntse', SwiperSliderHandler);
-    // elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-coropuna', SwiperSliderThumbsHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-ampato', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-andrus', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-saltoro', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-changtse', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-changla', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-galloway', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-jorasses', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-list-cholatse', SwiperSliderHandler);
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-lemon-tattoo', SwiperSliderHandler);
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
@@ -1187,8 +935,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\Users\Vuong\Local Sites\lemon-spa-dev\app\public\wp-content\plugins\lemon-addons\assets\js\plugin.js */"./assets/js/plugin.js");
-module.exports = __webpack_require__(/*! C:\Users\Vuong\Local Sites\lemon-spa-dev\app\public\wp-content\plugins\lemon-addons\assets\scss\plugin.scss */"./assets/scss/plugin.scss");
+__webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/plugins/lemon-addons/assets/js/plugin.js */"./assets/js/plugin.js");
+module.exports = __webpack_require__(/*! /Users/buitantoan/Local Sites/lemonspa/app/public/wp-content/plugins/lemon-addons/assets/scss/plugin.scss */"./assets/scss/plugin.scss");
 
 
 /***/ })

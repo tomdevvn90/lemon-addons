@@ -34,7 +34,7 @@ class Be_Testimonial_Carousel extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'lemon-addons-plugin' ];
+		return [ 'lemon-addons-plugin', 'bearsthemes-addons' ];
 	}
 
 	protected function register_skins() {
@@ -1217,7 +1217,12 @@ class Be_Testimonial_Carousel extends Widget_Base {
 		if( !empty( $settings['_skin'] ) && isset( $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key] ) ) {
 			 return $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key];
 		}
-		return $settings[$key];
+
+		if( isset( $settings[$key] ) ){
+			return $settings[$key];
+		}
+
+		return ;
 	}
 
 	protected function swiper_breakpoints() {
@@ -1324,9 +1329,14 @@ class Be_Testimonial_Carousel extends Widget_Base {
 			$classes .= ' elementor-testimonials--default';
 		}
 
+		$this->add_render_attribute( 'testimonial-caousel-attribute', [
+			'class' => $classes,
+			'data-swiper' => $this->swiper_data(),
+		] );
+
 		?>
-		<div class="<?php echo esc_attr( $classes ); ?>" data-swiper="<?php echo esc_attr( $this->swiper_data() ); ?>">
-		<div class="swiper-wrapper">
+		<div <?php echo $this->get_render_attribute_string( 'testimonial-caousel-attribute' ); ?>>
+			<div class="swiper-wrapper">
 		<?php
 	}
 
@@ -1454,10 +1464,10 @@ class Be_Testimonial_Carousel extends Widget_Base {
 						</div>
 						<div class="elementor-testimonial__infor">
 							<?php
-								if( '' !== $settings['list_name'] ) {
+								if( '' !== $item['list_name'] ) {
 									echo '<h3 class="elementor-testimonial__name">' . $item['list_name'] . '</h3>';
 								}
-								if( '' !== $settings['list_job'] ) {
+								if( '' !== $item['list_job'] ) {
 									echo '<div class="elementor-testimonial__job">' . $item['list_job'] . '</div>';
 								}
 							?>
