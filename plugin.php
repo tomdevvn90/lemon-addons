@@ -112,6 +112,7 @@ class Plugin {
 			'service-search-form',
 			'before-after',
 			'be-team-carousel',
+			'team-carousel',
 
 		);
 
@@ -152,7 +153,7 @@ class Plugin {
 	 * @access public
 	 */
 	public function widget_styles() {
-		wp_register_style( 'animate', plugins_url( '/assets/css/animate.css', __FILE__ ), false );
+		// wp_register_style( 'animate', plugins_url( '/assets/css/animate.css', __FILE__ ), false );
 	}
 
 	/**
@@ -257,6 +258,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Search_Form\Be_Search_Form() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Before_After\Be_Before_After() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Be_Team_Carousel() );
+		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Team_Carousel() );
 
 		// WooCommerce.
 		if ( $this->woocommerce_status() ) {

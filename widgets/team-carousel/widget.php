@@ -15,14 +15,14 @@ use \Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Be_Team_Carousel extends Widget_Base {
+class Team_Carousel extends Widget_Base {
 
 	public function get_name() {
-		return 'be-team-carousel';
+		return 'team-carousel';
 	}
 
 	public function get_title() {
-		return __( 'Be Team Carousel', 'bearsthemes-addons' );
+		return __( 'Team Carousel', 'bearsthemes-addons' );
 	}
 
 	public function get_icon() {

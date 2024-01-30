@@ -11,6 +11,7 @@
             mySwiper = new Swiper($selector, $dataSwiper);  
     };
 
+
     // Make sure you run this code under Elementor.
     $(window).on('elementor/frontend/init', function() {
 
@@ -56,6 +57,7 @@
         
         // Be Team
         elementorFrontend.hooks.addAction('frontend/element_ready/be-team-carousel.default', SwiperSliderHandler);
+        elementorFrontend.hooks.addAction('frontend/element_ready/team-carousel.default', SwiperSliderHandler);
 
         // Be Logo
         elementorFrontend.hooks.addAction('frontend/element_ready/be-logo-carousel.default', SwiperSliderHandler);
