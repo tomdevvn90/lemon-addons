@@ -18,7 +18,7 @@ class Be_Video_Box extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Video Box', 'bearsthemes-addons' );
+		return __( 'Be Video Box', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -26,7 +26,7 @@ class Be_Video_Box extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_script_depends() {
@@ -45,14 +45,14 @@ class Be_Video_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'image',
 			[
-				'label' => __( 'Choose Image', 'bearsthemes-addons' ),
+				'label' => __( 'Choose Image', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -63,7 +63,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'select_icon',
 			[
-				'label' => __( 'Icon', 'bearsthemes-addons' ),
+				'label' => __( 'Icon', 'lemon-addons' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -76,13 +76,13 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_view',
 			[
-				'label' => __( 'View', 'bearsthemes-addons' ),
+				'label' => __( 'View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'Default', 'bearsthemes-addons' ),
-					'stacked' => __( 'Stacked', 'bearsthemes-addons' ),
-					'framed' => __( 'Framed', 'bearsthemes-addons' ),
+					'' => __( 'Default', 'lemon-addons' ),
+					'stacked' => __( 'Stacked', 'lemon-addons' ),
+					'framed' => __( 'Framed', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-video-box--icon-view-',
 			]
@@ -91,12 +91,12 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_shape',
 			[
-				'label' => __( 'Shape', 'bearsthemes-addons' ),
+				'label' => __( 'Shape', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'circle',
 				'options' => [
-					'circle' => __( 'Circle', 'bearsthemes-addons' ),
-					'square' => __( 'Square', 'bearsthemes-addons' ),
+					'circle' => __( 'Circle', 'lemon-addons' ),
+					'square' => __( 'Square', 'lemon-addons' ),
 				],
 				'condition' => [
 					'icon_view!' => '',
@@ -532,7 +532,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -540,7 +540,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_responsive_control(
 			'box_height',
 			[
-				'label' => __( 'Height', 'bearsthemes-addons' ),
+				'label' => __( 'Height', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -560,7 +560,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'overlay_color',
 			[
-				'label' => __( 'Overlay Color', 'bearsthemes-addons' ),
+				'label' => __( 'Overlay Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -576,7 +576,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_icon',
 			[
-				'label' => __( 'Icon', 'bearsthemes-addons' ),
+				'label' => __( 'Icon', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -584,7 +584,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -605,7 +605,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_size_wrap',
 			[
-				'label' => __( 'Wrap Size', 'bearsthemes-addons' ),
+				'label' => __( 'Wrap Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -629,7 +629,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border',
 			[
-				'label' => __( 'Border Size', 'bearsthemes-addons' ),
+				'label' => __( 'Border Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -652,7 +652,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'condition' => [
 					'icon_view!' => '',
@@ -669,14 +669,14 @@ class Be_Video_Box extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_icon_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -693,7 +693,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_background',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -710,7 +710,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -727,14 +727,14 @@ class Be_Video_Box extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_icon_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'icon_color_hover',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -751,7 +751,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_background_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -768,7 +768,7 @@ class Be_Video_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [

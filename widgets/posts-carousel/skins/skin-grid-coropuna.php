@@ -28,7 +28,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Grid Coropuna', 'bearsthemes-addons' );
+		return __( 'Grid Coropuna', 'lemon-addons' );
 	}
 
 
@@ -40,7 +40,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_responsive_control(
 			'sliders_per_view',
 			[
-				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
+				'label' => __( 'Slides Per View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'options' => [
@@ -57,7 +57,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'posts_count',
 			[
-				'label' => __( 'Posts Count', 'bearsthemes-addons' ),
+				'label' => __( 'Posts Count', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 6,
 			]
@@ -66,10 +66,10 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'show_thumbnail',
 			[
-				'label' => __( 'Thumbnail', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'separator' => 'before',
 			]
@@ -90,7 +90,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_responsive_control(
 			'item_ratio',
 			[
-				'label' => __( 'Image Ratio', 'bearsthemes-addons' ),
+				'label' => __( 'Image Ratio', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0.66,
@@ -114,10 +114,10 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'show_date',
 			[
-				'label' => __( 'Date', 'bearsthemes-addons' ),
+				'label' => __( 'Date', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -125,10 +125,10 @@ class Skin_Grid_Coropuna extends Skin_Base {
     $this->add_control(
 			'show_title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -136,10 +136,10 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'show_meta',
 			[
-				'label' => __( 'Meta', 'bearsthemes-addons' ),
+				'label' => __( 'Meta', 'lemon-addons' ),
 				'type' 	=> Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default'  => 'yes',
 			]
 		);
@@ -152,7 +152,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_responsive_control(
 			'space_between',
 			[
-				'label' => __( 'Space Between', 'bearsthemes-addons' ),
+				'label' => __( 'Space Between', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -169,19 +169,19 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_responsive_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -199,7 +199,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
     $this->start_controls_section(
 			'section_design_box',
 			[
-				'label' => __( 'Box', 'bearsthemes-addons' ),
+				'label' => __( 'Box', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -207,7 +207,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'box_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -225,7 +225,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'box_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -243,7 +243,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -261,7 +261,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Content Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Content Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -280,7 +280,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 
 		$this->start_controls_tab( 'classic_style_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -295,7 +295,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'box_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post' => 'background-color: {{VALUE}}',
@@ -306,7 +306,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'box_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post' => 'border-color: {{VALUE}}',
@@ -318,7 +318,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 
 		$this->start_controls_tab( 'classic_style_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -333,7 +333,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'box_bg_color_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post:hover' => 'background-color: {{VALUE}}',
@@ -344,7 +344,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'box_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post:hover' => 'border-color: {{VALUE}}',
@@ -366,7 +366,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'skin_grid_coropuna_show_thumbnail!'=> '',
@@ -377,7 +377,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'img_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -390,7 +390,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -406,7 +406,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -431,7 +431,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
     $this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -439,7 +439,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'heading_date_style',
 			[
-				'label' => __( 'Date', 'bearsthemes-addons' ),
+				'label' => __( 'Date', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_coropuna_show_date!' => '',
@@ -450,7 +450,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'date_primary_color',
 			[
-				'label' => __( 'Primary Color', 'bearsthemes-addons' ),
+				'label' => __( 'Primary Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -465,7 +465,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'date_secondary-color',
 			[
-				'label' => __( 'Secondary Color', 'bearsthemes-addons' ),
+				'label' => __( 'Secondary Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -481,7 +481,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'date_typography',
-        'label' => __( 'Date Typography', 'bearsthemes-addons' ),
+        'label' => __( 'Date Typography', 'lemon-addons' ),
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-post__date',
 				'condition' => [
@@ -494,7 +494,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'month_typography',
-        'label' => __( 'Month Typography', 'bearsthemes-addons' ),
+        'label' => __( 'Month Typography', 'lemon-addons' ),
 				'default' => '',
 				'selector' => '{{WRAPPER}} .elementor-post__date .month',
 				'condition' => [
@@ -506,7 +506,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
     $this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_coropuna_show_title!' => '',
@@ -517,7 +517,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -532,7 +532,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -559,7 +559,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'heading_meta_style',
 			[
-				'label' => __( 'Meta', 'bearsthemes-addons' ),
+				'label' => __( 'Meta', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_coropuna_show_meta!' => '',
@@ -570,7 +570,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color Text', 'bearsthemes-addons' ),
+				'label' => __( 'Color Text', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -586,7 +586,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
 		$this->add_control(
 			'meta_color_hover',
 			[
-				'label' => __( 'Color Text Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Text Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
           '{{WRAPPER}} .elementor-post__meta li a:hover' => 'color: {{VALUE}}',
@@ -656,7 +656,7 @@ class Skin_Grid_Coropuna extends Skin_Base {
                 <?php
   								echo '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">'.
   									bearsthemes_addons_get_icon_svg('user', 14) .
-  									'<span>' . esc_html__('by ', 'bearsthemes-addons') . '</span>' . get_the_author() .
+  									'<span>' . esc_html__('by ', 'lemon-addons') . '</span>' . get_the_author() .
   								'</a>';
   							?>
   	          </li>

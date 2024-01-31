@@ -27,7 +27,7 @@ class Skin_Barber extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Barber', 'bearsthemes-addons' );
+		return __( 'Barber', 'lemon-addons' );
 	}
 
 	public function register_layout_section_controls( Widget_Base $widget ) {

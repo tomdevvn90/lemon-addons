@@ -23,7 +23,7 @@ class SkinFullContent extends Skin_Base {
 	}
 
 	public function get_title() {
-		return __( 'Full Content', 'bearsthemes-addons' );
+		return __( 'Full Content', 'lemon-addons' );
 	}
 
     public function register_layout_section_controls( Widget_Base $widget ) {
@@ -37,9 +37,9 @@ class SkinFullContent extends Skin_Base {
         $this->add_control(
 			'heading',
 			[
-				'label' => __( 'Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'This is Heading', 'bearsthemes-addons' ),
+				'default' => __( 'This is Heading', 'lemon-addons' ),
                 'label_block' => true,
 			]
 		);
@@ -47,9 +47,9 @@ class SkinFullContent extends Skin_Base {
         $this->add_control(
 			'desc',
 			[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::WYSIWYG,
-				'default' => __( 'This is Description', 'bearsthemes-addons' ),
+				'default' => __( 'This is Description', 'lemon-addons' ),
                 'label_block' => true,
 			]
 		);
@@ -57,16 +57,16 @@ class SkinFullContent extends Skin_Base {
         $this->add_control(
             'cta_text',
             [
-                'label' => __( 'CTA Text', 'bearsthemes-addons' ),
+                'label' => __( 'CTA Text', 'lemon-addons' ),
                 'type' => Controls_Manager::TEXT,
-                'default' => __( 'Click here', 'bearsthemes-addons' ),
+                'default' => __( 'Click here', 'lemon-addons' ),
             ]
         );
 
         $this->add_control(
     		'cta_icon',
     		[
-    			'label' => __( 'CTA Icon', 'bearsthemes-addons' ),
+    			'label' => __( 'CTA Icon', 'lemon-addons' ),
     			'type' => Controls_Manager::ICONS,
     			'default' => [
     				'value' => 'fas fa-star',
@@ -78,9 +78,9 @@ class SkinFullContent extends Skin_Base {
         $this->add_control(
             'cta_link',
             [
-				'label' => esc_html__( 'CTA Link', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'CTA Link', 'lemon-addons' ),
 				'type' => Controls_Manager::URL,
-				'placeholder' => esc_html__( 'https://your-link.com', 'bearsthemes-addons' ),
+				'placeholder' => esc_html__( 'https://your-link.com', 'lemon-addons' ),
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
 					'url' => '',
@@ -104,7 +104,7 @@ class SkinFullContent extends Skin_Base {
 			'container_width',
 			[
 				'type' => Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Content Width', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Content Width', 'lemon-addons' ),
 				'size_units' => [ 'px', '%', 'vw' ],
 				'range' => [
 					'px' => [
@@ -124,7 +124,7 @@ class SkinFullContent extends Skin_Base {
 			'container_max_width',
 			[
 				'type' => Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Content Max Width', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Content Max Width', 'lemon-addons' ),
 				'size_units' => [ 'px', '%', 'vw' ],
 				'range' => [
 					'px' => [
@@ -288,7 +288,7 @@ class SkinFullContent extends Skin_Base {
 			'desc_spacing',
 			[
 				'type' => Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Spacing', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Spacing', 'lemon-addons' ),
                 'selectors' => [
                     '{{WRAPPER}} ._content .__desc' => 'margin-top: {{SIZE}}px;',
                 ],
@@ -304,7 +304,7 @@ class SkinFullContent extends Skin_Base {
 		$this->start_controls_tab(
 			'cta_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
         $this->add_control(
@@ -331,7 +331,7 @@ class SkinFullContent extends Skin_Base {
         $this->start_controls_tab(
 			'cta_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
         $this->add_control(
@@ -379,7 +379,7 @@ class SkinFullContent extends Skin_Base {
 			'cta_spacing',
 			[
 				'type' => Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Spacing', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Spacing', 'lemon-addons' ),
 				'size_units' => [ 'px'],
 				'range' => [
 					'px' => [

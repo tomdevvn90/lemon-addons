@@ -13,7 +13,7 @@ class Be_Base_Widget extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Base Widget', 'bearsthemes-addons' );
+		return __( 'Be Base Widget', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -21,7 +21,7 @@ class Be_Base_Widget extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	protected function register_skins() {
@@ -33,14 +33,14 @@ class Be_Base_Widget extends Widget_Base {
 		$this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'condition' => [
 					'_skin' => '',
@@ -53,7 +53,7 @@ class Be_Base_Widget extends Widget_Base {
 		$this->start_controls_section(
 			'section_style',
 			[
-				'label' => __( 'Style', 'bearsthemes-addons' ),
+				'label' => __( 'Style', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -61,14 +61,14 @@ class Be_Base_Widget extends Widget_Base {
 		$this->add_control(
 			'text_transform',
 			[
-				'label' => __( 'Text Transform', 'bearsthemes-addons' ),
+				'label' => __( 'Text Transform', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'None', 'bearsthemes-addons' ),
-					'uppercase' => __( 'UPPERCASE', 'bearsthemes-addons' ),
-					'lowercase' => __( 'lowercase', 'bearsthemes-addons' ),
-					'capitalize' => __( 'Capitalize', 'bearsthemes-addons' ),
+					'' => __( 'None', 'lemon-addons' ),
+					'uppercase' => __( 'UPPERCASE', 'lemon-addons' ),
+					'lowercase' => __( 'lowercase', 'lemon-addons' ),
+					'capitalize' => __( 'Capitalize', 'lemon-addons' ),
 				],
 				'selectors' => [
 					'{{WRAPPER}} .title' => 'text-transform: {{VALUE}};',

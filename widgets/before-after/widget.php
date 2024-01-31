@@ -20,7 +20,7 @@ class Be_Before_After extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Before After', 'bearsthemes-addons' );
+		return __( 'Be Before After', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -28,7 +28,7 @@ class Be_Before_After extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_script_depends() {
@@ -39,14 +39,14 @@ class Be_Before_After extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'image_before',
 			[
-				'label' => __( 'Image Before', 'bearsthemes-addons' ),
+				'label' => __( 'Image Before', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -57,7 +57,7 @@ class Be_Before_After extends Widget_Base {
     	$this->add_control(
 			'image_after',
 			[
-				'label' => __( 'Image After', 'bearsthemes-addons' ),
+				'label' => __( 'Image After', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -72,14 +72,14 @@ class Be_Before_After extends Widget_Base {
 		$this->start_controls_section(
 			'section_additional_settings',
 			[
-				'label' => __( 'Additional Settings', 'bearsthemes-addons' ),
+				'label' => __( 'Additional Settings', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'default_offset_pct',
 			[
-				'label' => __( 'Default Offset PCT', 'bearsthemes-addons' ),
+				'label' => __( 'Default Offset PCT', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'min' => 0.1,
 				'max' => 1,
@@ -91,12 +91,12 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'orientation',
 			[
-				'label' => __( 'Orientation', 'bearsthemes-addons' ),
+				'label' => __( 'Orientation', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'horizontal',
 				'options' => [
-					'horizontal' => esc_html__( 'Horizontal', 'bearsthemes-addons'),
-					'vertical' => esc_html__('Vertical', 'bearsthemes-addons'),
+					'horizontal' => esc_html__( 'Horizontal', 'lemon-addons'),
+					'vertical' => esc_html__('Vertical', 'lemon-addons'),
 				],
 			]
 		);
@@ -108,7 +108,7 @@ class Be_Before_After extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -116,7 +116,7 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'twentytwenty_overlay',
 			[
-				'label' => __( 'Overlay', 'bearsthemes-addons' ),
+				'label' => __( 'Overlay', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -124,7 +124,7 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'twentytwenty_overlay_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .twentytwenty-overlay' => 'background: {{VALUE}}',
@@ -135,7 +135,7 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'twentytwenty_overlay_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .twentytwenty-overlay:hover' => 'background: {{VALUE}}',
@@ -146,7 +146,7 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'twentytwenty_label',
 			[
-				'label' => __( 'Before After Label', 'bearsthemes-addons' ),
+				'label' => __( 'Before After Label', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -163,7 +163,7 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'twentytwenty_before_after_label_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .twentytwenty-before-label:before' => 'color: {{VALUE}}',
@@ -175,7 +175,7 @@ class Be_Before_After extends Widget_Base {
 		$this->add_control(
 			'twentytwenty_before_after_label_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .twentytwenty-before-label:before' => 'background: {{VALUE}}',

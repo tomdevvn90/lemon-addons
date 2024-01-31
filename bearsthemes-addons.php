@@ -2,17 +2,17 @@
 /**
  * Plugin Name: Lemon Addons
  * Description: Extra custom post type and elements for Elementor.
- * Plugin URI:  https://bearsthemes.com/bearsthemes-addons/
+ * Plugin URI:  https://bearsthemes.com/lemon-addons/
  * Version:     2.3.1
  * Author:      Bearsthemes
  * Author URI:  https://bearsthemes.com/
- * Text Domain: bearsthemes-addons
+ * Text Domain: lemon-addons
  */
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 /**
- * Main Bearsthemes Addons Class
+ * Main Lemon Addons Class
  *
  * The init class that runs the Hello World plugin.
  * Intended To make sure that the plugin's minimum requirements are met.
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
  * Any custom code should go inside Plugin Class in the plugin.php file.
  * @since 1.0.0
  */
-final class Bearsthemes_Addons {
+final class Lemon_Addons {
 
 	/**
 	 * Plugin Version
@@ -73,7 +73,7 @@ final class Bearsthemes_Addons {
 	 * @access public
 	 */
 	public function i18n() {
-		load_plugin_textdomain( 'bearsthemes-addons' );
+		load_plugin_textdomain( 'lemon-addons' );
 	}
 
 
@@ -186,9 +186,9 @@ final class Bearsthemes_Addons {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor */
-			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'bearsthemes-addons' ),
-			'<strong>' . esc_html__( 'Bearsthemes Addons', 'bearsthemes-addons' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'bearsthemes-addons' ) . '</strong>'
+			esc_html__( '"%1$s" requires "%2$s" to be installed and activated.', 'lemon-addons' ),
+			'<strong>' . esc_html__( 'Lemon Addons', 'lemon-addons' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'lemon-addons' ) . '</strong>'
 		);
 
 		printf( '<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message );
@@ -209,9 +209,9 @@ final class Bearsthemes_Addons {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'bearsthemes-addons' ),
-			'<strong>' . esc_html__( 'Bearsthemes Addons', 'bearsthemes-addons' ) . '</strong>',
-			'<strong>' . esc_html__( 'Elementor', 'bearsthemes-addons' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'lemon-addons' ),
+			'<strong>' . esc_html__( 'Lemon Addons', 'lemon-addons' ) . '</strong>',
+			'<strong>' . esc_html__( 'Elementor', 'lemon-addons' ) . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -233,9 +233,9 @@ final class Bearsthemes_Addons {
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'bearsthemes-addons' ),
-			'<strong>' . esc_html__( 'Bearsthemes Addons', 'bearsthemes-addons' ) . '</strong>',
-			'<strong>' . esc_html__( 'PHP', 'bearsthemes-addons' ) . '</strong>',
+			esc_html__( '"%1$s" requires "%2$s" version %3$s or greater.', 'lemon-addons' ),
+			'<strong>' . esc_html__( 'Lemon Addons', 'lemon-addons' ) . '</strong>',
+			'<strong>' . esc_html__( 'PHP', 'lemon-addons' ) . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
 
@@ -243,5 +243,5 @@ final class Bearsthemes_Addons {
 	}
 }
 
-// Instantiate Bearsthemes_Addons.
-new Bearsthemes_Addons();
+// Instantiate Lemon_Addons.
+new Lemon_Addons();

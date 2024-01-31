@@ -15,7 +15,7 @@ class Be_Icon_Box extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Icon Box', 'bearsthemes-addons' );
+		return __( 'Be Icon Box', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -23,7 +23,7 @@ class Be_Icon_Box extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	protected function register_skins() {
@@ -42,14 +42,14 @@ class Be_Icon_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'select_icon',
 			[
-				'label' => __( 'Icon', 'bearsthemes-addons' ),
+				'label' => __( 'Icon', 'lemon-addons' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -62,13 +62,13 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_view',
 			[
-				'label' => __( 'View', 'bearsthemes-addons' ),
+				'label' => __( 'View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'Default', 'bearsthemes-addons' ),
-					'stacked' => __( 'Stacked', 'bearsthemes-addons' ),
-					'framed' => __( 'Framed', 'bearsthemes-addons' ),
+					'' => __( 'Default', 'lemon-addons' ),
+					'stacked' => __( 'Stacked', 'lemon-addons' ),
+					'framed' => __( 'Framed', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-icon-box--icon-view-',
 				'condition' => [
@@ -80,12 +80,12 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_shape',
 			[
-				'label' => __( 'Shape', 'bearsthemes-addons' ),
+				'label' => __( 'Shape', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'circle',
 				'options' => [
-					'circle' => __( 'Circle', 'bearsthemes-addons' ),
-					'square' => __( 'Square', 'bearsthemes-addons' ),
+					'circle' => __( 'Circle', 'lemon-addons' ),
+					'square' => __( 'Square', 'lemon-addons' ),
 				],
 				'condition' => [
 					'icon_view!' => '',
@@ -98,20 +98,20 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_position',
 			[
-				'label' => __( 'Icon Position', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Position', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'top',
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-h-align-left',
 					],
 					'top' => [
-						'title' => __( 'Top', 'bearsthemes-addons' ),
+						'title' => __( 'Top', 'lemon-addons' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-h-align-right',
 					],
 				],
@@ -125,17 +125,17 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'This is the heading', 'bearsthemes-addons' ),
+				'default' => __( 'This is the heading', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'title_link',
 			[
-				'label' => __( 'Title Link', 'bearsthemes-addons' ),
+				'label' => __( 'Title Link', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
 				'default' => '#',
@@ -145,9 +145,9 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'desc',
 			[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
+				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
 				'condition' => [
 					'_skin!' => 'skin-cholatse',
 				],
@@ -161,7 +161,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -169,19 +169,19 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -197,13 +197,13 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'vertical_ignment',
 			[
-				'label' => __( 'Vertical Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Vertical Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'top',
 				'options' => [
-					'top' => __( 'Top', 'bearsthemes-addons' ),
-					'middle' => __( 'Middle', 'bearsthemes-addons' ),
-					'bottom' => __( 'Bottom', 'bearsthemes-addons' ),
+					'top' => __( 'Top', 'lemon-addons' ),
+					'middle' => __( 'Middle', 'lemon-addons' ),
+					'bottom' => __( 'Bottom', 'lemon-addons' ),
 				],
 				'condition' => [
 					'_skin' => '',
@@ -220,7 +220,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_icon',
 			[
-				'label' => __( 'Icon', 'bearsthemes-addons' ),
+				'label' => __( 'Icon', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'_skin' => '',
@@ -231,7 +231,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_size',
 			[
-				'label' => __( 'Icon Size', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -252,7 +252,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_size_wrap',
 			[
-				'label' => __( 'Wrap Size', 'bearsthemes-addons' ),
+				'label' => __( 'Wrap Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -276,7 +276,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border',
 			[
-				'label' => __( 'Border Size', 'bearsthemes-addons' ),
+				'label' => __( 'Border Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -299,7 +299,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'condition' => [
 					'icon_view!' => '',
@@ -316,14 +316,14 @@ class Be_Icon_Box extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_icon_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'icon_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -340,7 +340,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_background',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -357,7 +357,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -374,14 +374,14 @@ class Be_Icon_Box extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_icon_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'icon_color_hover',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -398,7 +398,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_background_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -415,7 +415,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'icon_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'condition' => [
@@ -439,7 +439,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'_skin' => '',
@@ -450,7 +450,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -458,7 +458,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -470,7 +470,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -491,7 +491,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'heading_desc_style',
 			[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -499,7 +499,7 @@ class Be_Icon_Box extends Widget_Base {
 		$this->add_control(
 			'desc_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

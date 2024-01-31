@@ -16,7 +16,7 @@ class Be_Products_Sidebar extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Product Sidebar', 'bearsthemes-addons' );
+		return __( 'Be Product Sidebar', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -24,7 +24,7 @@ class Be_Products_Sidebar extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_script_depends() {
@@ -79,10 +79,10 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'product_categories',
             [
-                'label' => __( 'Product Categories', 'bearsthemes-addons' ),
+                'label' => __( 'Product Categories', 'lemon-addons' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__( 'Show', 'bearsthemes-addons' ),
-				'label_off' => esc_html__( 'Hide', 'bearsthemes-addons' ),
+                'label_on' => esc_html__( 'Show', 'lemon-addons' ),
+				'label_off' => esc_html__( 'Hide', 'lemon-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
             ]
@@ -91,7 +91,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'product_categories_heading',
             [
-                'label' => __( 'Heading', 'bearsthemes-addons' ),
+                'label' => __( 'Heading', 'lemon-addons' ),
                 'type' => Controls_Manager::TEXT,
 				'default' => 'Product Categories',
                 'label_block' => 'true',
@@ -105,10 +105,10 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'feature_product',
             [
-                'label' => __( 'Featured Products', 'bearsthemes-addons' ),
+                'label' => __( 'Featured Products', 'lemon-addons' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__( 'Show', 'bearsthemes-addons' ),
-				'label_off' => esc_html__( 'Hide', 'bearsthemes-addons' ),
+                'label_on' => esc_html__( 'Show', 'lemon-addons' ),
+				'label_off' => esc_html__( 'Hide', 'lemon-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
             ]
@@ -117,7 +117,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'feature_product_heading',
             [
-                'label' => __( 'Heading', 'bearsthemes-addons' ),
+                'label' => __( 'Heading', 'lemon-addons' ),
                 'type' => Controls_Manager::TEXT,
 				'default' => 'Featured Products',
                 'label_block' => 'true',
@@ -131,10 +131,10 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'top_rate_product',
             [
-                'label' => __( 'Top Rate Products', 'bearsthemes-addons' ),
+                'label' => __( 'Top Rate Products', 'lemon-addons' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__( 'Show', 'bearsthemes-addons' ),
-				'label_off' => esc_html__( 'Hide', 'bearsthemes-addons' ),
+                'label_on' => esc_html__( 'Show', 'lemon-addons' ),
+				'label_off' => esc_html__( 'Hide', 'lemon-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
             ]
@@ -143,7 +143,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'top_rate_product_heading',
             [
-                'label' => __( 'Heading', 'bearsthemes-addons' ),
+                'label' => __( 'Heading', 'lemon-addons' ),
                 'type' => Controls_Manager::TEXT,
 				'default' => 'Top Rated Products',
                 'label_block' => 'true',
@@ -157,10 +157,10 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'product_tags',
             [
-                'label' => __( 'Product Tags', 'bearsthemes-addons' ),
+                'label' => __( 'Product Tags', 'lemon-addons' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__( 'Show', 'bearsthemes-addons' ),
-				'label_off' => esc_html__( 'Hide', 'bearsthemes-addons' ),
+                'label_on' => esc_html__( 'Show', 'lemon-addons' ),
+				'label_off' => esc_html__( 'Hide', 'lemon-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
             ]
@@ -169,7 +169,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'product_tags_heading',
             [
-                'label' => __( 'Heading', 'bearsthemes-addons' ),
+                'label' => __( 'Heading', 'lemon-addons' ),
                 'type' => Controls_Manager::TEXT,
 				'default' => 'Product Tags',
                 'label_block' => 'true',
@@ -183,10 +183,10 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'search_product',
             [
-                'label' => __( 'Search Product', 'bearsthemes-addons' ),
+                'label' => __( 'Search Product', 'lemon-addons' ),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__( 'Show', 'bearsthemes-addons' ),
-				'label_off' => esc_html__( 'Hide', 'bearsthemes-addons' ),
+                'label_on' => esc_html__( 'Show', 'lemon-addons' ),
+				'label_off' => esc_html__( 'Hide', 'lemon-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
             ]
@@ -199,7 +199,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->start_controls_section(
             'query_section',
             [
-                'label' => __('Query', 'bearsthemes-addons'),
+                'label' => __('Query', 'lemon-addons'),
             ]
         );
 
@@ -208,14 +208,14 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->start_controls_tab(
             'tab_query_include',
             [
-                'label' => __('Include', 'bearsthemes-addons'),
+                'label' => __('Include', 'lemon-addons'),
             ]
         );
 
         $this->add_control(
 			'ids',
 			[
-				'label' => __( 'Ids', 'bearsthemes-addons' ),
+				'label' => __( 'Ids', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->get_supported_ids(),
 				'label_block' => true,
@@ -226,7 +226,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
 			'category',
 			[
-				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'label' => __( 'Category', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->get_supported_taxonomies(),
 				'label_block' => true,
@@ -239,14 +239,14 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->start_controls_tab(
             'tab_query_exclude',
             [
-                'label' => __('Exclude', 'bearsthemes-addons'),
+                'label' => __('Exclude', 'lemon-addons'),
             ]
         );
 
         $this->add_control(
             'ids_exclude',
             [
-                'label' => __( 'Ids', 'bearsthemes-addons' ),
+                'label' => __( 'Ids', 'lemon-addons' ),
                 'type' => Controls_Manager::SELECT2,
                 'options' => $this->get_supported_ids(),
                 'label_block' => true,
@@ -257,7 +257,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
             'category_exclude',
             [
-                'label' => __( 'Category', 'bearsthemes-addons' ),
+                'label' => __( 'Category', 'lemon-addons' ),
                 'type' => Controls_Manager::SELECT2,
                 'options' => $this->get_supported_taxonomies(),
                 'label_block' => true,
@@ -272,17 +272,17 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
 			'orderby',
 			[
-				'label' => __( 'Order By', 'bearsthemes-addons' ),
+				'label' => __( 'Order By', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'date',
 				'options' => [
-					'date' => __( 'Date', 'bearsthemes-addons' ),
-					'title' => __( 'Title', 'bearsthemes-addons' ),
-					'price' => __( 'Price', 'bearsthemes-addons' ),
-					'selling' => __( 'Selling', 'bearsthemes-addons' ),
-					'rated' => __( 'Rated', 'bearsthemes-addons' ),
-					'rand' => __( 'Random', 'bearsthemes-addons' ),
-					'menu_order' => __( 'Menu Order', 'bearsthemes-addons' ),
+					'date' => __( 'Date', 'lemon-addons' ),
+					'title' => __( 'Title', 'lemon-addons' ),
+					'price' => __( 'Price', 'lemon-addons' ),
+					'selling' => __( 'Selling', 'lemon-addons' ),
+					'rated' => __( 'Rated', 'lemon-addons' ),
+					'rand' => __( 'Random', 'lemon-addons' ),
+					'menu_order' => __( 'Menu Order', 'lemon-addons' ),
                     'separator' => 'before',
 				],
 			]
@@ -291,12 +291,12 @@ class Be_Products_Sidebar extends Widget_Base {
 		$this->add_control(
 			'order',
 			[
-				'label' => __( 'Order', 'bearsthemes-addons' ),
+				'label' => __( 'Order', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'desc',
 				'options' => [
-					'asc' => __( 'ASC', 'bearsthemes-addons' ),
-					'desc' => __( 'DESC', 'bearsthemes-addons' ),
+					'asc' => __( 'ASC', 'lemon-addons' ),
+					'desc' => __( 'DESC', 'lemon-addons' ),
 				],
 			]
 		);
@@ -304,23 +304,23 @@ class Be_Products_Sidebar extends Widget_Base {
         $this->add_control(
 			'ignore_sticky_posts',
 			[
-				'label' => __( 'Ignore Sticky Posts', 'bearsthemes-addons' ),
+				'label' => __( 'Ignore Sticky Posts', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'yes',
-				'description' => __( 'Sticky-posts ordering is visible on frontend only', 'bearsthemes-addons' ),
+				'description' => __( 'Sticky-posts ordering is visible on frontend only', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'show',
 			[
-				'label' => __( 'Show', 'bearsthemes-addons' ),
+				'label' => __( 'Show', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'all_products',
 				'options' => [
-					'all_products' => __( 'All Products', 'bearsthemes-addons' ),
-					'featured' => __( 'Featured Products', 'bearsthemes-addons' ),
-					'onsale' => __( 'On-sale Products', 'bearsthemes-addons' ),
+					'all_products' => __( 'All Products', 'lemon-addons' ),
+					'featured' => __( 'Featured Products', 'lemon-addons' ),
+					'onsale' => __( 'On-sale Products', 'lemon-addons' ),
 				],
 			]
 		);
@@ -328,20 +328,20 @@ class Be_Products_Sidebar extends Widget_Base {
 		$this->add_control(
 			'hide_free',
 			[
-				'label' => __( 'Hide Free', 'bearsthemes-addons' ),
+				'label' => __( 'Hide Free', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'yes',
-				'description' => __( 'Hide free product.', 'bearsthemes-addons' ),
+				'description' => __( 'Hide free product.', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'show_hidden',
 			[
-				'label' => __( 'Show Hidden', 'bearsthemes-addons' ),
+				'label' => __( 'Show Hidden', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'yes',
-				'description' => __( 'Show Hidden product.', 'bearsthemes-addons' ),
+				'description' => __( 'Show Hidden product.', 'lemon-addons' ),
 			]
 		);
 
@@ -617,7 +617,7 @@ class Be_Products_Sidebar extends Widget_Base {
         $sale_html = '';
 
         if ( $product->is_on_sale() ) {
-            $sale_html = '<span class="elementor-product__onsale">' . __( 'Sale!', 'bearsthemes-addons' ) . '</span>';
+            $sale_html = '<span class="elementor-product__onsale">' . __( 'Sale!', 'lemon-addons' ) . '</span>';
         }
 
         return $sale_html;

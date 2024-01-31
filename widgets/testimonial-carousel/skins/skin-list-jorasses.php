@@ -27,7 +27,7 @@ class Skin_List_Jorasses extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'List jorasses', 'bearsthemes-addons' );
+		return __( 'List jorasses', 'lemon-addons' );
 	}
 
 	public function register_layout_section_controls( Widget_Base $widget ) {
@@ -37,48 +37,48 @@ class Skin_List_Jorasses extends Skin_Base {
 
 		$repeater->add_control(
 			'list_content', [
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.' , 'bearsthemes-addons' ),
+				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.' , 'lemon-addons' ),
 			]
 		);
 
 		$repeater->add_control(
 			'list_name', [
-				'label' => __( 'Name', 'bearsthemes-addons' ),
+				'label' => __( 'Name', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Name' , 'bearsthemes-addons' ),
+				'default' => __( 'Name' , 'lemon-addons' ),
 			]
 		);
 
     $repeater->add_control(
 			'list_job', [
-				'label' => __( 'Job', 'bearsthemes-addons' ),
+				'label' => __( 'Job', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Job' , 'bearsthemes-addons' ),
+				'default' => __( 'Job' , 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'list',
 			[
-				'label' => __( 'Slides', 'bearsthemes-addons' ),
+				'label' => __( 'Slides', 'lemon-addons' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
-						'list_name' => __( 'Name #1', 'bearsthemes-addons' ),
+						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
+						'list_name' => __( 'Name #1', 'lemon-addons' ),
             'list_job' => 'Job #1',
 					],
 					[
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
-						'list_name' => __( 'Name #2', 'bearsthemes-addons' ),
+						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
+						'list_name' => __( 'Name #2', 'lemon-addons' ),
             'list_job' => 'Job #2',
 					],
 					[
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
-						'list_name' => __( 'Name #3', 'bearsthemes-addons' ),
+						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
+						'list_name' => __( 'Name #3', 'lemon-addons' ),
             'list_job' => 'Job #3',
 					],
 				],
@@ -91,7 +91,7 @@ class Skin_List_Jorasses extends Skin_Base {
 		$this->add_responsive_control(
 			'sliders_per_view',
 			[
-				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
+				'label' => __( 'Slides Per View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => [
@@ -115,19 +115,19 @@ class Skin_List_Jorasses extends Skin_Base {
 		$this->add_responsive_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -145,7 +145,7 @@ class Skin_List_Jorasses extends Skin_Base {
     $this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -153,7 +153,7 @@ class Skin_List_Jorasses extends Skin_Base {
     $this->add_control(
 			'heading_content_style',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -161,7 +161,7 @@ class Skin_List_Jorasses extends Skin_Base {
 		$this->add_control(
 			'content_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -182,7 +182,7 @@ class Skin_List_Jorasses extends Skin_Base {
 		$this->add_control(
 			'heading_name_style',
 			[
-				'label' => __( 'Name', 'bearsthemes-addons' ),
+				'label' => __( 'Name', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -190,7 +190,7 @@ class Skin_List_Jorasses extends Skin_Base {
 		$this->add_control(
 			'name_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -211,7 +211,7 @@ class Skin_List_Jorasses extends Skin_Base {
     $this->add_control(
 			'heading_job_style',
 			[
-				'label' => __( 'Job', 'bearsthemes-addons' ),
+				'label' => __( 'Job', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -219,7 +219,7 @@ class Skin_List_Jorasses extends Skin_Base {
 		$this->add_control(
 			'job_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

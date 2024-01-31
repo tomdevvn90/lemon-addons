@@ -27,7 +27,7 @@ class ElementAddon_Template_Library_Editor_Init {
 
         wp_enqueue_script(
             'bt-template-library-editor-scripts',
-            plugins_url('/') . 'bearsthemes-addons/template-library/editor/assets/js/editor-template-library.min.js',
+            plugins_url('/') . 'lemon-addons/template-library/editor/assets/js/editor-template-library.min.js',
             array('jquery', 'underscore', 'backbone-marionette'),
             '1.0.0',
             true
@@ -39,7 +39,7 @@ class ElementAddon_Template_Library_Editor_Init {
 
         wp_enqueue_style(
             'bt-template-library-editor-style',
-            plugins_url('/') . 'bearsthemes-addons/template-library/editor/assets/css/editor-template-library' . $direction_suffix . '.css',
+            plugins_url('/') . 'lemon-addons/template-library/editor/assets/css/editor-template-library' . $direction_suffix . '.css',
             array(),
             '1.0.0'
         );
@@ -51,7 +51,7 @@ class ElementAddon_Template_Library_Editor_Init {
 
         wp_enqueue_style(
             'bt-template-library-preview-style',
-            plugins_url('/') . 'bearsthemes-addons/template-library/editor/assets/css/editor-template-preview' . $direction_suffix . '.css',
+            plugins_url('/') . 'lemon-addons/template-library/editor/assets/css/editor-template-preview' . $direction_suffix . '.css',
             array(),
             '1.0.1'
         );

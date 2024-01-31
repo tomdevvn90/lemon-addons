@@ -30,7 +30,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Lemon Tattoo', 'bearsthemes-addons' );
+		return __( 'Lemon Tattoo', 'lemon-addons' );
 	}
 
 	public function register_layout_section_controls( Widget_Base $widget ) {
@@ -40,23 +40,23 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
         $repeater->add_control(
 			'list_name', [
-				'label' => __( 'Name', 'bearsthemes-addons' ),
+				'label' => __( 'Name', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Name' , 'bearsthemes-addons' ),
+				'default' => __( 'Name' , 'lemon-addons' ),
 			]
 		);
 
 		$repeater->add_control(
 			'list_content', [
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.' , 'bearsthemes-addons' ),
+				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.' , 'lemon-addons' ),
 			]
 		);
 
 		$repeater->add_control(
 			'list_image', [
-				'label' => __( 'Thumbnail', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -66,26 +66,26 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
 		$this->add_control(
 			'list',[
-				'label' => __( 'Slides', 'bearsthemes-addons' ),
+				'label' => __( 'Slides', 'lemon-addons' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
+						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
 						'list_image' => Utils::get_placeholder_image_src(),
-						'list_name' => __( 'Name #1', 'bearsthemes-addons' ),
+						'list_name' => __( 'Name #1', 'lemon-addons' ),
 						'list_job' => 'Job #1',
 					],
 					[
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
+						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
 						'list_image' => Utils::get_placeholder_image_src(),
-						'list_name' => __( 'Name #2', 'bearsthemes-addons' ),
+						'list_name' => __( 'Name #2', 'lemon-addons' ),
 						'list_job' => 'Job #2',
 					],
 					[
-						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
+						'list_content' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
 						'list_image' => Utils::get_placeholder_image_src(),
-						'list_name' => __( 'Name #3', 'bearsthemes-addons' ),
+						'list_name' => __( 'Name #3', 'lemon-addons' ),
 						'list_job' => 'Job #3',
 					],
 				],
@@ -98,7 +98,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
     	$this->add_responsive_control(
 			'sliders_per_view',
 			[
-				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
+				'label' => __( 'Slides Per View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '1',
 				'options' => [
@@ -131,19 +131,19 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 		$this->add_responsive_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -159,21 +159,21 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
         $this->start_controls_section(
 			'section_design_content',[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
         $this->add_control(
 			'name_style',[
-				'label' => __( 'Name', 'bearsthemes-addons' ),
+				'label' => __( 'Name', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
 			'name_color',[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -192,14 +192,14 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
 		$this->add_control(
 			'desc_style',[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
 		$this->add_control(
 			'desc_color',[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -218,14 +218,14 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
         $this->add_control(
 			'icon_style',[
-				'label' => __( 'Icon Quocte', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Quocte', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 
         $this->add_control(
 			'ic_quocte_color',[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -236,7 +236,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 
         $this->add_responsive_control(
 			'icon_fontsize',[
-				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'label' => __( 'Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -258,7 +258,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -266,7 +266,7 @@ class Skin_Lemon_Tattoo extends Skin_Base {
 		$this->add_control(
 			'img_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
