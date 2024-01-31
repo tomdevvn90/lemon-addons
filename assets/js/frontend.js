@@ -56,7 +56,6 @@
         elementorFrontend.hooks.addAction('frontend/element_ready/be-testimonial-carousel.skin-lemon-tattoo', SwiperSliderHandler);
         
         // Be Team
-        elementorFrontend.hooks.addAction('frontend/element_ready/be-team-carousel.default', SwiperSliderHandler);
         elementorFrontend.hooks.addAction('frontend/element_ready/team-carousel.default', SwiperSliderHandler);
 
         // Be Logo

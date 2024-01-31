@@ -111,7 +111,6 @@ class Plugin {
 			'banner-image-box',
 			'service-search-form',
 			'before-after',
-			'be-team-carousel',
 			'team-carousel',
 
 		);
@@ -257,7 +256,6 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Banner_Image_Box\Be_Banner_Image_Box() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Search_Form\Be_Search_Form() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Before_After\Be_Before_After() );
-		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Be_Team_Carousel() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Team_Carousel() );
 
 		// WooCommerce.

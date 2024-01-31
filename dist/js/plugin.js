@@ -87,40 +87,35 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/swiper-bundle.min.css */ "./node_modules/swiper/swiper-bundle.min.css");
-/* harmony import */ var swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_bundle_min_css__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var swiper_swiper_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! swiper/swiper.min.css */ "./node_modules/swiper/swiper.min.css");
-/* harmony import */ var swiper_swiper_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(swiper_swiper_min_css__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_general__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/general */ "./assets/js/components/general.js");
-/* harmony import */ var _components_general__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_general__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _widgets_be_team_carousel__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/be-team-carousel */ "./assets/js/widgets/be-team-carousel.js");
-/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/be-products-sidebar */ "./assets/js/widgets/be-products-sidebar.js");
-/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/be-text-animations */ "./assets/js/widgets/be-text-animations.js");
-/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/be-before-after */ "./assets/js/widgets/be-before-after.js");
-/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_before_after__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/be-banner-image-box */ "./assets/js/widgets/be-banner-image-box.js");
-/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/be-banner-animation */ "./assets/js/widgets/be-banner-animation.js");
-/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_8__);
-/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/be-posts */ "./assets/js/widgets/be-posts.js");
-/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_posts__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/be-video-box */ "./assets/js/widgets/be-video-box.js");
-/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_video_box__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./widgets/be-pie-chart */ "./assets/js/widgets/be-pie-chart.js");
-/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var _widgets_be_counter__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./widgets/be-counter */ "./assets/js/widgets/be-counter.js");
-/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./widgets/be-countdown */ "./assets/js/widgets/be-countdown.js");
-/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_countdown__WEBPACK_IMPORTED_MODULE_13__);
-
-
+/* harmony import */ var _components_general__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/general */ "./assets/js/components/general.js");
+/* harmony import */ var _components_general__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_general__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./widgets/be-products-sidebar */ "./assets/js/widgets/be-products-sidebar.js");
+/* harmony import */ var _widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_products_sidebar__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./widgets/be-text-animations */ "./assets/js/widgets/be-text-animations.js");
+/* harmony import */ var _widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_text_animations__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./widgets/be-before-after */ "./assets/js/widgets/be-before-after.js");
+/* harmony import */ var _widgets_be_before_after__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_before_after__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./widgets/be-banner-image-box */ "./assets/js/widgets/be-banner-image-box.js");
+/* harmony import */ var _widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_image_box__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./widgets/be-banner-animation */ "./assets/js/widgets/be-banner-animation.js");
+/* harmony import */ var _widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_banner_animation__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./widgets/be-posts */ "./assets/js/widgets/be-posts.js");
+/* harmony import */ var _widgets_be_posts__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_posts__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./widgets/be-video-box */ "./assets/js/widgets/be-video-box.js");
+/* harmony import */ var _widgets_be_video_box__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_video_box__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./widgets/be-pie-chart */ "./assets/js/widgets/be-pie-chart.js");
+/* harmony import */ var _widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_pie_chart__WEBPACK_IMPORTED_MODULE_8__);
+/* harmony import */ var _widgets_be_counter__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./widgets/be-counter */ "./assets/js/widgets/be-counter.js");
+/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./widgets/be-countdown */ "./assets/js/widgets/be-countdown.js");
+/* harmony import */ var _widgets_be_countdown__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(_widgets_be_countdown__WEBPACK_IMPORTED_MODULE_10__);
+// import 'swiper/swiper-bundle.min.css'
+// import 'swiper/swiper.min.css'
 
 //component
 
 
 // all widgets
-
+// import './widgets/be-team-carousel';
 // import './widgets/be-posts-carousel';
 // import './widgets/be-testimonial-carousel';
 // import './widgets/be-logo-carousel';
@@ -808,49 +803,6 @@ __webpack_require__.r(__webpack_exports__);
   // Make sure you run this code under Elementor.
   $(window).on('elementor/frontend/init', function () {
     elementorFrontend.hooks.addAction('frontend/element_ready/be-products-sidebar.default', ProductsSidebarHandler);
-  });
-})(jQuery);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
-
-/***/ }),
-
-/***/ "./assets/js/widgets/be-team-carousel.js":
-/*!***********************************************!*\
-  !*** ./assets/js/widgets/be-team-carousel.js ***!
-  \***********************************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* WEBPACK VAR INJECTION */(function(jQuery) {/* harmony import */ var swiper_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/modules */ "./node_modules/swiper/modules/index.mjs");
-
-(function ($) {
-  "use strict";
-
-  var SwiperSliderHandler = function SwiperSliderHandler($scope, $) {
-    var $selector = $scope.find('.swiper-container');
-    if ($selector.length > 0) {
-      var $dataSwiper = $selector.data('swiper');
-      var opt_df = {
-        loop: true,
-        paginationClickable: true,
-        navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev'
-        },
-        pagination: {
-          el: '.swiper-pagination'
-        },
-        modules: [swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Navigation"], swiper_modules__WEBPACK_IMPORTED_MODULE_0__["Pagination"]]
-      };
-      var widgetSlider = new Swiper($selector[0], Object.assign({}, opt_df, $dataSwiper));
-    }
-  };
-
-  // Make sure you run this code under Elementor.
-  $(window).on('elementor/frontend/init', function () {
-    elementorFrontend.hooks.addAction('frontend/element_ready/be-team-carousel.default', SwiperSliderHandler);
   });
 })(jQuery);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))

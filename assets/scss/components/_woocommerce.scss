@@ -1304,6 +1304,20 @@
         .elementor-product{
             text-align: center;
             overflow: hidden;
+            &:hover{
+                .elementor-product__overlay{
+                    opacity: 1;
+                }
+                .elementor-product__button-cart,
+                .elementor-product__button-readmore{
+                    -webkit-transform: translateX(0px);
+                    -moz-transform: translateX(0px);
+                    -o-transform: translateX(0px);
+                    -ms-transform: translateX(0px);
+                    transform: translateX(0px);
+                    z-index: 9;
+                }
+            }
             &__wrap{
                 position: relative;
             }
@@ -1318,20 +1332,6 @@
                     width: 100%;
                     height: 100%;
                     object-fit: cover;
-                }
-                &:hover{
-                    .elementor-product__overlay{
-                        opacity: 1;
-                    }
-                    .elementor-product__button-cart,
-                    .elementor-product__button-readmore{
-                        -webkit-transform: translateX(0px);
-                        -moz-transform: translateX(0px);
-                        -o-transform: translateX(0px);
-                        -ms-transform: translateX(0px);
-                        transform: translateX(0px);
-                        z-index: 9;
-                    }
                 }
             }
             &__overlay{
@@ -1349,7 +1349,7 @@
                 transition: all 0.6s;
             }
             &__onsale{
-                z-index: 1;
+                z-index: 5;
                 position: absolute;
                 top: 20px;
                 left: 20px;
@@ -1379,7 +1379,7 @@
             }
             &__button-cart,
             &__button-readmore{
-                width: 48%;
+                width: 50%;
                 z-index: 0;
                 -webkit-transform: translateX(80px);
                 -moz-transform: translateX(80px);
@@ -1396,7 +1396,7 @@
                     line-height: 24px;
                     padding: 0.618em 1em;
                     font-weight: 700;
-                    border-radius: 3px;
+                    border-radius: 0;
                     display: inline-block;
                 }
                 .add_to_cart_button,
@@ -1404,7 +1404,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
-                    max-width: 132px;
+                    max-width: 100%;
                     max-height: 50px;
                     background-color: #7c7270;
                     width: 100%;
@@ -1471,7 +1471,7 @@
                     text-align: center;
                     font-size: 22px;
                     line-height: 22px;
-                    max-width: 132px;
+                    max-width: 100%;
                     max-height: 50px;
                     background-color: #7c7270;
                     width: 100%;
