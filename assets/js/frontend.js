@@ -10,15 +10,80 @@
             $dataSwiper = $selector.data('swiper');
 
         if ( 'undefined' === typeof Swiper ) {
-            new elementorFrontend.utils.swiper( $selector, dataSwiper );
+            new elementorFrontend.utils.swiper( $selector, $dataSwiper );
         } else {
-            new Swiper( $selector, dataSwiper );
+            new Swiper( $selector, $dataSwiper );
         } 
     };
+
+    class CustomSwiperHandler extends elementorModules.frontend.handlers.SwiperBase {
+		getDefaultSettings() {
+			return {
+				selectors: {
+					swiperContainer: '.swiper-container',
+					swiperSlide: '.swiper-slide'
+				},
+				slidesPerView: {
+					widescreen: 3,
+					desktop: 3,
+					laptop: 3,
+					tablet_extra: 3,
+					tablet: 2,
+					mobile_extra: 2,
+					mobile: 1
+				}
+			};
+		}
+	
+		getDefaultElements() {
+			const selectors = this.getSettings('selectors'),
+				elements = {
+					$swiperContainer: this.$element.find(selectors.swiperContainer)
+				};
+			elements.$slides = elements.$swiperContainer.find(selectors.swiperSlide);
+	
+			return elements;
+		}
+	
+		async onInit() {
+			elementorModules.frontend.handlers.Base.prototype.onInit.apply(this, arguments);
+	
+			if (1 >= this.getSlidesCount()) {
+				return;
+			}
+	
+			const Swiper = elementorFrontend.utils.swiper;
+			this.swiper = await new Swiper(this.elements.$swiperContainer, this.getSwiperOptions());
+	
+			this.elements.$swiperContainer.data('swiper', this.swiper);
+		}
+
+		getSwiperData() {
+			const selectors = this.getSettings('selectors'),
+			elements =  this.$element.find(selectors.swiperContainer);
+			
+			return elements.data('swiper');
+		}
+	
+		getSwiperOptions() {
+			const elementSettings = this.getElementSettings();
+			const swiperData = this.getSwiperData();
+
+			return swiperData;
+		}
+	}
+
+	var addSwiperHandler = ( $element ) => {
+		elementorFrontend.elementsHandler.addHandler( CustomSwiperHandler, {
+			$element,
+		} );
+	};
 
 
     // Make sure you run this code under Elementor.
     $(window).on('elementor/frontend/init', function() {
+        // Be Base Swiper
+		elementorFrontend.hooks.addAction( 'frontend/element_ready/be-base-swiper.default', addSwiperHandler );
 
         // Be Posts
         elementorFrontend.hooks.addAction('frontend/element_ready/be-posts-carousel.default', SwiperSliderHandler);

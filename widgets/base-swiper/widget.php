@@ -1,5 +1,5 @@
 <?php
-namespace BearsthemesAddons\Widgets\Base_Carousel;
+namespace BearsthemesAddons\Widgets\Base_Swiper;
 
 use Elementor\Widget_Base;
 use Elementor\Controls_Manager;
@@ -15,14 +15,14 @@ use \Elementor\Plugin;
 
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
-class Be_Base_Carousel extends Widget_Base {
+class Be_Base_Swiper extends Widget_Base {
 
 	public function get_name() {
-		return 'be-base-carousel';
+		return 'be-base-swiper';
 	}
 
 	public function get_title() {
-		return __( 'Be Base Carousel', 'bearsthemes-addons' );
+		return __( 'Be Base Swiper', 'bearsthemes-addons' );
 	}
 
 	public function get_icon() {
@@ -33,13 +33,12 @@ class Be_Base_Carousel extends Widget_Base {
 		return [ 'bearsthemes-addons' ];
 	}
 
-	public function get_script_depends() {
-		return [ 'bearsthemes-addons' ];
+	public function get_style_depends() {
+		return [ 'elementor-frontend' ];
 	}
 
-	protected function register_skins() {
-		$this->add_skin( new Skins\Skin_Grid_Pumori( $this ) );
-
+	public function get_script_depends() {
+		return [ 'bearsthemes-addons' ];
 	}
 
 	public function get_breakpoints(){
@@ -155,9 +154,6 @@ class Be_Base_Carousel extends Widget_Base {
 					],
 				],
 				'title_field' => '{{{ list_title }}}',
-				'condition' => [
-					'_skin' => '',
-				],
 			]
 		);
 
@@ -169,6 +165,8 @@ class Be_Base_Carousel extends Widget_Base {
 				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
+				'tablet_default' => '2',
+				'mobile_default' => '1',
 				'options' => [
 					'1' => '1',
 					'2' => '2',
@@ -178,9 +176,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'6' => '6',
 				],
 				'separator' => 'before',
-				'condition' => [
-					'_skin' => '',
-				],
+				'frontend_available' => true,
 			] + $breakpoints
 		);
 
@@ -192,9 +188,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'label_on' => __( 'Show', 'bearsthemes-addons' ),
 				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
 				'default' => 'yes',
-				'condition' => [
-					'_skin' => '',
-				],
 			]
 		);
 
@@ -205,7 +198,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'default' => 'medium',
 				'exclude' => [ 'custom' ],
 				'condition' => [
-					'_skin' => '',
 					'show_thumbnail!'=> '',
 				],
 			]
@@ -230,7 +222,6 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .elementor-slide__thumbnail' => 'padding-bottom: calc( {{SIZE}} * 100% );',
 				],
 				'condition' => [
-					'_skin' => '',
 					'show_thumbnail!'=> '',
 				],
 			]
@@ -244,9 +235,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'label_on' => __( 'Show', 'bearsthemes-addons' ),
 				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
 				'default' => 'yes',
-				'condition' => [
-					'_skin' => '',
-				],
 			]
 		);
 
@@ -361,9 +349,7 @@ class Be_Base_Carousel extends Widget_Base {
 				'default' => [
 					'size' => 30,
 				],
-				'condition' => [
-					'_skin' => '',
-				],
+				'frontend_available' => true,
 			]
 		);
 
@@ -386,9 +372,6 @@ class Be_Base_Carousel extends Widget_Base {
 						'icon' => 'eicon-text-align-right',
 					],
 				],
-				'condition' => [
-					'_skin' => '',
-				],
 				'selectors' => [
 					'{{WRAPPER}} .elementor-slide' => 'text-align: {{VALUE}};',
 				],
@@ -404,9 +387,6 @@ class Be_Base_Carousel extends Widget_Base {
 			[
 				'label' => __( 'Box', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
-				'condition' => [
-					'_skin' => '',
-				],
 			]
 		);
 
@@ -572,7 +552,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'label' => __( 'Image', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'_skin' => '',
 					'show_thumbnail!' => '',
 				],
 			]
@@ -636,9 +615,6 @@ class Be_Base_Carousel extends Widget_Base {
 			[
 				'label' => __( 'Content', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
-				'condition' => [
-					'_skin' => '',
-				],
 			]
 		);
 
@@ -705,6 +681,9 @@ class Be_Base_Carousel extends Widget_Base {
 			[
 				'label' => __( 'Navigation', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'navigation!' => '',
+				],
 			]
 		);
 
@@ -714,9 +693,6 @@ class Be_Base_Carousel extends Widget_Base {
 			'tabs_arrow_prev',
 			[
 				'label' => __( 'Previous', 'bearsthemes-addons' ),
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -731,7 +707,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'library' => 'fa-solid',
 				],
 				'condition' => [
-					'navigation!' => ['text', ''],
+					'navigation!' => 'text',
 				],
 			]
 		);
@@ -744,7 +720,7 @@ class Be_Base_Carousel extends Widget_Base {
 				'default' => __( 'Prev', 'bearsthemes-addons' ),
 				'label_block' => true,
 				'condition' => [
-					'navigation!' => ['icon', ''],
+					'navigation!' => 'icon',
 				],
 			]
 		);
@@ -755,9 +731,6 @@ class Be_Base_Carousel extends Widget_Base {
 			'tabs_arrow_next',
 			[
 				'label' => __( 'Next', 'bearsthemes-addons' ),
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -772,7 +745,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'library' => 'fa-solid',
 				],
 				'condition' => [
-					'navigation!' => ['text', ''],
+					'navigation!' => 'text',
 				],
 			]
 		);
@@ -785,7 +758,7 @@ class Be_Base_Carousel extends Widget_Base {
 				'default' => __( 'Next', 'bearsthemes-addons' ),
 				'label_block' => true,
 				'condition' => [
-					'navigation!' => ['icon', ''],
+					'navigation!' => 'icon',
 				],
 			]
 		);
@@ -807,9 +780,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'prefix_class' => 'elementor-navigation-position-',
 				'render_type' => 'template',
 				'separator' => 'before',
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -822,9 +792,8 @@ class Be_Base_Carousel extends Widget_Base {
 				'label_on' => __( 'On', 'bearsthemes-addons' ),
 				'label_off' => __( 'Off', 'bearsthemes-addons' ),
 				'default' => 'yes',
-				'condition' => [
-					'navigation!' => '',
-				],
+				'prefix_class' => 'elementor-navigation-always-',
+				'render_type' => 'template',
 			]
 		);
 
@@ -846,9 +815,6 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}}.elementor-navigation-position-outside .elementor-swiper-button-next' => 'right: -{{SIZE}}{{UNIT}};',
 
 				],
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -868,9 +834,6 @@ class Be_Base_Carousel extends Widget_Base {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'height: {{SIZE}}{{UNIT}}; min-width: {{SIZE}}{{UNIT}}',
-				],
-				'condition' => [
-					'navigation!' => '',
 				],
 			]
 		);
@@ -894,7 +857,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .elementor-swiper-button img' => 'width: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'navigation!' => ['text', ''],
+					'navigation!' => 'text',
 				],
 			]
 		);
@@ -906,7 +869,7 @@ class Be_Base_Carousel extends Widget_Base {
 				'label' => __( 'Text Typography', 'bearsthemes-addons' ),
 				'selector' => '{{WRAPPER}} .elementor-swiper-button span',
 				'condition' => [
-					'navigation!' => ['icon', ''],
+					'navigation!' => 'icon',
 				],
 			]
 		);
@@ -926,9 +889,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'border-style: solid; border-width: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -940,9 +900,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
 				],
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -952,9 +909,6 @@ class Be_Base_Carousel extends Widget_Base {
 			'tabs_navigation_normal',
 			[
 				'label' => __( 'Normal', 'bearsthemes-addons' ),
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -968,7 +922,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .elementor-swiper-button svg' => 'fill: {{VALUE}}',
 				],
 				'condition' => [
-					'navigation!' => ['text', ''],
+					'navigation!' => 'text',
 				],
 			]
 		);
@@ -982,7 +936,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .elementor-swiper-button span' => 'color: {{VALUE}}',
 				],
 				'condition' => [
-					'navigation!' => ['icon', ''],
+					'navigation!' => 'icon',
 				],
 			]
 		);
@@ -995,9 +949,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'background-color: {{VALUE}}',
 				],
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -1008,9 +959,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'border-color: {{VALUE}}',
-				],
-				'condition' => [
-					'navigation!' => '',
 				],
 			]
 		);
@@ -1037,7 +985,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .elementor-swiper-button:hover svg' => 'fill: {{VALUE}}',
 				],
 				'condition' => [
-					'navigation!' => ['text', ''],
+					'navigation!' => 'text',
 				],
 			]
 		);
@@ -1051,7 +999,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .elementor-swiper-button:hover span' => 'color: {{VALUE}}',
 				],
 				'condition' => [
-					'navigation!' => ['icon', ''],
+					'navigation!' => 'icon',
 				],
 			]
 		);
@@ -1064,9 +1012,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button:hover' => 'background-color: {{VALUE}}',
 				],
-				'condition' => [
-					'navigation!' => '',
-				],
 			]
 		);
 
@@ -1077,9 +1022,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button:hover' => 'border-color: {{VALUE}}',
-				],
-				'condition' => [
-					'navigation!' => '',
 				],
 			]
 		);
@@ -1097,6 +1039,9 @@ class Be_Base_Carousel extends Widget_Base {
 			[
 				'label' => __( 'Pagination', 'bearsthemes-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'pagination!' => '',
+				],
 			]
 		);
 
@@ -1112,9 +1057,6 @@ class Be_Base_Carousel extends Widget_Base {
 				],
 				'prefix_class' => 'elementor-pagination-position-',
 				'render_type' => 'template',
-				'condition' => [
-					'pagination!' => '',
-				],
 			]
 		);
 
@@ -1133,9 +1075,6 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}}.elementor-pagination-position-inside .elementor-swiper-pagination' => 'bottom: {{SIZE}}{{UNIT}};',
 					'{{WRAPPER}}.elementor-pagination-position-outside .swiper-container' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 
-				],
-				'condition' => [
-					'pagination!' => '',
 				],
 			]
 		);
@@ -1163,9 +1102,6 @@ class Be_Base_Carousel extends Widget_Base {
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-pagination' => 'text-align: {{VALUE}};',
 				],
-				'condition' => [
-					'pagination!' => '',
-				],
 			]
 		);
 
@@ -1188,7 +1124,7 @@ class Be_Base_Carousel extends Widget_Base {
 					'{{WRAPPER}} .swiper-pagination-progressbar' => 'height: {{SIZE}}{{UNIT}}',
 				],
 				'condition' => [
-					'pagination!' => ['fraction', ''],
+					'pagination!' => 'fraction',
 				],
 			]
 		);
@@ -1222,12 +1158,9 @@ class Be_Base_Carousel extends Widget_Base {
 				'label' => __( 'Color', 'bearsthemes-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .swiper-pagination-bullet-active' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .swiper-pagination-bullet' => 'background-color: {{VALUE}}',
 					'{{WRAPPER}} .swiper-pagination-fraction' => 'color: {{VALUE}}',
 					'{{WRAPPER}} .swiper-pagination-progressbar .swiper-pagination-progressbar-fill' => 'background-color: {{VALUE}}',
-				],
-				'condition' => [
-					'pagination!' => '',
 				],
 			]
 		);
@@ -1268,12 +1201,7 @@ class Be_Base_Carousel extends Widget_Base {
 		if( !empty( $settings['_skin'] ) && isset( $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key] ) ) {
 			 return $settings[str_replace( '-', '_', $settings['_skin'] ) . '_' . $key];
 		}
-
-		if( isset($settings[$key]) ){
-			return $settings[$key];
-		}
-
-		return ;
+		return $settings[$key];
 	}
 
 	protected function swiper_breakpoints() {
@@ -1321,7 +1249,7 @@ class Be_Base_Carousel extends Widget_Base {
 	protected function swiper_data() {
 		$settings = $this->get_settings_for_display();
 
-		$slides_per_view = $this->get_instance_value_skin('sliders_per_view') ? $this->get_instance_value_skin('sliders_per_view') : 3;
+		$slides_per_view = $this->get_instance_value_skin('sliders_per_view') ? $this->get_instance_value_skin('sliders_per_view') : 1;
 		$slides_per_view_tablet = $this->get_instance_value_skin('sliders_per_view_tablet') ? $this->get_instance_value_skin('sliders_per_view_tablet') : $slides_per_view;
 		$slides_per_view_mobile = $this->get_instance_value_skin('sliders_per_view_mobile') ? $this->get_instance_value_skin('sliders_per_view_mobile') : $slides_per_view_tablet;
 
@@ -1337,21 +1265,19 @@ class Be_Base_Carousel extends Widget_Base {
 			'speed' => $settings['speed'],
 			'loop' => $settings['loop'] == 'yes' ? true : false,
 			'breakpoints' => $breakpoints,
+
 		);
 
 		if( '' !== $settings['navigation'] ) {
 			$swiper_data['navigation'] = array(
-				'nextEl' => '.elementor-swiper-button-next',
-				'prevEl' => '.elementor-swiper-button-prev',
+				'nextEl' => '.elementor-swiper-button-next__'.$this->get_id(),
+				'prevEl' => '.elementor-swiper-button-prev__'.$this->get_id(),
 			);
 		}
 
 		if( '' !== $settings['pagination'] ) {
-			if( '' !== $settings['_skin'] ) {
-				$el_class = '.base-carousel-dots--' . $settings['_skin'];
-			} else {
-				$el_class = '.base-carousel-dots--default';
-			}
+
+			$el_class = '.base-swiper-dots--default';
 
 			$swiper_data['pagination'] = array(
 				'el' => $el_class,
@@ -1373,12 +1299,8 @@ class Be_Base_Carousel extends Widget_Base {
 		$settings = $this->get_settings_for_display();
 
 		$classes = 'elementor-swiper swiper-container';
+		$classes .= ' elementor-slides--default';
 
-		if( $settings['_skin'] ) {
-			$classes .= ' elementor-slides--' . $settings['_skin'];
-		} else {
-			$classes .= ' elementor-slides--default';
-		}
 
 		if( $settings['navigation_show_always'] ) {
 			$classes .= ' elementor-swiper--navigation-always';
@@ -1387,9 +1309,26 @@ class Be_Base_Carousel extends Widget_Base {
 		}
 
 		?>
-		<div class="<?php echo esc_attr( $classes ); ?>" data-swiper="<?php echo esc_attr( $this->swiper_data() ); ?>">
-		<div class="swiper-wrapper">
+		<div class="<?php echo esc_attr( $classes ); ?>" 
+        data-swiper="<?php echo esc_attr( $this->swiper_data() ); ?>"
+        >
+		
+        <div class="swiper-wrapper" style="overflow: visible;">
 		<?php
+	}
+
+	protected function render_icon( $icon ) {
+		$icon_html = '';
+
+		if( !empty( $icon['value'] ) ) {
+			if( 'svg' !== $icon['library'] ) {
+				$icon_html = '<i class="' . esc_attr( $icon['value'] ) . '" aria-hidden="true"></i>';
+			} else {
+				$icon_html = file_get_contents($icon['value']['url']);;
+			}
+		}
+
+		return $icon_html;
 	}
 
 	protected function render_swiper_button_icon( $type ) {
@@ -1414,7 +1353,7 @@ class Be_Base_Carousel extends Widget_Base {
 		}
 
 		?>
-		<div class="elementor-swiper-button elementor-swiper-button-prev">
+		<div class="elementor-swiper-button elementor-swiper-button-prev elementor-swiper-button-prev__<?php echo $this->get_id(); ?>">
 			<?php
 
 				$this->render_swiper_button_icon( 'prev' );
@@ -1425,13 +1364,14 @@ class Be_Base_Carousel extends Widget_Base {
 			?>
 
 		</div>
-		<div class="elementor-swiper-button elementor-swiper-button-next">
+		<div class="elementor-swiper-button elementor-swiper-button-next elementor-swiper-button-next__<?php echo $this->get_id(); ?>">
 			<?php
 				if( ( 'both' === $settings['navigation'] || 'text' === $settings['navigation'] ) && '' !== $settings['arrow_next_text'] ) {
 					echo '<span>' . $settings['arrow_next_text'] . '</span>';
 				}
 
 				$this->render_swiper_button_icon( 'next' );
+
 			?>
 		</div>
 		<?php
@@ -1445,11 +1385,8 @@ class Be_Base_Carousel extends Widget_Base {
 		}
 
 		$el_class = 'elementor-swiper-pagination';
-		if( '' !== $settings['_skin'] ) {
-			$el_class .= ' base-carousel-dots--' . $settings['_skin'];
-		} else {
-			$el_class .= ' base-carousel-dots--default';
-		}
+		$el_class .= ' base-swiper-dots--default';
+		
 
 		echo '<div class="' . esc_attr( $el_class ) . '"></div>';
 	}
