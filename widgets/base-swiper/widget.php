@@ -38,7 +38,7 @@ class Be_Base_Swiper extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_breakpoints(){

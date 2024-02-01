@@ -177,7 +177,7 @@ class Plugin {
 		wp_register_script( 'jquery.event.move', plugins_url( '/assets/js/jquery.event.move.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_enqueue_script( 'lemon-addons-swiper', plugins_url( '/assets/js/swiper.min.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true);
 
-		wp_register_script( 'bearsthemes-addons', plugins_url( '/assets/js/frontend.js', __FILE__ ), [ 'jquery','jquery-isotope', 'lemon-addons-swiper', 'elementor-frontend' ], false, true );
+		wp_register_script( 'lemon-addons', plugins_url( '/assets/js/frontend.js', __FILE__ ), [ 'jquery','jquery-isotope', 'lemon-addons-swiper', 'elementor-frontend' ], false, true );
 		
 		wp_enqueue_script( 'lemon-addons-plugin', plugins_url( '/dist/js/plugin.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true);
 		wp_enqueue_script( 'lemon-addons-plugin-vendor', plugins_url( '/dist/js/vendor.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true );
