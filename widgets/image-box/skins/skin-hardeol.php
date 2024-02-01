@@ -25,7 +25,7 @@ class Skin_Hardeol extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Hardeol', 'bearsthemes-addons' );
+		return __( 'Hardeol', 'lemon-addons' );
 	}
 
 	public function register_layout_section_controls( Widget_Base $widget ) {
@@ -39,16 +39,16 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'read_more_text',
 			[
-				'label' => __( 'Read More Text', 'bearsthemes-addons' ),
+				'label' => __( 'Read More Text', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Read More', 'bearsthemes-addons' ),
+				'default' => __( 'Read More', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'read_more_link',
 			[
-				'label' => __( 'Read More Link', 'bearsthemes-addons' ),
+				'label' => __( 'Read More Link', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '#',
 			]
@@ -64,7 +64,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -72,7 +72,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'img_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -85,7 +85,7 @@ class Skin_Hardeol extends Skin_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -101,7 +101,7 @@ class Skin_Hardeol extends Skin_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -126,7 +126,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -134,7 +134,7 @@ class Skin_Hardeol extends Skin_Base {
     $this->add_control(
 			'overlay_color',
 			[
-				'label' => __( 'Overlay Color', 'bearsthemes-addons' ),
+				'label' => __( 'Overlay Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -146,7 +146,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -164,7 +164,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -173,7 +173,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -185,7 +185,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -206,7 +206,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'heading_desc_style',
 			[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -214,7 +214,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'desc_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -235,7 +235,7 @@ class Skin_Hardeol extends Skin_Base {
 		$this->add_control(
 			'heading_read_more_style',
 			[
-				'label' => __( 'Read More', 'bearsthemes-addons' ),
+				'label' => __( 'Read More', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -254,14 +254,14 @@ class Skin_Hardeol extends Skin_Base {
 		$this->start_controls_tab(
 			'tab_read_more_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
     $this->add_control(
 			'read_more_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -273,7 +273,7 @@ class Skin_Hardeol extends Skin_Base {
     $this->add_control(
 			'read_more_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -285,7 +285,7 @@ class Skin_Hardeol extends Skin_Base {
     $this->add_control(
 			'read_more_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -299,14 +299,14 @@ class Skin_Hardeol extends Skin_Base {
 		$this->start_controls_tab(
 			'tab_read_more_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
     $this->add_control(
 			'read_more_color_hover',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -318,7 +318,7 @@ class Skin_Hardeol extends Skin_Base {
     $this->add_control(
 			'read_more_bg_color_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -330,7 +330,7 @@ class Skin_Hardeol extends Skin_Base {
     $this->add_control(
 			'read_more_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

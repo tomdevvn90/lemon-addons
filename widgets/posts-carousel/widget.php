@@ -20,7 +20,7 @@ class Be_Posts_Carousel extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Posts Carousel', 'bearsthemes-addons' );
+		return __( 'Be Posts Carousel', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -28,7 +28,7 @@ class Be_Posts_Carousel extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_style_depends() {
@@ -36,7 +36,7 @@ class Be_Posts_Carousel extends Widget_Base {
 	}
 
 	public function get_script_depends() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	protected function register_skins() {
@@ -146,7 +146,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
@@ -155,7 +155,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'sliders_per_view',
 			[
-				'label' => __( 'Slides Per View', 'bearsthemes-addons' ),
+				'label' => __( 'Slides Per View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'options' => [
@@ -175,7 +175,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'posts_count',
 			[
-				'label' => __( 'Posts Count', 'bearsthemes-addons' ),
+				'label' => __( 'Posts Count', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 6,
 				'condition' => [
@@ -188,10 +188,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_thumbnail',
 			[
-				'label' => __( 'Thumbnail', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'separator' => 'before',
 				'condition' => [
@@ -216,7 +216,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'item_ratio',
 			[
-				'label' => __( 'Image Ratio', 'bearsthemes-addons' ),
+				'label' => __( 'Image Ratio', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 0.66,
@@ -241,10 +241,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_comment_count',
 			[
-				'label' => __( 'Comment Count', 'bearsthemes-addons' ),
+				'label' => __( 'Comment Count', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'separator' => 'before',
 				'condition' => [
@@ -257,10 +257,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_category',
 			[
-				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'label' => __( 'Category', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'condition' => [
 					'_skin' => '',
@@ -271,10 +271,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'condition' => [
 					'_skin' => '',
@@ -285,10 +285,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_meta',
 			[
-				'label' => __( 'Meta Data', 'bearsthemes-addons' ),
+				'label' => __( 'Meta Data', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'condition' => [
 					'_skin' => '',
@@ -299,10 +299,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_excerpt',
 			[
-				'label' => __( 'Excerpt', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'condition' => [
 					'_skin' => '',
@@ -313,7 +313,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'excerpt_length',
 			[
-				'label' => __( 'Excerpt Length', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt Length', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => apply_filters( 'excerpt_length', 25 ),
 				'condition' => [
@@ -326,7 +326,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'excerpt_more',
 			[
-				'label' => __( 'Excerpt More', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt More', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => apply_filters( 'excerpt_more', '' ),
 				'condition' => [
@@ -339,10 +339,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'show_read_more',
 			[
-				'label' => __( 'Read More', 'bearsthemes-addons' ),
+				'label' => __( 'Read More', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'condition' => [
 					'_skin' => '',
@@ -353,9 +353,9 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'read_more_text',
 			[
-				'label' => __( 'Read More Text', 'bearsthemes-addons' ),
+				'label' => __( 'Read More Text', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Read More »', 'bearsthemes-addons' ),
+				'default' => __( 'Read More »', 'lemon-addons' ),
 				'condition' => [
 					'_skin' => '',
 					'show_read_more!' => '',
@@ -370,7 +370,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_query',
 			[
-				'label' => __( 'Query', 'bearsthemes-addons' ),
+				'label' => __( 'Query', 'lemon-addons' ),
 			]
 		);
 
@@ -379,14 +379,14 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_query_include',
 			[
-				'label' => __( 'Include', 'bearsthemes-addons' ),
+				'label' => __( 'Include', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'ids',
 			[
-				'label' => __( 'Ids', 'bearsthemes-addons' ),
+				'label' => __( 'Ids', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->get_supported_ids(),
 				'label_block' => true,
@@ -397,7 +397,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'category',
 			[
-				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'label' => __( 'Category', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->get_supported_taxonomies(),
 				'label_block' => true,
@@ -411,14 +411,14 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_tab(
 			'tab_query_exnlude',
 			[
-				'label' => __( 'Exclude', 'bearsthemes-addons' ),
+				'label' => __( 'Exclude', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'ids_exclude',
 			[
-				'label' => __( 'Ids', 'bearsthemes-addons' ),
+				'label' => __( 'Ids', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->get_supported_ids(),
 				'label_block' => true,
@@ -429,7 +429,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'category_exclude',
 			[
-				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'label' => __( 'Category', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT2,
 				'options' => $this->get_supported_taxonomies(),
 				'label_block' => true,
@@ -440,10 +440,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'offset',
 			[
-				'label' => __( 'Offset', 'bearsthemes-addons' ),
+				'label' => __( 'Offset', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 0,
-				'description' => __( 'Use this setting to skip over posts (e.g. \'2\' to skip over 2 posts).', 'bearsthemes-addons' ),
+				'description' => __( 'Use this setting to skip over posts (e.g. \'2\' to skip over 2 posts).', 'lemon-addons' ),
 			]
 		);
 
@@ -454,14 +454,14 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'orderby',
 			[
-				'label' => __( 'Order By', 'bearsthemes-addons' ),
+				'label' => __( 'Order By', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'post_date',
 				'options' => [
-					'post_date' => __( 'Date', 'bearsthemes-addons' ),
-					'post_title' => __( 'Title', 'bearsthemes-addons' ),
-					'menu_order' => __( 'Menu Order', 'bearsthemes-addons' ),
-					'rand' => __( 'Random', 'bearsthemes-addons' ),
+					'post_date' => __( 'Date', 'lemon-addons' ),
+					'post_title' => __( 'Title', 'lemon-addons' ),
+					'menu_order' => __( 'Menu Order', 'lemon-addons' ),
+					'rand' => __( 'Random', 'lemon-addons' ),
 				],
 			]
 		);
@@ -469,12 +469,12 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'order',
 			[
-				'label' => __( 'Order', 'bearsthemes-addons' ),
+				'label' => __( 'Order', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'desc',
 				'options' => [
-					'asc' => __( 'ASC', 'bearsthemes-addons' ),
-					'desc' => __( 'DESC', 'bearsthemes-addons' ),
+					'asc' => __( 'ASC', 'lemon-addons' ),
+					'desc' => __( 'DESC', 'lemon-addons' ),
 				],
 			]
 		);
@@ -482,10 +482,10 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'ignore_sticky_posts',
 			[
-				'label' => __( 'Ignore Sticky Posts', 'bearsthemes-addons' ),
+				'label' => __( 'Ignore Sticky Posts', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'yes',
-				'description' => __( 'Sticky-posts ordering is visible on frontend only', 'bearsthemes-addons' ),
+				'description' => __( 'Sticky-posts ordering is visible on frontend only', 'lemon-addons' ),
 			]
 		);
 
@@ -496,7 +496,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_additional_options',
 			[
-				'label' => __( 'Additional Options', 'bearsthemes-addons' ),
+				'label' => __( 'Additional Options', 'lemon-addons' ),
 			]
 		);
 
@@ -504,13 +504,13 @@ class Be_Posts_Carousel extends Widget_Base {
 			'navigation',
 			[
 				'type' => Controls_Manager::SELECT,
-				'label' => __( 'Navigation', 'bearsthemes-addons' ),
+				'label' => __( 'Navigation', 'lemon-addons' ),
 				'default' => 'icon',
 				'options' => [
-					'' => __( 'None', 'bearsthemes-addons' ),
-					'icon' => __( 'Icon', 'bearsthemes-addons' ),
-					'text' => __( 'Text', 'bearsthemes-addons' ),
-					'both' => __( 'Icon and Text', 'bearsthemes-addons' ),
+					'' => __( 'None', 'lemon-addons' ),
+					'icon' => __( 'Icon', 'lemon-addons' ),
+					'text' => __( 'Text', 'lemon-addons' ),
+					'both' => __( 'Icon and Text', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-navigation-type-',
 				'render_type' => 'template',
@@ -520,14 +520,14 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'pagination',
 			[
-				'label' => __( 'Pagination', 'bearsthemes-addons' ),
+				'label' => __( 'Pagination', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'bullets',
 				'options' => [
-					'' => __( 'None', 'bearsthemes-addons' ),
-					'bullets' => __( 'Dots', 'bearsthemes-addons' ),
-					'fraction' => __( 'Fraction', 'bearsthemes-addons' ),
-					'progressbar' => __( 'Progress', 'bearsthemes-addons' ),
+					'' => __( 'None', 'lemon-addons' ),
+					'bullets' => __( 'Dots', 'lemon-addons' ),
+					'fraction' => __( 'Fraction', 'lemon-addons' ),
+					'progressbar' => __( 'Progress', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-pagination-type-',
 				'render_type' => 'template',
@@ -537,7 +537,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'speed',
 			[
-				'label' => __( 'Transition Duration', 'bearsthemes-addons' ),
+				'label' => __( 'Transition Duration', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 500,
 			]
@@ -546,7 +546,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'autoplay',
 			[
-				'label' => __( 'Autoplay', 'bearsthemes-addons' ),
+				'label' => __( 'Autoplay', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 				'separator' => 'before',
@@ -556,7 +556,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'autoplay_speed',
 			[
-				'label' => __( 'Autoplay Speed', 'bearsthemes-addons' ),
+				'label' => __( 'Autoplay Speed', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 5000,
 				'condition' => [
@@ -568,7 +568,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'loop',
 			[
-				'label' => __( 'Infinite Loop', 'bearsthemes-addons' ),
+				'label' => __( 'Infinite Loop', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
 				'default' => 'yes',
 			]
@@ -581,7 +581,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -589,7 +589,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'space_between',
 			[
-				'label' => __( 'Space Between', 'bearsthemes-addons' ),
+				'label' => __( 'Space Between', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -609,19 +609,19 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -641,7 +641,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_box',
 			[
-				'label' => __( 'Box', 'bearsthemes-addons' ),
+				'label' => __( 'Box', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'_skin' => '',
@@ -652,7 +652,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -670,7 +670,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -688,7 +688,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -706,7 +706,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'content_padding',
 			[
-				'label' => __( 'Content Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Content Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -726,7 +726,7 @@ class Be_Posts_Carousel extends Widget_Base {
 
 		$this->start_controls_tab( 'classic_style_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -741,7 +741,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post' => 'background-color: {{VALUE}}',
@@ -752,7 +752,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post' => 'border-color: {{VALUE}}',
@@ -764,7 +764,7 @@ class Be_Posts_Carousel extends Widget_Base {
 
 		$this->start_controls_tab( 'classic_style_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -779,7 +779,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_bg_color_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post:hover' => 'background-color: {{VALUE}}',
@@ -790,7 +790,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'box_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post:hover' => 'border-color: {{VALUE}}',
@@ -809,7 +809,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'_skin' => '',
@@ -821,7 +821,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'img_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -834,7 +834,7 @@ class Be_Posts_Carousel extends Widget_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -850,7 +850,7 @@ class Be_Posts_Carousel extends Widget_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -873,7 +873,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'_skin' => '',
@@ -884,7 +884,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'heading_comment_count_style',
 			[
-				'label' => __( 'Comment Count', 'bearsthemes-addons' ),
+				'label' => __( 'Comment Count', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_comment_count!' => '',
@@ -895,7 +895,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'comment_count_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -910,7 +910,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'comment_count_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -925,7 +925,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'heading_category_style',
 			[
-				'label' => __( 'Category', 'bearsthemes-addons' ),
+				'label' => __( 'Category', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_category!' => '',
@@ -936,7 +936,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'category_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -951,7 +951,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'category_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -978,7 +978,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_title!' => '',
@@ -989,7 +989,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1004,7 +1004,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1031,7 +1031,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'heading_meta_style',
 			[
-				'label' => __( 'Meta Data', 'bearsthemes-addons' ),
+				'label' => __( 'Meta Data', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_meta!' => '',
@@ -1042,7 +1042,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'meta_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1057,7 +1057,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'meta_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1072,7 +1072,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'meta_space_between_size',
 			[
-				'label' => __( 'Space Between Size', 'bearsthemes-addons' ),
+				'label' => __( 'Space Between Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -1091,7 +1091,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'meta_space_between_color',
 			[
-				'label' => __( 'Space Between Color', 'bearsthemes-addons' ),
+				'label' => __( 'Space Between Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1118,7 +1118,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'heading_excerpt_style',
 			[
-				'label' => __( 'Excerpt', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_excerpt!' => '',
@@ -1129,7 +1129,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'excerpt_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1156,7 +1156,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'heading_read_more_style',
 			[
-				'label' => __( 'Read More', 'bearsthemes-addons' ),
+				'label' => __( 'Read More', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_read_more!' => '',
@@ -1167,7 +1167,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'read_more_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1182,7 +1182,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'read_more_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -1213,7 +1213,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_navigation',
 			[
-				'label' => __( 'Navigation', 'bearsthemes-addons' ),
+				'label' => __( 'Navigation', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1223,7 +1223,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_tab(
 			'tabs_arrow_prev',
 			[
-				'label' => __( 'Previous', 'bearsthemes-addons' ),
+				'label' => __( 'Previous', 'lemon-addons' ),
 				'condition' => [
 					'navigation!' => '',
 				],
@@ -1233,7 +1233,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'arrow_prev_icon',
 			[
-				'label' => __( 'Previous Icon', 'bearsthemes-addons' ),
+				'label' => __( 'Previous Icon', 'lemon-addons' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -1249,9 +1249,9 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'arrow_prev_text',
 			[
-				'label' => __( 'Previous Text', 'bearsthemes-addons' ),
+				'label' => __( 'Previous Text', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Prev', 'bearsthemes-addons' ),
+				'default' => __( 'Prev', 'lemon-addons' ),
 				'label_block' => true,
 				'condition' => [
 					'navigation!' => ['icon', ''],
@@ -1264,7 +1264,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_tab(
 			'tabs_arrow_next',
 			[
-				'label' => __( 'Next', 'bearsthemes-addons' ),
+				'label' => __( 'Next', 'lemon-addons' ),
 				'condition' => [
 					'navigation!' => '',
 				],
@@ -1274,7 +1274,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'arrow_next_icon',
 			[
-				'label' => __( 'Next Icon', 'bearsthemes-addons' ),
+				'label' => __( 'Next Icon', 'lemon-addons' ),
 				'type' => Controls_Manager::ICONS,
 				'fa4compatibility' => 'icon',
 				'default' => [
@@ -1290,9 +1290,9 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'arrow_next_text',
 			[
-				'label' => __( 'Next Text', 'bearsthemes-addons' ),
+				'label' => __( 'Next Text', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Next', 'bearsthemes-addons' ),
+				'default' => __( 'Next', 'lemon-addons' ),
 				'label_block' => true,
 				'condition' => [
 					'navigation!' => ['icon', ''],
@@ -1307,12 +1307,12 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_position',
 			[
-				'label' => __( 'Position', 'bearsthemes-addons' ),
+				'label' => __( 'Position', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'inside',
 				'options' => [
-					'inside' => __( 'Inside', 'bearsthemes-addons' ),
-					'outside' => __( 'Outside', 'bearsthemes-addons' ),
+					'inside' => __( 'Inside', 'lemon-addons' ),
+					'outside' => __( 'Outside', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-navigation-position-',
 				'render_type' => 'template',
@@ -1326,11 +1326,11 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_show_always',
 			[
-				'label' => __( 'Show Always', 'bearsthemes-addons' ),
-				'description' => __( 'Check this to navigation show always.', 'bearsthemes-addons' ),
+				'label' => __( 'Show Always', 'lemon-addons' ),
+				'description' => __( 'Check this to navigation show always.', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'On', 'bearsthemes-addons' ),
-				'label_off' => __( 'Off', 'bearsthemes-addons' ),
+				'label_on' => __( 'On', 'lemon-addons' ),
+				'label_off' => __( 'Off', 'lemon-addons' ),
 				'default' => 'yes',
 				'prefix_class' => 'elementor-navigation-always-',
 				'render_type' => 'template',
@@ -1343,7 +1343,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'navigation_space',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -1367,7 +1367,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_size',
 			[
-				'label' => __( 'Button Size', 'bearsthemes-addons' ),
+				'label' => __( 'Button Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -1390,7 +1390,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_icon_size',
 			[
-				'label' => __( 'Icon Size', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => '',
@@ -1415,7 +1415,7 @@ class Be_Posts_Carousel extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'navigation_text_typography',
-				'label' => __( 'Text Typography', 'bearsthemes-addons' ),
+				'label' => __( 'Text Typography', 'lemon-addons' ),
 				'selector' => '{{WRAPPER}} .elementor-swiper-button span',
 				'condition' => [
 					'navigation!' => ['icon', ''],
@@ -1426,7 +1426,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -1447,7 +1447,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
@@ -1463,7 +1463,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_tab(
 			'tabs_navigation_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 				'condition' => [
 					'navigation!' => '',
 				],
@@ -1473,7 +1473,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_icon_color',
 			[
-				'label' => __( 'Icon Color', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button i' => 'color: {{VALUE}}',
@@ -1488,7 +1488,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_text_color',
 			[
-				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'label' => __( 'Text Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button span' => 'color: {{VALUE}}',
@@ -1502,7 +1502,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_background',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'background-color: {{VALUE}}',
@@ -1516,7 +1516,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button' => 'border-color: {{VALUE}}',
@@ -1532,7 +1532,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_tab(
 			'tabs_navigation_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 				'condition' => [
 					'navigation!' => '',
 				],
@@ -1542,7 +1542,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_icon_color_hover',
 			[
-				'label' => __( 'Icon Color', 'bearsthemes-addons' ),
+				'label' => __( 'Icon Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button:hover i' => 'color: {{VALUE}}',
@@ -1557,7 +1557,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_text_color_hover',
 			[
-				'label' => __( 'Text Color', 'bearsthemes-addons' ),
+				'label' => __( 'Text Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button:hover span' => 'color: {{VALUE}}',
@@ -1571,7 +1571,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_background_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button:hover' => 'background-color: {{VALUE}}',
@@ -1585,7 +1585,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'navigation_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-swiper-button:hover' => 'border-color: {{VALUE}}',
@@ -1607,7 +1607,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_pagination',
 			[
-				'label' => __( 'Pagination', 'bearsthemes-addons' ),
+				'label' => __( 'Pagination', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -1615,12 +1615,12 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'pagination_position',
 			[
-				'label' => __( 'Position', 'bearsthemes-addons' ),
+				'label' => __( 'Position', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'inside',
 				'options' => [
-					'inside' => __( 'Inside', 'bearsthemes-addons' ),
-					'outside' => __( 'Outside', 'bearsthemes-addons' ),
+					'inside' => __( 'Inside', 'lemon-addons' ),
+					'outside' => __( 'Outside', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-pagination-position-',
 				'render_type' => 'template',
@@ -1633,7 +1633,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'pagination_space',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -1655,19 +1655,19 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'pagination_align',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -1684,7 +1684,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_responsive_control(
 			'pagination_size',
 			[
-				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'label' => __( 'Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 8,
@@ -1708,7 +1708,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'pagination_space_between',
 			[
-				'label' => __( 'Space Between', 'bearsthemes-addons' ),
+				'label' => __( 'Space Between', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 6,
@@ -1731,7 +1731,7 @@ class Be_Posts_Carousel extends Widget_Base {
 		$this->add_control(
 			'pagination_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .swiper-pagination-bullet-active' => 'background-color: {{VALUE}}',
@@ -1748,7 +1748,7 @@ class Be_Posts_Carousel extends Widget_Base {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'pagination_typography',
-				'label' => __( 'Typography', 'bearsthemes-addons' ),
+				'label' => __( 'Typography', 'lemon-addons' ),
 				'selector' => '{{WRAPPER}} .swiper-pagination-fraction',
 				'condition' => [
 					'pagination' => 'fraction',
@@ -2073,7 +2073,7 @@ class Be_Posts_Carousel extends Widget_Base {
 				        <time class="entry-date published" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>"><a href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark"><?php echo esc_html( get_the_date() ); ?></a></time>
 				      </li>
 				      <li>
-								<?php echo '<span>' . esc_html__('by ', 'bearsthemes-addons') . '</span><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a>'; ?>
+								<?php echo '<span>' . esc_html__('by ', 'lemon-addons') . '</span><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . get_the_author() . '</a>'; ?>
 				      </li>
 				    </ul>
 					<?php } ?>

@@ -29,7 +29,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Grid Havsula', 'bearsthemes-addons' );
+		return __( 'Grid Havsula', 'lemon-addons' );
 	}
 
 
@@ -39,7 +39,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label' => __( 'Columns', 'bearsthemes-addons' ),
+				'label' => __( 'Columns', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -59,7 +59,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'posts_per_page',
 			[
-				'label' => __( 'Posts Per Page', 'bearsthemes-addons' ),
+				'label' => __( 'Posts Per Page', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 6,
 			]
@@ -68,10 +68,10 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'show_thumbnail',
 			[
-				'label' => __( 'Thumbnail', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'separator' => 'before',
 			]
@@ -92,7 +92,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_responsive_control(
 			'item_ratio',
 			[
-				'label' => __( 'Image Ratio', 'bearsthemes-addons' ),
+				'label' => __( 'Image Ratio', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 1.1,
@@ -116,10 +116,10 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'show_title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -127,10 +127,10 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'show_price',
 			[
-				'label' => __( 'Price', 'bearsthemes-addons' ),
+				'label' => __( 'Price', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -138,10 +138,10 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'show_star_rating',
 			[
-				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'label' => __( 'Star Rating', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -153,7 +153,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'column_gap',
 			[
-				'label' => __( 'Columns Gap', 'bearsthemes-addons' ),
+				'label' => __( 'Columns Gap', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 30,
@@ -173,7 +173,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'row_gap',
 			[
-				'label' => __( 'Rows Gap', 'bearsthemes-addons' ),
+				'label' => __( 'Rows Gap', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 35,
@@ -193,19 +193,19 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -223,7 +223,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_box',
 			[
-				'label' => __( 'Box', 'bearsthemes-addons' ),
+				'label' => __( 'Box', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -231,7 +231,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'box_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -249,7 +249,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'box_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -267,7 +267,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -285,7 +285,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_responsive_control(
 			'content_padding',
 			[
-				'label' => __( 'Content Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Content Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -304,7 +304,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 
 		$this->start_controls_tab( 'classic_style_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -319,7 +319,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'box_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product' => 'background-color: {{VALUE}}',
@@ -330,7 +330,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'box_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product' => 'border-color: {{VALUE}}',
@@ -342,7 +342,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 
 		$this->start_controls_tab( 'classic_style_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -357,7 +357,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'box_bg_color_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product:hover' => 'background-color: {{VALUE}}',
@@ -368,7 +368,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'box_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-product:hover' => 'border-color: {{VALUE}}',
@@ -389,7 +389,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'skin_grid_havsula_show_thumbnail!' => '',
@@ -400,7 +400,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'img_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -413,7 +413,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -429,7 +429,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -454,7 +454,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -462,7 +462,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'heading_onsale_style',
 			[
-				'label' => __( 'On sale', 'bearsthemes-addons' ),
+				'label' => __( 'On sale', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_havsula_show_thumbnail!' => '',
@@ -473,7 +473,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'onsale_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -488,7 +488,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'onsale_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -515,7 +515,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'heading_add_to_cart_style',
 			[
-				'label' => __( 'Add to cart', 'bearsthemes-addons' ),
+				'label' => __( 'Add to cart', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_havsula_show_thumbnail!' => '',
@@ -526,7 +526,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'add_to_cart_primary_color',
 			[
-				'label' => __( 'Primary Color', 'bearsthemes-addons' ),
+				'label' => __( 'Primary Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -543,7 +543,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'add_to_cart_secondary_color',
 			[
-				'label' => __( 'Secondary Color', 'bearsthemes-addons' ),
+				'label' => __( 'Secondary Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -572,7 +572,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_havsula_show_title!' => '',
@@ -583,7 +583,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -598,7 +598,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -625,7 +625,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'heading_price_style',
 			[
-				'label' => __( 'Price', 'bearsthemes-addons' ),
+				'label' => __( 'Price', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_havsula_show_price!' => '',
@@ -636,7 +636,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'price_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -651,7 +651,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'price_del_color',
 			[
-				'label' => __( 'Del Color', 'bearsthemes-addons' ),
+				'label' => __( 'Del Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -678,7 +678,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'heading_star_rating_style',
 			[
-				'label' => __( 'Star Rating', 'bearsthemes-addons' ),
+				'label' => __( 'Star Rating', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'skin_grid_havsula_show_star_rating!' => '',
@@ -689,7 +689,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'star_rating_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -704,7 +704,7 @@ class Skin_Grid_Havsula extends Skin_Base {
 		$this->add_control(
 			'star_rating_size',
 			[
-				'label' => __( 'Size', 'bearsthemes-addons' ),
+				'label' => __( 'Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'default' => [

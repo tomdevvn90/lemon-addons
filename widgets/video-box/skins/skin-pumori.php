@@ -24,7 +24,7 @@ class Skin_Pumori extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Pumori', 'bearsthemes-addons' );
+		return __( 'Pumori', 'lemon-addons' );
 	}
 
 
@@ -34,20 +34,20 @@ class Skin_Pumori extends Skin_Base {
     $this->add_control(
 			'sub_title',
 			[
-				'label' => __( 'Sub Title', 'bearsthemes-addons' ),
+				'label' => __( 'Sub Title', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'Watch This Video', 'bearsthemes-addons' ),
+				'default' => __( 'Watch This Video', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'Play Now', 'bearsthemes-addons' ),
+				'default' => __( 'Play Now', 'lemon-addons' ),
 			]
 		);
 
@@ -59,7 +59,7 @@ class Skin_Pumori extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -67,7 +67,7 @@ class Skin_Pumori extends Skin_Base {
     $this->add_control(
 			'heading_sub_title_style',
 			[
-				'label' => __( 'Sub Title', 'bearsthemes-addons' ),
+				'label' => __( 'Sub Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -75,7 +75,7 @@ class Skin_Pumori extends Skin_Base {
 		$this->add_control(
 			'sub_title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -96,7 +96,7 @@ class Skin_Pumori extends Skin_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -104,7 +104,7 @@ class Skin_Pumori extends Skin_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

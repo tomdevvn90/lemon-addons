@@ -11,7 +11,7 @@ add_action( 'elementor/element/heading/section_title/after_section_end', functio
   $element->start_controls_section(
 		'heading_custom_section',
 		[
-			'label' => __( 'Custom', 'bearsthemes-addons' ),
+			'label' => __( 'Custom', 'lemon-addons' ),
 		]
 	);
 
@@ -19,7 +19,7 @@ add_action( 'elementor/element/heading/section_title/after_section_end', functio
 		'heading_max_width',
 		[
 			'type' => \Elementor\Controls_Manager::SLIDER,
-			'label' => __( 'Max Width', 'bearsthemes-addons' ),
+			'label' => __( 'Max Width', 'lemon-addons' ),
       'size_units' => [ 'px', '%' ],
 			'range' => [
 				'px' => [
@@ -82,7 +82,7 @@ add_action( 'elementor/element/text-editor/section_editor/after_section_end', fu
   $element->start_controls_section(
 		'text_editor_custom_section',
 		[
-			'label' => __( 'Custom', 'bearsthemes-addons' ),
+			'label' => __( 'Custom', 'lemon-addons' ),
 		]
 	);
 
@@ -90,7 +90,7 @@ add_action( 'elementor/element/text-editor/section_editor/after_section_end', fu
 		'text_editor_max_width',
 		[
 			'type' => \Elementor\Controls_Manager::SLIDER,
-			'label' => __( 'Max Width', 'bearsthemes-addons' ),
+			'label' => __( 'Max Width', 'lemon-addons' ),
       'size_units' => [ 'px', '%' ],
 			'range' => [
 				'px' => [
@@ -153,7 +153,7 @@ add_action( 'elementor/element/button/section_button/after_section_end', functio
   $element->start_controls_section(
 		'button_custom_section',
 		[
-			'label' => __( 'Custom', 'bearsthemes-addons' ),
+			'label' => __( 'Custom', 'lemon-addons' ),
 		]
 	);
 
@@ -161,7 +161,7 @@ add_action( 'elementor/element/button/section_button/after_section_end', functio
 		'button_min_width',
 		[
 			'type' => \Elementor\Controls_Manager::SLIDER,
-			'label' => __( 'Min Width', 'bearsthemes-addons' ),
+			'label' => __( 'Min Width', 'lemon-addons' ),
       'size_units' => [ 'px', '%' ],
 			'range' => [
 				'px' => [
@@ -191,7 +191,7 @@ add_action( 'elementor/element/slides/section_slides/before_section_end', functi
 		'slides_content_width',
 		[
 			'type' => \Elementor\Controls_Manager::SLIDER,
-			'label' => __( 'Content Width', 'bearsthemes-addons' ),
+			'label' => __( 'Content Width', 'lemon-addons' ),
       'size_units' => [ 'px', '%' ],
 			'range' => [
 				'px' => [
@@ -215,7 +215,7 @@ add_action( 'elementor/element/slides/section_slides/before_section_end', functi
 	);
 
 }, 10, 2 );
-class Alone_SVG_Icons {
+class Lemon_SVG_Icons {
 
 	/**
 	 * Gets the SVG code for a given icon.
@@ -414,6 +414,6 @@ class Alone_SVG_Icons {
 	);
 
 }
-function alone_get_icon_svg( $icon, $size = 24 ) {
-	return Alone_SVG_Icons::get_svg( 'ui', $icon, $size );
+function lemon_get_icon_svg( $icon, $size = 24 ) {
+	return Lemon_SVG_Icons::get_svg( 'ui', $icon, $size );
 }

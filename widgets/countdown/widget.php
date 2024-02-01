@@ -14,7 +14,7 @@ class Be_CountDown extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Count Down', 'bearsthemes-addons' );
+		return __( 'Be Count Down', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -22,7 +22,7 @@ class Be_CountDown extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_script_depends() {
@@ -33,20 +33,20 @@ class Be_CountDown extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'view',
 			[
-				'label' => __( 'View', 'bearsthemes-addons' ),
+				'label' => __( 'View', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '',
 				'options' => [
-					'' => __( 'Default', 'bearsthemes-addons' ),
-					'stacked' => __( 'Stacked', 'bearsthemes-addons' ),
-					'framed' => __( 'Framed', 'bearsthemes-addons' ),
+					'' => __( 'Default', 'lemon-addons' ),
+					'stacked' => __( 'Stacked', 'lemon-addons' ),
+					'framed' => __( 'Framed', 'lemon-addons' ),
 				],
 				'prefix_class' => 'elementor-countdown--view-',
 			]
@@ -55,13 +55,13 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'shape',
 			[
-				'label' => __( 'Shape', 'bearsthemes-addons' ),
+				'label' => __( 'Shape', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'circle',
 				'options' => [
-					'circle' => __( 'Circle', 'bearsthemes-addons' ),
-					'rounded' => __( 'Rounded', 'bearsthemes-addons' ),
-					'square' => __( 'Square', 'bearsthemes-addons' ),
+					'circle' => __( 'Circle', 'lemon-addons' ),
+					'rounded' => __( 'Rounded', 'lemon-addons' ),
+					'square' => __( 'Square', 'lemon-addons' ),
 				],
 				'condition' => [
 					'view!' => '',
@@ -73,7 +73,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'date_end',
 			[
-				'label' => __( 'Date End', 'bearsthemes-addons' ),
+				'label' => __( 'Date End', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => '2021/12/1 0:0:0',
 				'placeholder' => '2021/12/1 0:0:0',
@@ -83,7 +83,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'format',
 			[
-				'label' => __( 'Format', 'bearsthemes-addons' ),
+				'label' => __( 'Format', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => 'ODHMS',
 				'placeholder' => 'ODHMS',
@@ -97,7 +97,7 @@ class Be_CountDown extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -105,19 +105,19 @@ class Be_CountDown extends Widget_Base {
 		$this->add_responsive_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -130,7 +130,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_responsive_control(
 			'section_size',
 			[
-				'label' => __( 'Section Size', 'bearsthemes-addons' ),
+				'label' => __( 'Section Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -154,7 +154,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'section_bg_color',
 			[
-				'label' => __( 'Section Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Section Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -169,7 +169,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'section_border_color',
 			[
-				'label' => __( 'Section Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Section Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -188,7 +188,7 @@ class Be_CountDown extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -196,7 +196,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'heading_amount_style',
 			[
-				'label' => __( 'Amount', 'bearsthemes-addons' ),
+				'label' => __( 'Amount', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -204,7 +204,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'amount_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -226,7 +226,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'separator_color',
 			[
-				'label' => __( 'Separator Color', 'bearsthemes-addons' ),
+				'label' => __( 'Separator Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -241,7 +241,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'heading_period_style',
 			[
-				'label' => __( 'Amount', 'bearsthemes-addons' ),
+				'label' => __( 'Amount', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -249,7 +249,7 @@ class Be_CountDown extends Widget_Base {
 		$this->add_control(
 			'period_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

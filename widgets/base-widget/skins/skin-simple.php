@@ -20,7 +20,7 @@ class Skin_Simple extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Simple', 'bearsthemes-addons' );
+		return __( 'Simple', 'lemon-addons' );
 	}
 
 
@@ -30,7 +30,7 @@ class Skin_Simple extends Skin_Base {
 		$this->add_control(
 			'title_simple',
 			[
-				'label' => __( 'Title Simple', 'bearsthemes-addons' ),
+				'label' => __( 'Title Simple', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 			]
 		);

@@ -17,7 +17,7 @@ class Be_Banner_Image_Box extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Banner Image Box', 'bearsthemes-addons' );
+		return __( 'Be Banner Image Box', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -25,7 +25,7 @@ class Be_Banner_Image_Box extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
     public function get_style_depends() {
@@ -47,7 +47,7 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
@@ -55,7 +55,7 @@ class Be_Banner_Image_Box extends Widget_Base {
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'background',
-				'label' => esc_html__( 'Background', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Background', 'lemon-addons' ),
 				'types' => [ 'classic', 'gradient', 'video' ],
 				'selector' => '{{WRAPPER}} .elementor-banner-image-box',
                 'fields_options' => [
@@ -73,7 +73,7 @@ class Be_Banner_Image_Box extends Widget_Base {
 			'banner_height',
 			[
 				'type' => Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Min Height', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Min Height', 'lemon-addons' ),
 				'size_units' => [ 'px', '%', 'vh' ],
 				'range' => [
 					'px' => [
@@ -94,7 +94,7 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_image',
 			[
-				'label' => esc_html__( 'Banner Image', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Banner Image', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -116,14 +116,14 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_image_box_one',
 			[
-				'label' => __( 'Image Box One', 'bearsthemes-addons' ),
+				'label' => __( 'Image Box One', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_one_img',
 			[
-				'label' => esc_html__( 'Choose Image', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Choose Image', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -134,20 +134,20 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_image_box_one_heading',
 			[
-				'label' => __( 'Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'This is the heading one', 'bearsthemes-addons' ),
+				'default' => __( 'This is the heading one', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_one_sub_heading',
 			[
-				'label' => __( 'Sub Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Sub Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'label_block' => true,
-				'default' => __( 'This is the sub heading one', 'bearsthemes-addons' ),
+				'default' => __( 'This is the sub heading one', 'lemon-addons' ),
 			]
 		);
 
@@ -157,14 +157,14 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_image_box_two',
 			[
-				'label' => __( 'Image Box Two', 'bearsthemes-addons' ),
+				'label' => __( 'Image Box Two', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_two_img',
 			[
-				'label' => esc_html__( 'Choose Image', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Choose Image', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -175,20 +175,20 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_image_box_two_heading',
 			[
-				'label' => __( 'Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'This is the heading two', 'bearsthemes-addons' ),
+				'default' => __( 'This is the heading two', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_two_sub_heading',
 			[
-				'label' => __( 'Sub Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Sub Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'label_block' => true,
-				'default' => __( 'This is the sub heading two', 'bearsthemes-addons' ),
+				'default' => __( 'This is the sub heading two', 'lemon-addons' ),
 			]
 		);
 
@@ -198,14 +198,14 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_image_box_three',
 			[
-				'label' => __( 'Image Box Three', 'bearsthemes-addons' ),
+				'label' => __( 'Image Box Three', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_three_img',
 			[
-				'label' => esc_html__( 'Choose Image', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Choose Image', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -216,20 +216,20 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_image_box_three_heading',
 			[
-				'label' => __( 'Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'This is the heading three', 'bearsthemes-addons' ),
+				'default' => __( 'This is the heading three', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_three_sub_heading',
 			[
-				'label' => __( 'Sub Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Sub Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'label_block' => true,
-				'default' => __( 'This is the sub heading three', 'bearsthemes-addons' ),
+				'default' => __( 'This is the sub heading three', 'lemon-addons' ),
 			]
 		);
 
@@ -239,14 +239,14 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_image_box_fourth',
 			[
-				'label' => __( 'Image Box Fourth', 'bearsthemes-addons' ),
+				'label' => __( 'Image Box Fourth', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_fourth_img',
 			[
-				'label' => esc_html__( 'Choose Image', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Choose Image', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => Utils::get_placeholder_image_src(),
@@ -257,20 +257,20 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_image_box_fourth_heading',
 			[
-				'label' => __( 'Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'This is the heading fourth', 'bearsthemes-addons' ),
+				'default' => __( 'This is the heading fourth', 'lemon-addons' ),
 			]
 		);
 
         $this->add_control(
 			'banner_image_box_fourth_sub_heading',
 			[
-				'label' => __( 'Sub Heading', 'bearsthemes-addons' ),
+				'label' => __( 'Sub Heading', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'label_block' => true,
-				'default' => __( 'This is the sub heading fourth', 'bearsthemes-addons' ),
+				'default' => __( 'This is the sub heading fourth', 'lemon-addons' ),
 			]
 		);
 
@@ -283,7 +283,7 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -291,7 +291,7 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->add_control(
 			'banner_img_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'selectors' => [
@@ -305,7 +305,7 @@ class Be_Banner_Image_Box extends Widget_Base {
         $this->start_controls_section(
 			'section_design_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);

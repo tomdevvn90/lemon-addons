@@ -20,7 +20,7 @@ class Be_Search_Form extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Search Form', 'bearsthemes-addons' );
+		return __( 'Be Search Form', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -28,7 +28,7 @@ class Be_Search_Form extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	public function get_script_depends() {
@@ -77,45 +77,45 @@ class Be_Search_Form extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'This is the heading', 'bearsthemes-addons' ),
+				'default' => __( 'This is the heading', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'desc',
 			[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'bearsthemes-addons' ),
+				'default' => __( 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'placeholder',
 			[
-				'label' => __( 'Placeholder', 'bearsthemes-addons' ),
+				'label' => __( 'Placeholder', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'label_block' => true,
-				'default' => __( 'Search...', 'bearsthemes-addons' ),
+				'default' => __( 'Search...', 'lemon-addons' ),
 			]
 		);
 		
 		$this->add_control(
 			'button_text',
 			[
-				'label' => __( 'Button', 'bearsthemes-addons' ),
+				'label' => __( 'Button', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => __( 'Search', 'bearsthemes-addons' ),
+				'default' => __( 'Search', 'lemon-addons' ),
 			]
 		);
 
@@ -126,7 +126,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->start_controls_section(
 			'section_design_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -134,19 +134,19 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -159,14 +159,14 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'title_space',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -183,7 +183,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -205,7 +205,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'heading_desc_style',
 			[
-				'label' => __( 'Description', 'bearsthemes-addons' ),
+				'label' => __( 'Description', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -213,7 +213,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_responsive_control(
 			'decs_space',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -231,7 +231,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'desc_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -252,7 +252,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'form_field_style',
 			[
-				'label' => __( 'Form Field', 'bearsthemes-addons' ),
+				'label' => __( 'Form Field', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -260,7 +260,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_responsive_control(
 			'field_space',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -279,7 +279,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_responsive_control(
 			'form_field_space',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -299,7 +299,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'form_field_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -321,7 +321,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'form_field_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .search-form-box form input.field' => 'background-color: {{VALUE}}',
@@ -333,7 +333,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'form_field_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -352,7 +352,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'form_field_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -371,7 +371,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'form_field_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .search-form-box form input.field' => 'border-color: {{VALUE}}',
@@ -383,14 +383,14 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'button_style',
 			[
-				'label' => __( 'Button Submit', 'bearsthemes-addons' ),
+				'label' => __( 'Button Submit', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
 		$this->add_responsive_control(
 			'button_space',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -408,14 +408,14 @@ class Be_Search_Form extends Widget_Base {
 
 		$this->start_controls_tab( 'classic_style_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_responsive_control(
 			'button_space',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -434,7 +434,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'button_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -455,7 +455,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'but_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .search-form-box__submit' => 'background-color: {{VALUE}}',
@@ -466,7 +466,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'but_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -484,7 +484,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'but_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -502,7 +502,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'but_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .search-form-box__submit' => 'border-color: {{VALUE}}',
@@ -514,14 +514,14 @@ class Be_Search_Form extends Widget_Base {
 
 		$this->start_controls_tab( 'classic_style_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'button_color_hover',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -533,7 +533,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'but_bg_color_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .search-form-box__submit:hover' => 'background-color: {{VALUE}}',
@@ -543,7 +543,7 @@ class Be_Search_Form extends Widget_Base {
 		$this->add_control(
 			'but_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .search-form-box__submit:hover' => 'border-color: {{VALUE}}',

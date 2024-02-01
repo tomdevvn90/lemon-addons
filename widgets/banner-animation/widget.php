@@ -17,7 +17,7 @@ class Be_Banner_Animation extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Banner with Animation', 'bearsthemes-addons' );
+		return __( 'Be Banner with Animation', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -25,7 +25,7 @@ class Be_Banner_Animation extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
     protected function register_skins() {
@@ -51,17 +51,17 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
         $this->add_control(
         	'animation_type',
         	[
-        		'label' => __( 'Animation type', 'bearsthemes-addons' ),
+        		'label' => __( 'Animation type', 'lemon-addons' ),
         		'type' => Controls_Manager::SELECT,
         		'options' => [
-        			'default' => esc_html__( 'Default', 'bearsthemes-addons' ),
-        			'bubble' => esc_html__( 'Bubble', 'bearsthemes-addons' ),
+        			'default' => esc_html__( 'Default', 'lemon-addons' ),
+        			'bubble' => esc_html__( 'Bubble', 'lemon-addons' ),
         		],
                 'default' => 'default'
         	]
@@ -70,7 +70,7 @@ class Be_Banner_Animation extends Widget_Base {
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'background',
-				'label' => esc_html__( 'Background', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Background', 'lemon-addons' ),
 				'types' => [ 'classic', 'gradient', 'video' ],
 				'selector' => '{{WRAPPER}} .elementor-banner-animation',
                 'fields_options' => [
@@ -87,7 +87,7 @@ class Be_Banner_Animation extends Widget_Base {
 			'wrap_height',
 			[
 				'type' => Controls_Manager::SLIDER,
-				'label' => esc_html__( 'Height', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Height', 'lemon-addons' ),
 				'size_units' => [ 'px', '%', 'vh' ],
 				'range' => [
 					'px' => [
@@ -108,13 +108,13 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
 			'section_content',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 			]
 		);
         $this->add_control(
 			'image',
 			[
-				'label' => esc_html__( 'Choose Logo', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Choose Logo', 'lemon-addons' ),
 				'type' => Controls_Manager::MEDIA,
 				'default' => [
 					'url' => '',
@@ -135,9 +135,9 @@ class Be_Banner_Animation extends Widget_Base {
 
 		$repeater->add_control(
 			'list_title', [
-				'label' => esc_html__( 'Title', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::WYSIWYG,
-				'default' => esc_html__( 'List Title' , 'bearsthemes-addons' ),
+				'default' => esc_html__( 'List Title' , 'lemon-addons' ),
 				'label_block' => true,
 			]
 		);
@@ -145,18 +145,18 @@ class Be_Banner_Animation extends Widget_Base {
         $this->add_control(
 			'list',
 			[
-				'label' => esc_html__( 'List Title', 'bearsthemes-addons' ),
+				'label' => esc_html__( 'List Title', 'lemon-addons' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'list_title' => esc_html__( 'Title #1', 'bearsthemes-addons' ),
+						'list_title' => esc_html__( 'Title #1', 'lemon-addons' ),
 					],
 					[
-						'list_title' => esc_html__( 'Title #2', 'bearsthemes-addons' ),
+						'list_title' => esc_html__( 'Title #2', 'lemon-addons' ),
 					],
 					[
-						'list_title' => esc_html__( 'Title #3', 'bearsthemes-addons' ),
+						'list_title' => esc_html__( 'Title #3', 'lemon-addons' ),
 					],
 				],
 				'title_field' => '{{{ list_title }}}',
@@ -173,7 +173,7 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
             'content_text',
             [
-                'label' => esc_html__( 'Content Text', 'bearsthemes-addons' ),
+                'label' => esc_html__( 'Content Text', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
 					'_skin' => '',
@@ -227,7 +227,7 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
             'layout',
             [
-                'label' => esc_html__( 'Layout', 'bearsthemes-addons' ),
+                'label' => esc_html__( 'Layout', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
 					'_skin' => 'skin-full-content',
@@ -242,7 +242,7 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
             'heading_text',
             [
-                'label' => esc_html__( 'Heading', 'bearsthemes-addons' ),
+                'label' => esc_html__( 'Heading', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
 					'_skin' => 'skin-full-content',
@@ -257,7 +257,7 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
             'desc_text',
             [
-                'label' => esc_html__( 'Description', 'bearsthemes-addons' ),
+                'label' => esc_html__( 'Description', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
 					'_skin' => 'skin-full-content',
@@ -272,7 +272,7 @@ class Be_Banner_Animation extends Widget_Base {
         $this->start_controls_section(
             'cta',
             [
-                'label' => esc_html__( 'CTA', 'bearsthemes-addons' ),
+                'label' => esc_html__( 'CTA', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
 					'_skin' => 'skin-full-content',

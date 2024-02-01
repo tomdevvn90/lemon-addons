@@ -30,7 +30,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 
 
 	public function get_title() {
-		return __( 'Grid Jimara', 'bearsthemes-addons' );
+		return __( 'Grid Jimara', 'lemon-addons' );
 	}
 
 
@@ -40,7 +40,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_responsive_control(
 			'columns',
 			[
-				'label' => __( 'Columns', 'bearsthemes-addons' ),
+				'label' => __( 'Columns', 'lemon-addons' ),
 				'type' => Controls_Manager::SELECT,
 				'default' => '3',
 				'tablet_default' => '2',
@@ -60,7 +60,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'posts_per_page',
 			[
-				'label' => __( 'Posts Per Page', 'bearsthemes-addons' ),
+				'label' => __( 'Posts Per Page', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 6,
 			]
@@ -69,10 +69,10 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
 			'show_thumbnail',
 			[
-				'label' => __( 'Thumbnail', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 				'separator' => 'before',
 			]
@@ -93,7 +93,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_responsive_control(
 			'item_ratio',
 			[
-				'label' => __( 'Image Ratio', 'bearsthemes-addons' ),
+				'label' => __( 'Image Ratio', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 1.2,
@@ -117,10 +117,10 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
 			'show_title',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -128,10 +128,10 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'show_meta',
 			[
-				'label' => __( 'Meta', 'bearsthemes-addons' ),
+				'label' => __( 'Meta', 'lemon-addons' ),
 				'type' 	=> Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default'  => 'yes',
 			]
 		);
@@ -139,10 +139,10 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
 			'show_excerpt',
 			[
-				'label' => __( 'Excerpt', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -150,7 +150,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'excerpt_length',
 			[
-				'label' => __( 'Excerpt Length', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt Length', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => apply_filters( 'jimara_excerpt_length', 15 ),
 				'condition' => [
@@ -162,7 +162,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'excerpt_more',
 			[
-				'label' => __( 'Excerpt More', 'bearsthemes-addons' ),
+				'label' => __( 'Excerpt More', 'lemon-addons' ),
 				'type' => Controls_Manager::TEXT,
 				'default' => apply_filters( 'jimara_excerpt_more', '' ),
 				'condition' => [
@@ -174,10 +174,10 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'show_read_more',
 			[
-				'label' => __( 'Read More', 'bearsthemes-addons' ),
+				'label' => __( 'Read More', 'lemon-addons' ),
 				'type' 	=> Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default'  => 'yes',
 			]
 		);
@@ -185,9 +185,9 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'read_more_text',
 			[
-				'label' => __( 'Read More Text', 'bearsthemes-addons' ),
+				'label' => __( 'Read More Text', 'lemon-addons' ),
 				'type' 	=> Controls_Manager::TEXT,
-				'default' => __( 'Read More', 'bearsthemes-addons' ),
+				'default' => __( 'Read More', 'lemon-addons' ),
 				'condition' => [
 					'skin_grid_jimara_show_read_more!' => '',
 				],
@@ -202,7 +202,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'column_gap',
 			[
-				'label' => __( 'Columns Gap', 'bearsthemes-addons' ),
+				'label' => __( 'Columns Gap', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 30,
@@ -222,7 +222,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'row_gap',
 			[
-				'label' => __( 'Rows Gap', 'bearsthemes-addons' ),
+				'label' => __( 'Rows Gap', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 35,
@@ -242,19 +242,19 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'alignment',
 			[
-				'label' => __( 'Alignment', 'bearsthemes-addons' ),
+				'label' => __( 'Alignment', 'lemon-addons' ),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left' => [
-						'title' => __( 'Left', 'bearsthemes-addons' ),
+						'title' => __( 'Left', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => __( 'Center', 'bearsthemes-addons' ),
+						'title' => __( 'Center', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => __( 'Right', 'bearsthemes-addons' ),
+						'title' => __( 'Right', 'lemon-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -272,7 +272,7 @@ class Skin_Grid_Jimara extends Skin_Base {
     $this->start_controls_section(
 			'section_design_box',
 			[
-				'label' => __( 'Box', 'bearsthemes-addons' ),
+				'label' => __( 'Box', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -280,7 +280,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'box_border_width',
 			[
-				'label' => __( 'Border Width', 'bearsthemes-addons' ),
+				'label' => __( 'Border Width', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -298,7 +298,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'box_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -316,7 +316,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_responsive_control(
 			'box_padding',
 			[
-				'label' => __( 'Padding', 'bearsthemes-addons' ),
+				'label' => __( 'Padding', 'lemon-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -337,7 +337,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 
 		$this->start_controls_tab( 'classic_style_normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -352,7 +352,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'box_bg_color',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post' => 'background-color: {{VALUE}}',
@@ -363,7 +363,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'box_border_color',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post' => 'border-color: {{VALUE}}',
@@ -375,7 +375,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 
 		$this->start_controls_tab( 'classic_style_hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -390,7 +390,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'box_bg_color_hover',
 			[
-				'label' => __( 'Background Color', 'bearsthemes-addons' ),
+				'label' => __( 'Background Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post:hover' => 'background-color: {{VALUE}}',
@@ -401,7 +401,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->add_control(
 			'box_border_color_hover',
 			[
-				'label' => __( 'Border Color', 'bearsthemes-addons' ),
+				'label' => __( 'Border Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post:hover' => 'border-color: {{VALUE}}',
@@ -423,7 +423,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 		$this->start_controls_section(
 			'section_design_image',
 			[
-				'label' => __( 'Image', 'bearsthemes-addons' ),
+				'label' => __( 'Image', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'skin_grid_jimara_show_thumbnail!'=> '',
@@ -434,7 +434,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
 			'overlay_bg_color',
 			[
-				'label' => __( 'Overlay Color', 'bearsthemes-addons' ),
+				'label' => __( 'Overlay Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .elementor-post__overlay' => 'background-color: {{VALUE}}',
@@ -446,7 +446,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -462,7 +462,7 @@ class Skin_Grid_Jimara extends Skin_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -487,7 +487,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->start_controls_section(
             'section_design_content',
             [
-                'label' => __( 'Content', 'bearsthemes-addons' ),
+                'label' => __( 'Content', 'lemon-addons' ),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -495,7 +495,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'heading_title_style',
             [
-                'label' => __( 'Title', 'bearsthemes-addons' ),
+                'label' => __( 'Title', 'lemon-addons' ),
                 'type' => Controls_Manager::HEADING,
                 'condition' => [
                     'skin_grid_jimara_show_title!' => '',
@@ -506,7 +506,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'title_color',
             [
-                'label' => __( 'Color', 'bearsthemes-addons' ),
+                'label' => __( 'Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -521,7 +521,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'title_color_hover',
             [
-                'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+                'label' => __( 'Color Hover', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -548,7 +548,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'heading_meta_style',
             [
-                'label' => __( 'Meta', 'bearsthemes-addons' ),
+                'label' => __( 'Meta', 'lemon-addons' ),
                 'type' => Controls_Manager::HEADING,
                 'condition' => [
                     'skin_grid_jimara_show_meta!' => '',
@@ -559,7 +559,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'meta_color',
             [
-                'label' => __( 'Color Text', 'bearsthemes-addons' ),
+                'label' => __( 'Color Text', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -574,7 +574,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'meta_color_hover',
             [
-                'label' => __( 'Color Text Hover', 'bearsthemes-addons' ),
+                'label' => __( 'Color Text Hover', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .elementor-post__meta li a:hover' => 'color: {{VALUE}}',
@@ -600,7 +600,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'heading_excerpt_style',
             [
-                'label' => __( 'Excerpt', 'bearsthemes-addons' ),
+                'label' => __( 'Excerpt', 'lemon-addons' ),
                 'type' => Controls_Manager::HEADING,
                 'condition' => [
                     'skin_grid_jimara_show_excerpt!' => '',
@@ -611,7 +611,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'excerpt_color',
             [
-                'label' => __( 'Color', 'bearsthemes-addons' ),
+                'label' => __( 'Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -638,7 +638,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'heading_readmore_style',
             [
-                'label' => __( 'Read More', 'bearsthemes-addons' ),
+                'label' => __( 'Read More', 'lemon-addons' ),
                 'type' => Controls_Manager::HEADING,
                 'condition' => [
                     'skin_grid_jimara_show_read_more!' => '',
@@ -663,7 +663,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->start_controls_tab(
             'tab_read_more_normal',
             [
-                'label' => __( 'Normal', 'bearsthemes-addons' ),
+                'label' => __( 'Normal', 'lemon-addons' ),
                 'condition' => [
                     'skin_grid_jimara_show_read_more!' => '',
                 ],
@@ -673,7 +673,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'read_more_color',
             [
-                'label' => __( 'Color', 'bearsthemes-addons' ),
+                'label' => __( 'Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -688,7 +688,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'read_more_bg_color',
             [
-                'label' => __( 'Background Color', 'bearsthemes-addons' ),
+                'label' => __( 'Background Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -703,7 +703,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'read_more_border_color',
             [
-                'label' => __( 'Border Color', 'bearsthemes-addons' ),
+                'label' => __( 'Border Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -720,7 +720,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->start_controls_tab(
             'tab_read_more_hover',
             [
-                'label' => __( 'Hover', 'bearsthemes-addons' ),
+                'label' => __( 'Hover', 'lemon-addons' ),
                 'condition' => [
                     'skin_grid_jimara_show_read_more!' => '',
                 ],
@@ -730,7 +730,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'read_more_color_hover',
             [
-                'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+                'label' => __( 'Color Hover', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -745,7 +745,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'read_more_bg_color_hover',
             [
-                'label' => __( 'Background Color', 'bearsthemes-addons' ),
+                'label' => __( 'Background Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -760,7 +760,7 @@ class Skin_Grid_Jimara extends Skin_Base {
         $this->add_control(
             'read_more_border_color_hover',
             [
-                'label' => __( 'Border Color', 'bearsthemes-addons' ),
+                'label' => __( 'Border Color', 'lemon-addons' ),
                 'type' => Controls_Manager::COLOR,
                 'default' => '',
                 'selectors' => [
@@ -801,13 +801,13 @@ class Skin_Grid_Jimara extends Skin_Base {
                         <li>
                             <?php
                                 echo '<a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">'. 
-                                        '<span>' . esc_html__('by ', 'bearsthemes-addons') . '</span>' . get_the_author() .
+                                        '<span>' . esc_html__('by ', 'lemon-addons') . '</span>' . get_the_author() .
                                     '</a>';
                             ?>
                         </li>
                         <li>
                             <?php
-                                echo '<span>' . esc_html__('date ', 'bearsthemes-addons') . '</span>' .
+                                echo '<span>' . esc_html__('date ', 'lemon-addons') . '</span>' .
                                     '<time class="entry-date published" datetime="' . esc_attr( get_the_date( DATE_W3C ) ) . '">' . esc_html( get_the_date() ) . '</time>';
                             ?>
                         </li>

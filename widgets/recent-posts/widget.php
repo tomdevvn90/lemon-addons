@@ -15,7 +15,7 @@ class Be_Recent_Posts extends Widget_Base {
 	}
 
 	public function get_title() {
-		return __( 'Be Recent Posts', 'bearsthemes-addons' );
+		return __( 'Be Recent Posts', 'lemon-addons' );
 	}
 
 	public function get_icon() {
@@ -23,21 +23,21 @@ class Be_Recent_Posts extends Widget_Base {
 	}
 
 	public function get_categories() {
-		return [ 'bearsthemes-addons' ];
+		return [ 'lemon-addons' ];
 	}
 
 	protected function register_controls() {
 		$this->start_controls_section(
 			'section_layout',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'numberposts',
 			[
-				'label' => __( 'Number Posts', 'bearsthemes-addons' ),
+				'label' => __( 'Number Posts', 'lemon-addons' ),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 3,
 			]
@@ -46,10 +46,10 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'show_date',
 			[
-				'label' => __( 'Display Post Date?', 'bearsthemes-addons' ),
+				'label' => __( 'Display Post Date?', 'lemon-addons' ),
 				'type' => Controls_Manager::SWITCHER,
-				'label_on' => __( 'Show', 'bearsthemes-addons' ),
-				'label_off' => __( 'Hide', 'bearsthemes-addons' ),
+				'label_on' => __( 'Show', 'lemon-addons' ),
+				'label_off' => __( 'Hide', 'lemon-addons' ),
 				'default' => 'yes',
 			]
 		);
@@ -59,7 +59,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->start_controls_section(
 			'section_layout_style',
 			[
-				'label' => __( 'Layout', 'bearsthemes-addons' ),
+				'label' => __( 'Layout', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -67,7 +67,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'row_gap',
 			[
-				'label' => __( 'Rows Gap', 'bearsthemes-addons' ),
+				'label' => __( 'Rows Gap', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 15,
@@ -89,7 +89,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->start_controls_section(
 			'section_thumbnail_style',
 			[
-				'label' => __( 'Thumbnail', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -97,7 +97,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'thumbnail_size',
 			[
-				'label' => __( 'Thumbnail Size', 'bearsthemes-addons' ),
+				'label' => __( 'Thumbnail Size', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'default' => [
 					'size' => 70,
@@ -118,7 +118,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'thumbnail_spacing',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -138,7 +138,7 @@ class Be_Recent_Posts extends Widget_Base {
 
 		$this->start_controls_tab( 'normal',
 			[
-				'label' => __( 'Normal', 'bearsthemes-addons' ),
+				'label' => __( 'Normal', 'lemon-addons' ),
 			]
 		);
 
@@ -154,7 +154,7 @@ class Be_Recent_Posts extends Widget_Base {
 
 		$this->start_controls_tab( 'hover',
 			[
-				'label' => __( 'Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Hover', 'lemon-addons' ),
 			]
 		);
 
@@ -173,7 +173,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'thumbnail_border_radius',
 			[
-				'label' => __( 'Border Radius', 'bearsthemes-addons' ),
+				'label' => __( 'Border Radius', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -193,7 +193,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->start_controls_section(
 			'section_content_style',
 			[
-				'label' => __( 'Content', 'bearsthemes-addons' ),
+				'label' => __( 'Content', 'lemon-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -201,7 +201,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'heading_title_style',
 			[
-				'label' => __( 'Title', 'bearsthemes-addons' ),
+				'label' => __( 'Title', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 			]
 		);
@@ -209,7 +209,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'title_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -221,7 +221,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'title_color_hover',
 			[
-				'label' => __( 'Color Hover', 'bearsthemes-addons' ),
+				'label' => __( 'Color Hover', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [
@@ -242,7 +242,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'title_spacing',
 			[
-				'label' => __( 'Spacing', 'bearsthemes-addons' ),
+				'label' => __( 'Spacing', 'lemon-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -261,7 +261,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'heading_date_style',
 			[
-				'label' => __( 'Date', 'bearsthemes-addons' ),
+				'label' => __( 'Date', 'lemon-addons' ),
 				'type' => Controls_Manager::HEADING,
 				'condition' => [
 					'show_date!' => '',
@@ -272,7 +272,7 @@ class Be_Recent_Posts extends Widget_Base {
 		$this->add_control(
 			'date_color',
 			[
-				'label' => __( 'Color', 'bearsthemes-addons' ),
+				'label' => __( 'Color', 'lemon-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'default' => '',
 				'selectors' => [

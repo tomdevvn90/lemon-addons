@@ -183,7 +183,7 @@ class Plugin {
 		wp_enqueue_script( 'lemon-addons-plugin-vendor', plugins_url( '/dist/js/vendor.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true );
 		wp_enqueue_script( 'lemon-addons-plugin-manifest', plugins_url( '/dist/js/manifest.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true );
 		
-		wp_localize_script( 'bearsthemes-addons', 'products_data_ajax', array(
+		wp_localize_script( 'lemon-addons', 'products_data_ajax', array(
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
 			'current_page' => (get_query_var('paged')) ? absint(get_query_var('paged')) : 1,
 		) );
@@ -219,9 +219,9 @@ class Plugin {
 	 */
 	public function add_category( $elements_manager ) {
 		$elements_manager->add_category(
-			'bearsthemes-addons',
+			'lemon-addons',
 			[
-				'title' => esc_html__( 'Bearsthemes Addons', 'bearsthemes-addons' )
+				'title' => esc_html__( 'Lemon Addons', 'lemon-addons' )
 			]
 		);
 	}
