@@ -175,7 +175,7 @@ class Plugin {
 		wp_register_script( 'jquery.twentytwenty', plugins_url( '/assets/js/jquery.twentytwenty.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_register_script( 'jquery.event.move', plugins_url( '/assets/js/jquery.event.move.js', __FILE__ ), [ 'jquery' ], false, true );
 		wp_enqueue_script( 'lemon-addons-swiper', plugins_url( '/assets/js/swiper.min.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true);
-		
+
 		wp_register_script( 'bearsthemes-addons', plugins_url( '/assets/js/frontend.js', __FILE__ ), [ 'jquery','jquery-isotope', 'lemon-addons-swiper' ], false, true );
 		
 		wp_enqueue_script( 'lemon-addons-plugin', plugins_url( '/dist/js/plugin.js', __FILE__ ), array( 'jquery' ), rand(11111, 99999999), true);
@@ -258,7 +258,7 @@ class Plugin {
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Before_After\Be_Before_After() );
 		\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Team_Carousel\Team_Carousel() );
 
-		// WooCommerce.
+		// // WooCommerce.
 		if ( $this->woocommerce_status() ) {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Products\Be_Products() );
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Products_Carousel\Be_Products_Carousel() );
@@ -267,7 +267,7 @@ class Plugin {
 
 		}
 
-		// ubermenu.
+		// // ubermenu.
 		if ( $this->ubermenu_status() ) {
 			\Elementor\Plugin::instance()->widgets_manager->register_widget_type( new Widgets\Uber_Menu\Be_Uber_Menu() );
 

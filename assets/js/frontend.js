@@ -7,8 +7,13 @@
     var SwiperSliderHandler = function($scope, $) {
         
         var $selector = $scope.find('.swiper-container'),
-            $dataSwiper = $selector.data('swiper'),
-            mySwiper = new Swiper($selector, $dataSwiper);  
+            $dataSwiper = $selector.data('swiper');
+
+        if ( 'undefined' === typeof Swiper ) {
+            new elementorFrontend.utils.swiper( $selector, dataSwiper );
+        } else {
+            new Swiper( $selector, dataSwiper );
+        } 
     };
 
 
